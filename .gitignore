@@ -1,0 +1,5 @@
+node_modules/
+presentation/dist/
+presentation/shots/
+*.log
+.DS_Store

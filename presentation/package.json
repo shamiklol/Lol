@@ -1,0 +1,27 @@
+{
+  "name": "prompt-logic-agent-tool-chaining",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Prompt Logic & AI Agent Tool Chaining — Shamsiddin · Shams.labs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint:uz": "node scripts/lint-uz.mjs",
+    "shots": "node scripts/screenshots.mjs",
+    "video": "node scripts/render-video.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.129.0",
+    "gpt-tokenizer": "^3.0.0",
+    "gsap": "^3.15.0",
+    "qrcode-generator": "^1.4.4",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1",
+    "vite": "^8.3.1",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}

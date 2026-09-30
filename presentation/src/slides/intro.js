@@ -22,7 +22,7 @@ const title = {
       <span class="t-line swarm-src ink">&amp; AI Agent</span>
       <span class="t-line swarm-src ink">Tool Chaining</span>
     </h1>
-    <p class="t-sub" data-in="2">Promptdan agentgacha: mantiq, vositalar va zanjirlar</p>
+    <p class="t-sub" data-in="2">Promptdan agentgacha: logika, tool’lar va chain’lar</p>
     <div class="t-speaker" data-in="3">
       ${sunMark('t-sun')}
       <div><b>${CONFIG.speaker}</b><span>${CONFIG.brand}</span></div>
@@ -66,7 +66,7 @@ const PROMPT_A = 'Kofexona uchun marketing strategiya yozib ber.';
 const PROMPT_B = `<maqsad>Toshkentdagi yangi kofexona uchun 4 haftalik Instagram reja.</maqsad>
 <kontekst>Byudjet: 5 mln soʻm. Auditoriya: 18–25 yoshli talabalar.
 Yaqinida 3 ta universitet bor.</kontekst>
-<shartlar>Agar gʻoya byudjetdan oshsa — arzonroq muqobil taklif qil.</shartlar>
+<shartlar>Agar gʻoya byudjetdan oshsa — arzonroq variant taklif qil.</shartlar>
 <format>Jadval: hafta | gʻoya | format | KPI. Oxirida umumiy xarajat.</format>`;
 
 const ANSWER_A = `Kofexona uchun marketing strategiyasi:
@@ -106,7 +106,7 @@ const hook = {
       </div>
     </article>
     <article class="panel hook-card hook-b" data-in="3" data-anim="right">
-      <div class="hook-top"><span class="chip" data-c="prompt">B · mantiqli prompt</span><span class="hook-model mono">Claude</span></div>
+      <div class="hook-top"><span class="chip" data-c="prompt">B · logikali prompt</span><span class="hook-model mono">Claude</span></div>
       <pre class="code hook-prompt">${codeLines(PROMPT_B, 'prompt')}</pre>
       <div class="hook-arrow" aria-hidden="true"></div>
       <div class="hook-out" data-out="b">
@@ -123,7 +123,7 @@ const hook = {
     </article>
   </div>
   <div class="hook-punch" data-step="3" data-anim="scale">
-    <span>Model bir xil edi.</span><b class="ink">Mantiq boshqa edi.</b>
+    <span>Model bir xil edi.</span><b class="ink">Logika boshqa edi.</b>
   </div>
   <div class="live-bar" data-in="5">
     <button class="btn" data-live><span class="dot" style="color:var(--data)"></span>Jonli sinash</button>
@@ -209,9 +209,9 @@ const hook = {
 // ---------------------------------------------------------------- 3 · Route
 const STOPS = [
   ['Prompt', 'Model matnni qanday oʻqiydi', 'prompt'],
-  ['Mantiq', 'Promptni dastur kabi yozamiz', 'prompt'],
-  ['Zanjir', 'Katta vazifani halqalarga boʻlamiz', 'model'],
-  ['Vositalar', 'Modelga qoʻl beramiz: tool calling', 'tool'],
+  ['Logika', 'Promptni dastur kabi yozamiz', 'prompt'],
+  ['Chain', 'Katta vazifani qadamlarga boʻlamiz', 'model'],
+  ['Tool’lar', 'Modelga qoʻl beramiz: tool calling', 'tool'],
   ['Agent', 'Oʻzi reja tuzib, oʻzi bajaradigan tizim', 'data'],
 ];
 
@@ -244,7 +244,7 @@ const route = {
   <div class="takeaway" data-in="8">
     <span class="takeaway-label mono">Oʻzingiz bilan olib ketasiz</span>
     <span class="chip" data-c="prompt">MAKTAB freymvorki</span>
-    <span class="chip" data-c="model">6 ta zanjir naqshi</span>
+    <span class="chip" data-c="model">6 ta chaining patterni</span>
     <span class="chip" data-c="tool">jonli agent</span>
     <span class="chip" data-c="data">8 ta bonus skill</span>
   </div>`,

@@ -159,11 +159,11 @@ const program = {
 // ---------------------------------------------------------------- MAKTAB
 const LAYERS = [
   ['M', 'Maqsad', 'Nima kerak va nima uchun', 'Maqsad: kechikkan buyurtma haqidagi shikoyatga javob yoz — mijoz bizda qolsin.', 'prompt'],
-  ['A', 'Agar', 'Shartlar, cheklovlar, istisnolar', 'Agar buyurtma raqami yoʻq boʻlsa — avval uni soʻra. Chegirma 10% dan oshmasin.', 'danger'],
+  ['A', 'Agar', 'Shartlar va cheklovlar', 'Agar buyurtma raqami yoʻq boʻlsa — avval uni soʻra. Chegirma 10% dan oshmasin.', 'danger'],
   ['K', 'Kontekst', 'Kim, kim uchun, qanday vaziyatda', 'Sen — onlayn doʻkon yordam xizmati mutaxassissan. Mijoz 2 yildan beri xarid qiladi.', 'model'],
   ['T', 'Tuzilma', 'Javob formati va hajmi', 'Format: 1) uzr 2) yechim 3) keyingi qadam. 80 soʻzdan oshmasin.', 'tool'],
   ['A', 'Andoza', 'Namuna va misollar', '<misol>Hurmatli Aziza opa, kechikish uchun uzr soʻraymiz…</misol>', 'data'],
-  ['B', 'Baholash', 'Muvaffaqiyat mezoni va oʻz-oʻzini tekshirish', 'Yuborishdan oldin tekshir: yechim aniqmi? Ohang samimiymi?', 'prompt'],
+  ['B', 'Baholash', 'Yaxshi javob talabi va oʻzini tekshirish', 'Yuborishdan oldin tekshir: yechim aniqmi? Ohang samimiymi?', 'prompt'],
 ];
 
 const maktab = {
@@ -233,11 +233,11 @@ const maktab = {
 };
 
 // ---------------------------------------------------------------- Agar (logic)
-const AGAR = `Mijoz xabarini tasnifla va shunday harakat qil:
+const AGAR = `Mijoz xabarining turini aniqla va shunday harakat qil:
 Agar maʼlumot yetarli boʻlmasa → taxmin qilma, soʻra.
-Agar toifa = "qaytarish" va ≤ 14 kun → yoʻriqnoma yubor.
-Agar toifa = "qaytarish" va > 14 kun → muqobil taklif qil.
-Agar toifa = "texnik" → 2 ta aniqlovchi savol ber.
+Agar turi = "qaytarish" va ≤ 14 kun → qaytarish tartibini yubor.
+Agar turi = "qaytarish" va > 14 kun → boshqa variant taklif qil.
+Agar turi = "texnik" → 2 ta savol berib, muammoni aniqla.
 Aks holda → operatorga yoʻnalt: {"handoff": true}`;
 
 const node = (x, y, w, h, t1, t2, c, cls = '') => `
@@ -256,12 +256,12 @@ const agar = {
   id: 'agar',
   act: 1,
   station: 1,
-  title: '«Agar» — promptdagi mantiq',
+  title: '«Agar» — promptdagi logika',
   time: 95,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode>M · <b>A</b> · K · T · A · B</div>
-    <h2 class="h1 kinetic"><span class="ink-cool">«Agar»</span> — promptdagi mantiq</h2>
+    <h2 class="h1 kinetic"><span class="ink-cool">«Agar»</span> — promptdagi logika</h2>
   </header>
   <div class="ag-grid">
     <div class="panel window ag-code" data-in="2" data-anim="left">
@@ -286,9 +286,9 @@ const agar = {
       ${node(20, 268, 180, 64, 'Mijoz xabari', '', 'text-2', 's0')}
       ${diamond(350, 300, 100, 62, 'Maʼlumot', 'yetarlimi?', 'prompt', 's1')}
       ${node(250, 86, 200, 64, 'Taxmin qilma —', 'aniqlab soʻra', 'danger', 's1')}
-      ${diamond(610, 300, 90, 58, 'Toifa?', '', 'model', 's2')}
-      ${node(752, 58, 220, 68, 'qaytarish · ≤14 kun', 'Yoʻriqnoma', 'data', 's2')}
-      ${node(752, 188, 220, 68, 'qaytarish · >14 kun', 'Muqobil taklif', 'tool', 's2')}
+      ${diamond(610, 300, 90, 58, 'Turi?', '', 'model', 's2')}
+      ${node(752, 58, 220, 68, 'qaytarish · ≤14 kun', 'Qaytarish tartibi', 'data', 's2')}
+      ${node(752, 188, 220, 68, 'qaytarish · >14 kun', 'Boshqa variant', 'tool', 's2')}
       ${node(752, 318, 220, 68, 'texnik', '2 ta savol', 'model', 's3')}
       ${node(752, 448, 220, 68, 'aks holda', 'Operatorga', 'text-2', 's4')}
     </svg>
@@ -322,7 +322,7 @@ const XMLP = `<hujjat>
 </hujjat>
 <qoidalar>
   Faqat hujjatdagi maʼlumotga tayan.
-  Har bir javobga hujjatdan iqtibos keltir.
+  Har bir javobga hujjatdan aniq parcha keltir.
 </qoidalar>
 <savol>
   Shartnomani muddatidan oldin bekor qilsa boʻladimi?
@@ -331,14 +331,14 @@ const SCHEMA = `{
   "type": "object",
   "properties": {
     "javob":   { "enum": ["ha", "yoʻq", "shartli"] },
-    "iqtibos": { "type": "string" },
+    "manba":   { "type": "string" },
     "ishonch": { "type": "number" }
   },
-  "required": ["javob", "iqtibos"]
+  "required": ["javob", "manba"]
 }`;
 const OUT = `{
   "javob": "shartli",
-  "iqtibos": "7.2-band: 60 kun oldin yozma xabar berilsa…",
+  "manba": "7.2-band: 60 kun oldin yozma xabar berilsa…",
   "ishonch": 0.92
 }`;
 
@@ -375,7 +375,7 @@ const tuzilma = {
         <pre class="code window-body">${codeLines(OUT, 'json')}</pre>
         <div class="tz-checks">
           <span class="chip" data-c="data">✓ javob ∈ enum</span>
-          <span class="chip" data-c="data">✓ iqtibos — matn</span>
+          <span class="chip" data-c="data">✓ manba — hujjatdan</span>
           <span class="chip" data-c="data">✓ majburiy maydonlar bor</span>
         </div>
       </div>
@@ -405,7 +405,7 @@ const andoza = {
         <h2 class="h1 kinetic"><span class="ink-cool">Andoza:</span> bitta yaxshi misol oʻnta qoidadan kuchli</h2>
       </header>
       <ul class="an-tips">
-        <li data-in="3">Misollar <b>xilma-xil</b> boʻlsin: oddiy, murakkab va chegaraviy holat.</li>
+        <li data-in="3">Misollar <b>xilma-xil</b> boʻlsin: oddiy, murakkab va nostandart holat.</li>
         <li data-in="4">Misollarni <b class="hl-model">&lt;misol&gt;</b> teglariga oʻrang — qoidalardan ajralib tursin.</li>
         <li data-in="5">Model misoldagi <b class="hl-danger">hamma narsani</b> koʻchiradi: uzunlikni ham, xatoni ham.</li>
       </ul>
@@ -420,7 +420,7 @@ const andoza = {
         ${Array.from({ length: DOTS }, (_, i) => `<circle class="an-dot" r="7" data-i="${i}"/>`).join('')}
       </svg>
       <div class="an-examples" data-step="1">
-        <span class="mono">&lt;misol&gt; oddiy</span><span class="mono">&lt;misol&gt; murakkab</span><span class="mono">&lt;misol&gt; chegaraviy</span>
+        <span class="mono">&lt;misol&gt; oddiy</span><span class="mono">&lt;misol&gt; murakkab</span><span class="mono">&lt;misol&gt; nostandart</span>
       </div>
     </div>
   </div>`,
@@ -453,7 +453,7 @@ const OLD = `Qadam-baqadam oʻyla.
 3) Soʻng ularni tartibla.
 4) Oxirida xulosa chiqar.`;
 const NEW = `<maqsad>Investor 1 daqiqada oʻqiydigan xulosa.</maqsad>
-<mezon>Raqamlar aniq, xavflar yashirilmagan.</mezon>
+<talab>Raqamlar aniq, xavflar yashirilmagan.</talab>
 <cheklov>120 soʻz. Jargon yoʻq.</cheklov>
 Javob berishdan oldin raqamlarni manba bilan solishtir.`;
 
@@ -461,12 +461,12 @@ const fikrlash = {
   id: 'fikrlash',
   act: 1,
   station: 1,
-  title: 'Fikrlovchi modellar',
+  title: 'Reasoning modellar',
   time: 90,
   html: `
   <header class="head">
-    <div class="eyebrow" data-in="0" data-decode>Reasoning · 2026</div>
-    <h2 class="h1 kinetic">Fikrlovchi modellar: <span class="ink-cool">qadamni emas, maqsadni bering</span></h2>
+    <div class="eyebrow" data-in="0" data-decode>Yangi avlod · 2026</div>
+    <h2 class="h1 kinetic">Reasoning modellar: <span class="ink-cool">qadamni emas, maqsadni bering</span></h2>
   </header>
   <div class="fk-grid">
     <div class="panel window fk-old" data-in="2" data-anim="left">
@@ -475,7 +475,7 @@ const fikrlash = {
     </div>
     <div class="fk-vs mono" data-in="3" aria-hidden="true">→</div>
     <div class="panel window fk-new" data-in="4" data-anim="right">
-      <div class="window-bar"><i></i><i></i><i></i><span>hozir · maqsad + mezon</span></div>
+      <div class="window-bar"><i></i><i></i><i></i><span>hozir · maqsad + talab</span></div>
       <pre class="code window-body">${codeLines(NEW, 'prompt')}</pre>
     </div>
   </div>
@@ -692,12 +692,12 @@ const chain = {
   id: 'chain',
   act: 1,
   station: 2,
-  title: 'Bitta ulkan prompt oʻrniga — zanjir',
+  title: 'Bitta ulkan prompt oʻrniga — chain',
   time: 75,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--model)">Dekompozitsiya</div>
-    <h2 class="h1 kinetic">Bitta ulkan prompt oʻrniga — <span class="ink">zanjir</span></h2>
+    <h2 class="h1 kinetic">Bitta ulkan prompt oʻrniga — <span class="ink">chain</span></h2>
   </header>
   <div class="ch-stage">
     <div class="ch-mono panel">
@@ -708,17 +708,17 @@ const chain = {
       ${LINKS.map(
         ([n, t, d, c], i) => `
         <div class="ch-link panel" style="--c:var(--${c})"><span class="mono">${n}</span><b>${t}</b><em>${d}</em></div>
-        ${i < LINKS.length - 1 ? `<div class="ch-contract" data-k="${i}"><i></i><span class="mono">${i === 1 ? 'darvoza ✓' : 'JSON'}</span></div>` : ''}`,
+        ${i < LINKS.length - 1 ? `<div class="ch-contract" data-k="${i}"><i></i><span class="mono">${i === 1 ? 'tekshiruv ✓' : 'JSON'}</span></div>` : ''}`,
       ).join('')}
     </div>
   </div>
   <div class="ch-benefits" data-step="2">
-    <span class="chip" data-c="prompt">Har bir halqa — bitta vazifa</span>
-    <span class="chip" data-c="model">Halqalar orasida — aniq format</span>
+    <span class="chip" data-c="prompt">Har bir qadam — bitta vazifa</span>
+    <span class="chip" data-c="model">Qadamlar orasida — aniq format</span>
     <span class="chip" data-c="tool">Xato qayerda ekani darhol koʻrinadi</span>
-    <span class="chip" data-c="data">Har bir halqa alohida test qilinadi</span>
+    <span class="chip" data-c="data">Har bir qadam alohida test qilinadi</span>
   </div>
-  <p class="ch-tease" data-step="3">Keyingi qadam: zanjirga <b class="ink-warm">qoʻl</b> qoʻshamiz →</p>`,
+  <p class="ch-tease" data-step="3">Keyingi qadam: chain’ga <b class="ink-warm">qoʻl</b> qoʻshamiz →</p>`,
   setup(el) {
     this.mono = el.querySelector('.ch-mono');
     this.links = [...el.querySelectorAll('.ch-link')];

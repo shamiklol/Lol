@@ -18,7 +18,7 @@ export const ERRORS = {
   rate_limited: 'Soʻrovlar koʻpayib ketdi. Bir daqiqadan keyin qayta urinib koʻring.',
   session_expired: 'Claude.ai’ga qayta kiring.',
   refused: 'Claude bu soʻrovni bajarmadi. Vazifani boshqacha yozib koʻring.',
-  tools_unavailable: 'Bu koʻrinishda vositalar ishlamaydi. Yozib olingan namoyish koʻrsatiladi.',
+  tools_unavailable: 'Bu koʻrinishda tool’lar ishlamaydi. Yozib olingan namoyish koʻrsatiladi.',
   auth: 'API kaliti notoʻgʻri. Sozlamalarda (vergul tugmasi) tekshiring.',
   offline: 'Jonli rejim yoqilmagan: yozib olingan namoyish koʻrsatiladi.',
   network: 'Tarmoq bilan aloqa uzildi. Yozib olingan namoyish koʻrsatiladi.',

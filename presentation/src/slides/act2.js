@@ -61,11 +61,11 @@ const hands = {
       <div class="hd-lim panel" data-in="2"><b class="mono">01</b><div><h3 class="h3">Bilimi muzlatilgan</h3><p class="body">Oʻqitilgan sanadan keyingi voqealarni bilmaydi.</p></div></div>
       <div class="hd-lim panel" data-in="3"><b class="mono">02</b><div><h3 class="h3">Hisobda adashadi</h3><p class="body">Katta sonlar va aniq hisob — zaif joyi.</p></div></div>
       <div class="hd-lim panel" data-in="4"><b class="mono">03</b><div><h3 class="h3">Harakat qila olmaydi</h3><p class="body">Xat yubora olmaydi, bazaga yoza olmaydi.</p></div></div>
-      <p class="hd-eq" data-step="1"><span class="hl-tool">Vosita (tool)</span> = modelning <b class="ink-warm">qoʻli</b></p>
+      <p class="hd-eq" data-step="1"><span class="hl-tool">Tool</span> = modelning <b class="ink-warm">qoʻli</b></p>
     </div>
     <div class="hd-right" data-step="1" data-anim="right">
       <div class="panel window hd-code">
-        <div class="window-bar"><i></i><i></i><i></i><span>vosita tavsifi · JSON</span></div>
+        <div class="window-bar"><i></i><i></i><i></i><span>tool tavsifi · JSON</span></div>
         <pre class="code window-body">${codeLines(TOOL_DEF, 'json')}</pre>
       </div>
       <div class="hd-call hd-c1" data-step="2"><b>name</b> — nima qilishini aytadi</div>
@@ -86,7 +86,7 @@ const LANES = [
   ['Foydalanuvchi', 'text-2', 150],
   ['Ilova · sizning kodingiz', 'prompt', 620],
   ['Claude', 'model', 1090],
-  ['Vosita · API', 'tool', 1520],
+  ['Tool · API', 'tool', 1520],
 ];
 const MSGS = [
   [0, 1, '«Ertaga Samarqandda yomgʻir yogʻadimi?»', 'text-2'],
@@ -128,7 +128,7 @@ const flow = {
     }).join('')}
   </svg>
   <div class="sq-stop chip" data-c="model" data-step="3" data-anim="scale">stop_reason: "tool_use"</div>
-  <div class="sq-punch panel" data-step="8" data-anim="up">Model vositani <b class="hl-danger">oʻzi ishga tushirmaydi</b> — faqat soʻraydi. Bajaradigan — <b class="hl-prompt">sizning kodingiz</b>.</div>`,
+  <div class="sq-punch panel" data-step="8" data-anim="up">Model tool’ni <b class="hl-danger">oʻzi ishga tushirmaydi</b> — faqat soʻraydi. Bajaradigan — <b class="hl-prompt">sizning kodingiz</b>.</div>`,
   setup(el) {
     this.msgs = [...el.querySelectorAll('.sq-msg')];
   },
@@ -182,12 +182,12 @@ const loop = {
   id: 'loop',
   act: 2,
   station: 4,
-  title: 'Agent = model + vositalar + sikl',
+  title: 'Agent = model + tool’lar + sikl',
   time: 80,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--data)">Agent formulasi</div>
-    <h2 class="h1 kinetic">Agent = model + vositalar + <span class="ink-warm">sikl</span></h2>
+    <h2 class="h1 kinetic">Agent = model + tool’lar + <span class="ink-warm">sikl</span></h2>
   </header>
   <div class="lp-grid">
     <div class="panel window lp-code" data-in="2" data-anim="left">
@@ -229,35 +229,35 @@ const loop = {
 
 // ---------------------------------------------------------------- Patterns
 const P = [
-  ['Ketma-ket zanjir', 'Bir halqaning chiqishi — keyingisining kirishi. Oraliqda darvoza.', 'reja → matn → tarjima', 'prompt',
+  ['Ketma-ket chain', 'Bir qadamning natijasi keyingi qadamga uzatiladi. Oraliqda tekshiruv.', 'reja → matn → tarjima', 'prompt',
     `<path class="pt-p" d="M30 75 H330"/><circle class="pt-n" cx="30" cy="75" r="14"/><circle class="pt-n" cx="130" cy="75" r="14"/><rect class="pt-g" x="215" y="61" width="28" height="28" transform="rotate(45 229 75)"/><circle class="pt-n" cx="330" cy="75" r="14"/>`],
-  ['Yoʻnaltirish', 'Kirishni tasniflab, mos yoʻlga yuborish.', 'savol · shikoyat · qaytarish', 'model',
+  ['Routing', 'Soʻrov turini aniqlab, mos yoʻlga yuborish.', 'savol · shikoyat · qaytarish', 'model',
     `<path class="pt-p" d="M30 75 H120"/><path class="pt-p" d="M150 75 C220 75 220 25 320 25"/><path class="pt-p" d="M150 75 H320"/><path class="pt-p" d="M150 75 C220 75 220 125 320 125"/><circle class="pt-n" cx="30" cy="75" r="14"/><rect class="pt-g" x="118" y="61" width="28" height="28" transform="rotate(45 132 75)"/><circle class="pt-n" cx="330" cy="25" r="12"/><circle class="pt-n" cx="330" cy="75" r="12"/><circle class="pt-n" cx="330" cy="125" r="12"/>`],
-  ['Parallellashtirish', 'Boʻlaklarga boʻlib yoki bir necha ovoz bilan bir vaqtda ishlash.', 'kodni 3 tomondan tekshirish', 'tool',
+  ['Parallel ishlash', 'Bir vaqtda bir necha model ishlaydi: vazifani boʻlib yoki ovoz berib.', 'kodni 3 tomondan tekshirish', 'tool',
     `<path class="pt-p" d="M30 75 C100 75 100 25 180 25 C260 25 260 75 330 75"/><path class="pt-p" d="M30 75 H330"/><path class="pt-p" d="M30 75 C100 75 100 125 180 125 C260 125 260 75 330 75"/><circle class="pt-n" cx="30" cy="75" r="14"/><circle class="pt-n" cx="180" cy="25" r="12"/><circle class="pt-n" cx="180" cy="75" r="12"/><circle class="pt-n" cx="180" cy="125" r="12"/><circle class="pt-n" cx="330" cy="75" r="14"/>`],
   ['Orkestrator va ishchilar', 'Bosh model vazifani oʻzi boʻladi va ishchilarga tarqatadi.', 'koʻp faylli kod oʻzgarishi', 'data',
     `<path class="pt-p" d="M60 75 L200 20"/><path class="pt-p" d="M60 75 L200 60"/><path class="pt-p" d="M60 75 L200 100"/><path class="pt-p" d="M60 75 L200 140"/><path class="pt-p" d="M200 20 L330 75 M200 60 L330 75 M200 100 L330 75 M200 140 L330 75"/><circle class="pt-n pt-big" cx="60" cy="75" r="22"/><circle class="pt-n" cx="200" cy="20" r="10"/><circle class="pt-n" cx="200" cy="60" r="10"/><circle class="pt-n" cx="200" cy="100" r="10"/><circle class="pt-n" cx="200" cy="140" r="10"/><circle class="pt-n" cx="330" cy="75" r="14"/>`],
-  ['Baholovchi va yaxshilovchi', 'Biri yozadi, ikkinchisi baholaydi — mezonga yetguncha.', 'adabiy tarjima', 'prompt',
+  ['Yozuvchi va tekshiruvchi', 'Biri yozadi, ikkinchisi tekshiradi — natija yaxshi boʻlguncha.', 'adabiy tarjima', 'prompt',
     `<path class="pt-p" d="M90 60 C170 10 190 10 270 60"/><path class="pt-p" d="M270 90 C190 140 170 140 90 90"/><circle class="pt-n pt-big" cx="70" cy="75" r="24"/><circle class="pt-n pt-big" cx="290" cy="75" r="24"/><text x="70" y="81" text-anchor="middle" class="pt-t">yoz</text><text x="290" y="81" text-anchor="middle" class="pt-t">baho</text>`],
-  ['Avtonom agent', 'Reja, vositalar va toʻxtash vaqtini model oʻzi tanlaydi.', 'kodlash agenti', 'tool',
+  ['Avtonom agent', 'Reja, tool’lar va qachon toʻxtashni model oʻzi tanlaydi.', 'kodlash agenti', 'tool',
     `<circle class="pt-p" cx="180" cy="75" r="58"/><circle class="pt-n pt-big" cx="180" cy="75" r="22"/><rect class="pt-h" x="36" y="18" width="34" height="34" rx="6"/><rect class="pt-h" x="36" y="98" width="34" height="34" rx="6"/><rect class="pt-h" x="290" y="18" width="34" height="34" rx="6"/><rect class="pt-h" x="290" y="98" width="34" height="34" rx="6"/><path class="pt-p" d="M70 35 L150 62 M70 115 L150 88 M290 35 L210 62 M290 115 L210 88"/>`],
 ];
 const patterns = {
   id: 'patterns',
   act: 2,
   station: 4,
-  title: 'Zanjirning 6 naqshi',
+  title: 'Chaining: 6 ta pattern',
   time: 200,
   html: `
   <header class="head pt-head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--model)">Anthropic · Building Effective Agents</div>
-    <h2 class="h1 kinetic">Zanjirning <span class="ink">6 naqshi</span></h2>
+    <h2 class="h1 kinetic">Chaining: <span class="ink">6 ta pattern</span></h2>
   </header>
   <div class="pt-grid">
     ${P.map(
       ([t, d, ex, c, svg], i) => `
       <article class="pt-card panel" data-p="${i + 1}" style="--c:var(--${c})" data-in="${2 + i * 0.5}" data-anim="flip">
-        <div class="pt-top"><span class="mono">0${i + 1}</span><span class="chip">${i < 5 ? 'ish oqimi' : 'agent'}</span></div>
+        <div class="pt-top"><span class="mono">0${i + 1}</span><span class="chip">${i < 5 ? 'workflow' : 'agent'}</span></div>
         <svg viewBox="0 0 360 150" class="pt-svg" aria-hidden="true">${svg}<circle class="pt-pk" r="7" cx="-20" cy="-20"/></svg>
         <h3 class="h3">${t}</h3>
         <p class="small">${d}</p>
@@ -265,7 +265,7 @@ const patterns = {
       </article>`,
     ).join('')}
   </div>
-  <div class="pt-punch panel" data-step="7" data-anim="up"><b>Oddiydan boshlang.</b> Murakkablikni faqat natija talab qilsa qoʻshing: bitta prompt → zanjir → ish oqimi → agent.</div>`,
+  <div class="pt-punch panel" data-step="7" data-anim="up"><b>Oddiydan boshlang.</b> Murakkablikni faqat natija talab qilsa qoʻshing: bitta prompt → chain → workflow → agent.</div>`,
   setup(el) {
     this.cards = [...el.querySelectorAll('.pt-card')];
   },
@@ -310,12 +310,12 @@ const aci = {
   id: 'aci',
   act: 2,
   station: 4,
-  title: 'Vosita tavsifi — bu ham prompt',
+  title: 'Tool tavsifi — bu ham prompt',
   time: 80,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Agent–kompyuter interfeysi</div>
-    <h2 class="h1 kinetic">Vosita tavsifi — <span class="ink-warm">bu ham prompt</span></h2>
+    <h2 class="h1 kinetic">Tool tavsifi — <span class="ink-warm">bu ham prompt</span></h2>
   </header>
   <div class="ac-grid">
     <div class="ac-col">
@@ -326,8 +326,8 @@ const aci = {
       <ol class="ac-rules">
         <li data-step="1"><b>Nom</b> — aniq va prefiks bilan: crm_search, crm_update</li>
         <li data-step="2"><b>Tavsif</b> — yangi xodimga tushuntirgandek: qachon ishlatish va qachon emas</li>
-        <li data-step="3"><b>Xato matni</b> — oʻrgatsin: «sana YYYY-MM-DD formatida boʻlsin»</li>
-        <li data-step="4"><b>Kam, lekin aniq</b>: 40 ta mayda emas, 8 ta kuchli vosita</li>
+        <li data-step="3"><b>Xato matni</b> — nima qilishni aytsin: «sana YYYY-MM-DD formatida boʻlsin»</li>
+        <li data-step="4"><b>Kam, lekin aniq</b>: 40 ta mayda emas, 8 ta kuchli tool</li>
         <li data-step="5"><b>Qisqa natija</b> — faqat kerakli maʼlumot: kontekst qimmat</li>
       </ol>
     </div>
@@ -400,20 +400,20 @@ const mcp = {
 // ---------------------------------------------------------------- Context engineering
 const SEGS = [
   ['Tizim prompti', 6, 6, 'prompt'],
-  ['Vositalar tavsifi', 14, 6, 'tool'],
+  ['Tool’lar tavsifi', 14, 6, 'tool'],
   ['Suhbat tarixi', 26, 9, 'model'],
   ['Hujjatlar', 30, 12, 'data'],
-  ['Vosita natijalari', 34, 10, 'danger'],
+  ['Tool natijalari', 34, 10, 'danger'],
 ];
 const context = {
   id: 'context',
   act: 2,
   station: 4,
-  title: 'Kontekst muhandisligi',
+  title: 'Context engineering',
   time: 95,
   html: `
   <header class="head">
-    <div class="eyebrow" data-in="0" data-decode style="--accent:var(--data)">Context engineering</div>
+    <div class="eyebrow" data-in="0" data-decode style="--accent:var(--data)">Kontekst</div>
     <h2 class="h1 kinetic">Kontekst — <span class="ink-warm">cheklangan ish stoli</span></h2>
   </header>
   <div class="cx-bar-wrap" data-in="2" data-anim="fade">
@@ -430,7 +430,7 @@ const context = {
     <div class="cx-t panel" data-step="2" data-delay="0.2"><b>Subagentlar</b><span>har biri toza kontekstda ishlaydi, faqat xulosa qaytaradi</span></div>
     <div class="cx-t panel" data-step="2" data-delay="0.3"><b>Skills</b><span>avval faqat nom va tavsif — kerak boʻlsa toʻliq ochiladi</span></div>
   </div>
-  <div class="cx-quote" data-step="3">Prompt muhandisligi — <b class="hl-prompt">nima deyish</b>. Kontekst muhandisligi — <b class="ink-warm">model nimani koʻrishi</b>.</div>`,
+  <div class="cx-quote" data-step="3">Prompt engineering — <b class="hl-prompt">nima deyish</b>.<br>Context engineering — <b class="ink-warm">model nimani koʻrishi</b>.</div>`,
   setup(el) {
     this.segs = [...el.querySelectorAll('.cx-seg')];
     this.over = el.querySelector('[data-over]');
@@ -455,9 +455,9 @@ const context = {
 // ---------------------------------------------------------------- Failures & defenses
 const FAILS = [
   ['Cheksiz sikl', 'Qadamlar limiti va byudjet'],
-  ['Toʻqib chiqarilgan parametr', 'Sxema tekshiruvi + oʻrgatuvchi xato matni'],
-  ['Prompt injection (vosita natijasida)', 'Tashqi matn — buyruq emas, maʼlumot. Ruxsatlar minimal'],
-  ['Notoʻgʻri vosita tanlash', 'Aniq tavsif, kamroq vosita'],
+  ['Oʻylab topilgan parametr', 'Sxema tekshiruvi + tushunarli xato matni'],
+  ['Prompt injection (tool natijasida)', 'Tashqi matn — buyruq emas, maʼlumot. Ruxsatlar minimal'],
+  ['Notoʻgʻri tool tanlash', 'Aniq tavsif, kamroq tool'],
   ['Qaytarib boʻlmaydigan harakat', 'Inson tasdigʻi (human-in-the-loop)'],
   ['«Qora quti»', 'Trace, log va evallar'],
 ];

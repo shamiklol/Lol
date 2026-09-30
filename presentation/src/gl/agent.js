@@ -170,7 +170,7 @@ export class AgentScene {
     const texts = [
       'ROL: Shams.labs demo agenti   ·   ',
       'MAQSAD: vazifani oxirigacha bajarish   ·   ',
-      'QOIDALAR: faqat vosita maʼlumotiga tayan · taxmin qilma · 8 qadamdan oshma   ·   ',
+      'QOIDALAR: faqat tool maʼlumotiga tayan · taxmin qilma · 8 qadamdan oshma   ·   ',
     ];
     this.rings = texts.map((text, i) => {
       const tex = ringTexture(text);

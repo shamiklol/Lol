@@ -18,7 +18,7 @@ export function glowTexture(size = 128, inner = 'rgba(255,255,255,1)', mid = 'rg
 // Real sub-word pieces as a tokenizer would cut them (Uzbek, English, code).
 export const TOKENS = [
   'prompt', ' agent', 'tool_use', ' Agar', ' oʻ', 'zg', 'lar', '{', '}', '</', 'json', ' model',
-  'ing', ' the', ' kontekst', ' vosita', ' sikl', 'stop_reason', ' MCP', ' zanjir', 'iy', 'ʼ',
+  'ing', ' the', ' kontekst', ' logika', ' sikl', 'stop_reason', ' MCP', ' tools', 'iy', 'ʼ',
   ' maqsad', ' think', ' act', ' observe', 'input_schema', ' result', ' tahl', 'il', ' javob', ' token',
   '=>', ' if', ' else', ' return', ' loop', ' memory', ' skill', ' chain', 'tool_result', '"name"',
   ' Sun', 'elle', 'kt', ' bug', 'un', ' xot', 'ira', ' reja', '<maqsad>', ' natija', ' format', '[]',

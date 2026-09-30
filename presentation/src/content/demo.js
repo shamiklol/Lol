@@ -66,7 +66,7 @@ export function createDemoTools(ui) {
     },
     {
       name: 'calculate',
-      description: 'Arifmetik ifodani aniq hisoblaydi. Faqat raqamlar, + - * / va qavslar. Masalan: 450000*2 + 180000*3. Hisob-kitobni hech qachon oʻzing qilma — shu vositadan foydalan.',
+      description: 'Arifmetik ifodani aniq hisoblaydi. Faqat raqamlar, + - * / va qavslar. Masalan: 450000*2 + 180000*3. Hisob-kitobni hech qachon oʻzing qilma — shu tool’dan foydalan.',
       input_schema: {
         type: 'object',
         properties: { expression: { type: 'string', description: 'Ifoda, masalan: (3*120000)*2' } },
@@ -140,13 +140,13 @@ export function createDemoTools(ui) {
   ];
 }
 
-export const AGENT_RULES = `Sen — Shams.labs taqdimotidagi demo agentsan. Foydalanuvchi vazifasini berilgan vositalar yordamida bajar.
+export const AGENT_RULES = `Sen — Shams.labs taqdimotidagi demo agentsan. Foydalanuvchi vazifasini berilgan tool’lar yordamida bajar.
 Qoidalar:
-- Faqat vositalar qaytargan maʼlumotga tayan, hech narsani oʻylab topma.
-- Bir-biriga bogʻliq boʻlmagan vositalarni bir vaqtda (parallel) chaqir.
-- Hisob-kitobni oʻzing qilma — calculate vositasidan foydalan.
+- Faqat tool’lar qaytargan maʼlumotga tayan, hech narsani oʻylab topma.
+- Bir-biriga bogʻliq boʻlmagan tool’larni bir vaqtda (parallel) chaqir.
+- Hisob-kitobni oʻzing qilma — calculate tool’idan foydalan.
 - Oxirida create_report bilan hisobot tuz; vazifada yuborish soʻralgan boʻlsa, send_message bilan yubor.
-- 8 ta vosita chaqiruvidan oshma.
+- 8 ta tool chaqiruvidan oshma.
 - Yakuniy javobni oʻzbek tilida, 3–4 gapda yoz.`;
 
 export const PRESETS = [
@@ -197,7 +197,7 @@ export const TRACE_REPORTS = {
     title: 'Oktabrdagi AI tadbirlari',
     sections: [
       { heading: 'Tavsiya', text: 'AI Builders Meetup — 10-oktabr, bepul, havo quyoshli (+21°C).' },
-      { heading: 'Muqobil', text: 'Prompt Engineering Workshop — 17-oktabr, 150 000 soʻm, yomgʻir ehtimoli 60%.' },
+      { heading: 'Zaxira variant', text: 'Prompt Engineering Workshop — 17-oktabr, 150 000 soʻm, yomgʻir ehtimoli 60%.' },
       { heading: 'Keyingi qadam', text: 'Roʻyxatdan oʻtish havolasini jamoaga yuborish.' },
     ],
     message: ['Jamoa (Telegram)', 'Doʻstlar, 10-oktabr kuni AI Builders Meetup boʻladi — bepul, havo ham zoʻr. Boramizmi?'],

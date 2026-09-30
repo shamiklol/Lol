@@ -23,7 +23,7 @@ function qrBlock(label) {
 
 // ---------------------------------------------------------------- Ecosystem
 const ECO = [
-  ['Prompt ustaxonasi', 'prompt', ['Claude Console', 'OpenAI Playground', 'Google AI Studio']],
+  ['Promptni sinash', 'prompt', ['Claude Console', 'OpenAI Playground', 'Google AI Studio']],
   ['Agent SDK va freymvorklar', 'model', ['Claude Agent SDK', 'OpenAI Agents SDK', 'Google ADK', 'LangGraph', 'CrewAI', 'Microsoft Agent Framework', 'Mastra']],
   ['No-code avtomatlashtirish', 'tool', ['n8n', 'Make', 'Zapier', 'Dify', 'Flowise', 'Langflow']],
   ['Kodlash agentlari', 'data', ['Claude Code', 'Cursor', 'OpenAI Codex', 'GitHub Copilot']],
@@ -65,7 +65,7 @@ const ecosystem = {
     ).join('')}
   </div>
   <div class="eco-start panel" data-step="1" data-anim="up">
-    <b>Boshlash uchun:</b> Claude Console’da prompt → n8n yoki Agent SDK’da zanjir → MCP bilan vositalar → Langfuse bilan kuzatuv
+    <b>Boshlash uchun:</b> Claude Console’da prompt → n8n yoki Agent SDK’da chain → MCP bilan tool’lar → Langfuse bilan kuzatuv
   </div>`,
   enter(el) {
     const tl = gsap.timeline();
@@ -81,10 +81,10 @@ const SKILLS = [
   ['maktab-prompt', 'Xom soʻrovni MAKTAB boʻyicha kuchli promptga aylantiradi'],
   ['prompt-doctor', 'Promptdagi xatolarni topadi, tashxis qoʻyadi va tuzatadi'],
   ['prompt-evals', 'Test toʻplami, rubrika va LLM-hakam promptini yozadi'],
-  ['few-shot-studio', 'Xilma-xil va chegaraviy misollar toʻplamini tuzadi'],
+  ['few-shot-studio', 'Xilma-xil va nostandart misollar toʻplamini tuzadi'],
   ['structured-output', 'JSON sxema va unga qatʼiy mos javob beruvchi prompt'],
-  ['prompt-chain-architect', 'Vazifani halqalarga boʻladi, kontrakt va darvozalar bilan'],
-  ['tool-contract-writer', 'Agent vositalari uchun nom, tavsif va sxema yozadi'],
+  ['prompt-chain-architect', 'Vazifani qadamlarga boʻladi: kontrakt va tekshiruvlar bilan'],
+  ['tool-contract-writer', 'Agent tool’lari uchun nom, tavsif va sxema yozadi'],
   ['agent-system-prompt', 'Agent tizim prompti: rol, qoidalar, toʻxtash shartlari'],
 ];
 const bonus = {
@@ -97,7 +97,7 @@ const bonus = {
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Bonus · sizga sovgʻa</div>
-    <h2 class="h1 kinetic"><span class="ink-warm">8 ta skill</span> — prompt muhandisligi uchun</h2>
+    <h2 class="h1 kinetic"><span class="ink-warm">8 ta skill</span> — prompt engineering uchun</h2>
   </header>
   <div class="bn-wrap">
     <div class="bn-grid">
@@ -184,7 +184,7 @@ const meta = {
       ${BUILD.stats.map(([v, l]) => `<div><b class="tabular">${v}</b><span>${l}</span></div>`).join('')}
     </div>
   </div>
-  <p class="mt-punch" data-step="3">Bugungi hamma gʻoya — <b class="hl-prompt">prompt mantiqi</b>, <b class="hl-tool">vositalar zanjiri</b>, <b class="hl-data">sikl</b> — shu taqdimot ichida ishladi.</p>`,
+  <p class="mt-punch" data-step="3">Bugungi hamma gʻoya — <b class="hl-prompt">prompt logikasi</b>, <b class="hl-tool">tool&nbsp;chaining</b>, <b class="hl-data">sikl</b> — shu taqdimot ichida ishladi.</p>`,
   notes: NOTES.meta,
 };
 
@@ -203,8 +203,8 @@ const final = {
       <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Yakun · 3 ta asosiy fikr</div>
       <ol class="fn-list">
         <li data-in="1"><b>Prompt — dastur.</b> MAKTAB bilan yozing, eval bilan oʻlchang.</li>
-        <li data-in="2"><b>Vosita — modelning qoʻli.</b> Tavsif ham prompt.</li>
-        <li data-in="3"><b>Oddiydan boshlang:</b> prompt → zanjir → ish oqimi → agent.</li>
+        <li data-in="2"><b>Tool — modelning qoʻli.</b> Tavsif ham prompt.</li>
+        <li data-in="3"><b>Oddiydan boshlang:</b> prompt → chain → workflow → agent.</li>
       </ol>
       <h2 class="fn-q swarm-src ink">Savollar?</h2>
     </div>

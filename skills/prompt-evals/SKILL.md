@@ -24,7 +24,7 @@ A prompt without evals is a guess. This skill produces a small, honest evaluatio
 
 Reply in the user's language. Deliver:
 
-1. **Mezonlar** — numbered success criteria with the grader type (kod / LLM-hakam / inson).
+1. **Kriteriylar** — numbered success criteria with the grader type (kod / LLM-hakam / inson).
 2. **Test toʻplami** — a table or JSONL block: `id, input, tests_criteria, expected_or_must_include, type (typical/hard/edge), synthetic (yes/no)`.
 3. **LLM-hakam prompti** — ready to paste, one per subjective criterion.
 4. **Kod tekshiruvlari** — short snippets (Python or JS) for the deterministic criteria.

@@ -3,9 +3,9 @@ import { CONFIG } from '../config.js';
 
 export const STATIONS = [
   { name: 'Prompt', c: 'var(--prompt)' },
-  { name: 'Mantiq', c: 'var(--prompt)' },
-  { name: 'Zanjir', c: 'var(--model)' },
-  { name: 'Vositalar', c: 'var(--tool)' },
+  { name: 'Logika', c: 'var(--prompt)' },
+  { name: 'Chain', c: 'var(--model)' },
+  { name: 'Tool’lar', c: 'var(--tool)' },
   { name: 'Agent', c: 'var(--data)' },
 ];
 

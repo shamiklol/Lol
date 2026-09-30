@@ -6,7 +6,7 @@ export const BUILD = {
     ['Reja', 'plan', '45 daqiqalik sahna rejasi va MAKTAB freymvorki'],
     ['Kod', 'Write · Edit', 'dvigatel, 3D qatlam, slaydlar'],
     ['Tekshiruv', 'Playwright', 'har bir slayd skrinshot orqali koʻrib chiqildi'],
-    ['Video', 'ffmpeg', 'shoupis kadrma-kadr MP4 ga render qilindi'],
+    ['Video', 'ffmpeg', 'agent animatsiyasi kadrma-kadr MP4 ga render qilindi'],
     ['Nashr', 'git · Artifact', 'repozitoriy va maxfiy havola'],
   ],
   stats: [

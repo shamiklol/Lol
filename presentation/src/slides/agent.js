@@ -201,10 +201,10 @@ async function renderSoundtrack(from, to, { S, T0, rows, tools }) {
 const CAPS = [
   ['01', 'LLM', 'Miya bor, qoʻl yoʻq. Matn oladi — matn qaytaradi.'],
   ['02', 'Tizim prompti', 'Rol, maqsad va qoidalar — agentning xarakteri.'],
-  ['03', 'Vositalar', 'Har biri — aniq kontrakt: nom, tavsif, sxema.'],
+  ['03', 'Tool’lar', 'Har biri — aniq kontrakt: nom, tavsif, sxema.'],
   ['04', 'Xotira', 'Qisqa muddatli — kontekst. Uzoq muddatli — fayl va baza.'],
   ['05', 'Sikl', 'Oʻyla → Harakat qil → Kuzat. Vazifa bajarilguncha.'],
-  ['06', 'Ishga tushirish', 'Vazifa keldi: agent reja tuzadi va vositalarni zanjirga ulaydi.'],
+  ['06', 'Ishga tushirish', 'Vazifa keldi: agent reja tuzadi va tool’larni ketma-ket chaqiradi.'],
   ['07', 'Tayyor', ''],
 ];
 const STAGE_AT = [0, 7, 14, 27, 33, 40, 62, 71];
@@ -214,7 +214,7 @@ const assembly = {
   id: 'assembly',
   act: 2,
   station: 4,
-  title: 'Shoupis: agentni yigʻamiz',
+  title: 'Agentni yigʻamiz',
   time: 130,
   gl: 'agent',
   hideHud: false,
@@ -223,27 +223,27 @@ const assembly = {
   <div class="as-labels-wrap"><div class="as-labels ag-layer" aria-hidden="true"></div></div>
   <div class="as-shade" aria-hidden="true"></div>
   <div class="as-head">
-    <div class="eyebrow" data-decode style="--accent:var(--tool)">Shoupis · agent yigʻilmoqda</div>
+    <div class="eyebrow" data-decode style="--accent:var(--tool)">Demo · agent yigʻilmoqda</div>
   </div>
   <div class="as-caps">
     ${CAPS.map(([n, t, d], i) => `<div class="as-cap" data-c="${i}"><span class="as-num mono">${n}<i>/07</i></span><h3>${t}</h3>${d ? `<p>${d}</p>` : ''}</div>`).join('')}
   </div>
   <div class="as-task panel"><span class="chip" data-c="prompt">vazifa</span><p>${PRESETS[0].task}</p></div>
   <div class="as-trace panel">
-    <div class="as-trace-head mono"><span>trace</span><span>agent · 6 vosita</span></div>
+    <div class="as-trace-head mono"><span>trace</span><span>agent · 6 ta tool</span></div>
     <div class="as-trace-body"></div>
   </div>
   <div class="as-final">
     <h2 class="as-final-t">Bu — <span class="ink-warm">agent</span>.</h2>
-    <p class="as-final-s mono">model + prompt + vositalar + xotira + sikl</p>
+    <p class="as-final-s mono">model + prompt + tool’lar + xotira + sikl</p>
   </div>
-  <button class="btn as-play" data-play><span class="dot" style="color:var(--tool)"></span>Toʻliq ijro · 70 s</button>`,
+  <button class="btn as-play" data-play><span class="dot" style="color:var(--tool)"></span>Toʻliq koʻrish · 70 s</button>`,
   setup(el, ctx) {
     if (!ctx.gl) {
       gsap.set(el.querySelectorAll('.as-caps, .as-task, .as-trace, .as-play, .as-final'), { autoAlpha: 0 });
       el.insertAdjacentHTML(
         'beforeend',
-        `<div class="as-nogl"><h2 class="h1">Agent = <span class="ink-warm">5 qatlam</span></h2><div class="as-nogl-chain">${['LLM — miya', 'Tizim prompti', '6 ta vosita', 'Xotira', 'Sikl: Oʻyla → Harakat qil → Kuzat']
+        `<div class="as-nogl"><h2 class="h1">Agent = <span class="ink-warm">5 qatlam</span></h2><div class="as-nogl-chain">${['LLM — miya', 'Tizim prompti', '6 ta tool', 'Xotira', 'Sikl: Oʻyla → Harakat qil → Kuzat']
           .map((t, i) => `<span class="chip" data-c="${['model', 'prompt', 'tool', 'data', 'data'][i]}">${t}</span>`)
           .join('<span class="mono muted">+</span>')}</div></div>`,
       );
@@ -279,11 +279,11 @@ const assembly = {
     gsap.set(shade, { autoAlpha: 0 });
 
     const cam = gl.cam;
-    const orbit = { th: -0.3, r: 11, h: 3.2, x: 0 };
+    const orbit = { th: -0.3, r: 11, h: 3.2, x: 0, ly: 3.2 };
     const applyOrbit = () => {
       if (!this.active) return;
       cam.off.set(Math.sin(orbit.th) * orbit.r + orbit.x, orbit.h, Math.cos(orbit.th) * orbit.r);
-      cam.look.set(orbit.x, 3.2, 0);
+      cam.look.set(orbit.x, orbit.ly, 0);
     };
 
     const tl = gsap.timeline({ paused: true, defaults: { ease: 'power2.inOut' } });
@@ -296,8 +296,8 @@ const assembly = {
     tl.to(orbit, { r: 16.5, duration: 6 }, S[1]);
     tl.to(orbit, { r: 18.5, duration: 10 }, S[2]);
     tl.to(orbit, { r: 19.5, h: 3.6, duration: 8 }, S[4]);
-    tl.to(orbit, { x: 5.2, r: 21, duration: 2.4, ease: 'power3.inOut' }, S[5] + 2.4);
-    tl.to(orbit, { x: 0, r: 30, h: 4.4, duration: 6, ease: 'power3.inOut' }, S[6]);
+    tl.to(orbit, { x: 5.2, r: 21, ly: 1.7, duration: 2.4, ease: 'power3.inOut' }, S[5] + 2.4);
+    tl.to(orbit, { x: 0, r: 30, h: 4.4, ly: 3.2, duration: 6, ease: 'power3.inOut' }, S[6]);
 
     // captions: one visible per stage
     caps.forEach((c, i) => {

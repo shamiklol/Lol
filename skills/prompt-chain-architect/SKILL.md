@@ -26,7 +26,7 @@ Big prompts that collect, analyze, write and check at once do each part halfway.
 
 Reply in the user's language. Deliver:
 
-1. **Naqsh** — the chosen pattern and one sentence on why simpler/harder patterns were not chosen.
+1. **Pattern** — the chosen pattern and one sentence on why simpler/harder patterns were not chosen.
 2. **Diagramma** — a Mermaid flowchart of the steps, gates and branches.
 3. **Qadamlar jadvali** — step | vazifa | kirish | chiqish kontrakti | model/effort | xatoda nima qilinadi.
 4. **Promptlar** — a compact prompt skeleton per step (goal, conditions, output format).

@@ -11,8 +11,8 @@ export const BUILD = {
   ],
   stats: [
     ['29', 'slayd'],
-    ['—', 'qator kod'],
-    ['—', 'skrinshot tekshiruvi'],
-    ['—', 'commit'],
+    ['7 399', 'qator kod'],
+    ['202', 'skrinshot tekshiruvi'],
+    ['4 261', 'video kadr'],
   ],
 };

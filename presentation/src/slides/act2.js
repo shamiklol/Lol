@@ -84,7 +84,7 @@ const hands = {
 // ---------------------------------------------------------------- Function calling flow
 const LANES = [
   ['Foydalanuvchi', 'text-2', 150],
-  ['Ilova · sizning kod', 'prompt', 620],
+  ['Ilova · sizning kodingiz', 'prompt', 620],
   ['Claude', 'model', 1090],
   ['Vosita · API', 'tool', 1520],
 ];
@@ -426,7 +426,7 @@ const context = {
   </div>
   <div class="cx-tech">
     <div class="cx-t panel" data-step="2"><b>Siqish</b><span>eski tarix qisqa xulosaga aylanadi (compaction)</span></div>
-    <div class="cx-t panel" data-step="2" data-delay="0.1"><b>Kerak paytda yuklash</b><span>hujjatning faqat kerakli qismi olinadi</span></div>
+    <div class="cx-t panel" data-step="2" data-delay="0.1"><b>Kerak boʻlganda yuklash</b><span>hujjatning faqat kerakli qismi olinadi</span></div>
     <div class="cx-t panel" data-step="2" data-delay="0.2"><b>Subagentlar</b><span>har biri toza kontekstda ishlaydi, faqat xulosa qaytaradi</span></div>
     <div class="cx-t panel" data-step="2" data-delay="0.3"><b>Skills</b><span>avval faqat nom va tavsif — kerak boʻlsa toʻliq ochiladi</span></div>
   </div>

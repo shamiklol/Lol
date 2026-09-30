@@ -69,8 +69,8 @@ export const NOTES = {
 <p>Lekin ehtiyot boʻling: model misoldagi hamma narsani koʻchiradi. Misolingiz uch qator boʻlsa — javob ham uch qator. Misolda xato boʻlsa — xato ham koʻchadi. Shuning uchun misol tanlashga qoida yozishdan koʻra koʻproq vaqt ajrating.</p>`,
 
   fikrlash: `
-<p>2026-yildagi katta oʻzgarish — <b>fikrlovchi modellar</b>. Ilgari «qadam-baqadam oʻyla» deb, har bir qadamni yozib berardik. ${PAUZA}</p>
-<p>Bugungi modellar ichida oʻzi fikrlaydi va buni bizdan yaxshiroq rejalashtiradi. Shuning uchun endi qadamni emas, maqsadni beramiz: nima kerak, qanday mezon bilan, qanday cheklov bilan. Bitta qator qoʻshsak kifoya: «javobdan oldin raqamlarni manba bilan solishtir». ${KLIK}</p>
+<p>Soʻnggi ikki yilning katta oʻzgarishi — <b>fikrlovchi modellar</b>. Ilgari «qadam-baqadam oʻyla» deb, har bir qadamni yozib berardik. ${PAUZA}</p>
+<p>Bugungi modellar javob berishdan oldin oʻzi fikrlaydi va qadamlarni koʻpincha bizdan yaxshiroq rejalashtiradi. Shuning uchun endi qadamni emas, maqsadni beramiz: nima kerak, qanday mezon bilan, qanday cheklov bilan. Bitta qator qoʻshsak kifoya: «javobdan oldin raqamlarni manba bilan solishtir». ${KLIK}</p>
 <p>Qancha fikrlashni <b>effort</b> parametri bilan boshqaramiz. Oddiy vazifaga — low: tez va arzon. Murakkab tahlilga — high yoki max. Hamma narsaga max qoʻyish — vaqt va pulni behuda sarflash.</p>`,
 
   baholash: `
@@ -151,7 +151,7 @@ export const NOTES = {
   context: `
 <p>Birinchi qismda promptni qanday yozishni gapirdik. Agentlarda yangi savol paydo boʻladi: model aynan nimani koʻradi? ${KLIK}</p>
 <p>Kontekst oynasi — cheklangan ish stoli. Tizim prompti, vositalar tavsifi, suhbat tarixi, hujjatlar, vositalar natijalari — hammasi shu stolga sigʻishi kerak. Uzun ishda stol toʻlib ketadi va sifat tushadi. ${KLIK}</p>
-<p>Toʻrt usul bor. <b>Siqish</b> — eski tarix qisqa xulosaga aylanadi. <b>Kerak paytda yuklash</b> — butun hujjat emas, faqat kerakli qism. <b>Subagentlar</b> — har biri toza kontekstda ishlaydi va faqat xulosa qaytaradi. <b>Skills</b> — agent avval faqat skill nomi va tavsifini koʻradi, kerak boʻlgandagina toʻliq ochadi. ${KLIK}</p>
+<p>Toʻrt usul bor. <b>Siqish</b> — eski tarix qisqa xulosaga aylanadi. <b>Kerak boʻlganda yuklash</b> — butun hujjat emas, faqat kerakli qism. <b>Subagentlar</b> — har biri toza kontekstda ishlaydi va faqat xulosa qaytaradi. <b>Skills</b> — agent avval faqat skill nomi va tavsifini koʻradi, kerak boʻlgandagina toʻliq ochadi. ${KLIK}</p>
 <p>Qisqa qilib aytganda: prompt muhandisligi — nima deyish. Kontekst muhandisligi — model nimani koʻrishi.</p>`,
 
   failures: `

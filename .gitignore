@@ -3,3 +3,5 @@ presentation/dist/
 presentation/shots/
 *.log
 .DS_Store
+release/*.video.mp4
+release/*.wav

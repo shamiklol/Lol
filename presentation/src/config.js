@@ -14,5 +14,5 @@ export const CONFIG = {
   repos: [],
 
   // Model for the offline "API key" mode of the live labs.
-  apiModel: 'claude-sonnet-5-5',
+  apiModel: 'claude-opus-5-5',
 };

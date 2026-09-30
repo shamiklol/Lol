@@ -311,3 +311,6 @@ body.laser-on #viewport { cursor: none; }
 }
 .gate button:hover { color: var(--text); border-color: var(--prompt); }
 .gate button:focus-visible { outline: 2px solid var(--prompt); }
+
+/* clean frame for video export */
+body.render-mode .hud-top, body.render-mode .metro, body.render-mode .gate, body.render-mode .as-play, body.render-mode #fx-grain { display: none !important; }

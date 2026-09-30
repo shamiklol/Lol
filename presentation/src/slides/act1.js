@@ -160,10 +160,10 @@ const program = {
 const LAYERS = [
   ['M', 'Maqsad', 'Nima kerak va nima uchun', 'Maqsad: kechikkan buyurtma haqidagi shikoyatga javob yoz — mijoz bizda qolsin.', 'prompt'],
   ['A', 'Agar', 'Shartlar, cheklovlar, istisnolar', 'Agar buyurtma raqami yoʻq boʻlsa — avval uni soʻra. Chegirma 10% dan oshmasin.', 'danger'],
-  ['K', 'Kontekst', 'Kim, kim uchun, qanday vaziyatda', 'Sen — onlayn doʻkon yordam xizmati mutaxassisisan. Mijoz 2 yildan beri xarid qiladi.', 'model'],
+  ['K', 'Kontekst', 'Kim, kim uchun, qanday vaziyatda', 'Sen — onlayn doʻkon yordam xizmati mutaxassissan. Mijoz 2 yildan beri xarid qiladi.', 'model'],
   ['T', 'Tuzilma', 'Javob formati va hajmi', 'Format: 1) uzr 2) yechim 3) keyingi qadam. 80 soʻzdan oshmasin.', 'tool'],
   ['A', 'Andoza', 'Namuna va misollar', '<misol>Hurmatli Aziza opa, kechikish uchun uzr soʻraymiz…</misol>', 'data'],
-  ['B', 'Baholash', 'Muvaffaqiyat mezoni va oʻzini tekshirish', 'Yuborishdan oldin tekshir: yechim aniqmi? Ohang samimiymi?', 'prompt'],
+  ['B', 'Baholash', 'Muvaffaqiyat mezoni va oʻz-oʻzini tekshirish', 'Yuborishdan oldin tekshir: yechim aniqmi? Ohang samimiymi?', 'prompt'],
 ];
 
 const maktab = {
@@ -301,7 +301,7 @@ const agar = {
   },
   enter(el) {
     gsap.set(el.querySelectorAll('.fc-node:not(.s0), .fc-lab'), { autoAlpha: 0 });
-    gsap.set(this.edges, { drawSVG: '0%' });
+    gsap.set(this.edges, { drawSVG: '0%', autoAlpha: 0 });
   },
   step(el, ctx, n, info) {
     const d = info.instant ? 0 : 0.9;
@@ -310,7 +310,7 @@ const agar = {
     for (let s = 1; s <= 4; s++) {
       const on = n >= s;
       gsap.to(el.querySelectorAll(`.fc-node.s${s}, .fc-lab.s${s}`), { autoAlpha: on ? 1 : 0, scale: on ? 1 : 0.9, transformOrigin: '50% 50%', duration: d * 0.8, stagger: d ? 0.12 : 0, ease: 'expo.out' });
-      gsap.to(el.querySelectorAll(`.fc-e.s${s}`), { drawSVG: on ? '100%' : '0%', duration: d, ease: 'power2.inOut' });
+      gsap.to(el.querySelectorAll(`.fc-e.s${s}`), { drawSVG: on ? '100%' : '0%', autoAlpha: on ? 1 : 0, duration: d, ease: 'power2.inOut' });
     }
   },
   notes: NOTES.agar,

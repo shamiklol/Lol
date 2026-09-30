@@ -11,6 +11,7 @@ import { createSound } from './core/sound.js';
 import { store } from './core/store.js';
 import { live } from './core/live.js';
 import { slides } from './slides/index.js';
+import { THUMBS } from './content/thumbs.js';
 
 const $ = (s) => document.querySelector(s);
 
@@ -58,6 +59,7 @@ async function boot() {
   }
 
   const root = document.documentElement;
+  if (new URLSearchParams(location.search).has('render')) document.body.classList.add('render-mode');
   const theme = store.get('theme', 'dark');
   if (theme === 'light') root.dataset.deckTheme = 'light';
   const params = new URLSearchParams(location.search);
@@ -91,7 +93,7 @@ async function boot() {
   });
   deck.mount();
   createHud($('#hud'), deck);
-  const overview = createOverview($('#overlays'), deck, window.__THUMBS__ || {});
+  const overview = createOverview($('#overlays'), deck, THUMBS);
   const presenter = linkPresenter(deck, overlays);
 
   deck.addEventListener('change', ({ detail }) => {

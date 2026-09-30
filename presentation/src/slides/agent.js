@@ -43,6 +43,160 @@ export function summarize(name, r) {
   }
 }
 
+// Soundtrack for the exported video, synthesized offline and timed to the showpiece timeline.
+async function renderSoundtrack(from, to, { S, T0, rows, tools }) {
+  const sr = 48000;
+  const dur = to - from + 0.6;
+  const ctx = new OfflineAudioContext(2, Math.ceil(sr * dur), sr);
+  let seed = 11;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const T = (t) => t - from;
+
+  const comp = ctx.createDynamicsCompressor();
+  comp.threshold.value = -14;
+  comp.ratio.value = 3;
+  comp.connect(ctx.destination);
+  const master = ctx.createGain();
+  master.gain.value = 0.85;
+  master.connect(comp);
+  const ir = ctx.createBuffer(2, sr * 3, sr);
+  for (let ch = 0; ch < 2; ch++) {
+    const d = ir.getChannelData(ch);
+    for (let i = 0; i < d.length; i++) d[i] = (rnd() * 2 - 1) * Math.pow(1 - i / d.length, 3.2);
+  }
+  const conv = ctx.createConvolver();
+  conv.buffer = ir;
+  const wet = ctx.createGain();
+  wet.gain.value = 0.32;
+  conv.connect(wet).connect(master);
+  const bus = ctx.createGain();
+  bus.connect(master);
+  bus.connect(conv);
+  const noise = ctx.createBuffer(1, sr * 2, sr);
+  const nd = noise.getChannelData(0);
+  for (let i = 0; i < nd.length; i++) nd[i] = rnd() * 2 - 1;
+
+  const env = (g, t, a, peak, d) => {
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(peak, t + a);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + a + d);
+  };
+  const whoosh = (t, len = 1.3, peak = 0.22) => {
+    if (T(t) < 0) return;
+    const s = ctx.createBufferSource();
+    s.buffer = noise;
+    const f = ctx.createBiquadFilter();
+    f.type = 'bandpass';
+    f.Q.value = 1.2;
+    f.frequency.setValueAtTime(180, T(t));
+    f.frequency.exponentialRampToValueAtTime(3200, T(t) + len * 0.55);
+    f.frequency.exponentialRampToValueAtTime(600, T(t) + len);
+    const g = ctx.createGain();
+    env(g, T(t), len * 0.5, peak, len * 0.5);
+    s.connect(f).connect(g).connect(bus);
+    s.start(T(t));
+    s.stop(T(t) + len + 0.1);
+  };
+  const tone = (t, freq, type, peak, a, d, to = null) => {
+    if (T(t) < 0) return;
+    const o = ctx.createOscillator();
+    o.type = type;
+    o.frequency.setValueAtTime(freq, T(t));
+    if (to) o.frequency.exponentialRampToValueAtTime(to, T(t) + a + d);
+    const g = ctx.createGain();
+    env(g, T(t), a, peak, d);
+    o.connect(g).connect(bus);
+    o.start(T(t));
+    o.stop(T(t) + a + d + 0.05);
+  };
+  const snap = (t) => {
+    tone(t, 150, 'triangle', 0.5, 0.004, 0.28, 45);
+    tone(t, 1800, 'sine', 0.08, 0.002, 0.08, 900);
+    tone(t + 0.01, 1318.5, 'triangle', 0.06, 0.005, 0.6);
+  };
+  const tick = (t, f = 2400) => tone(t, f, 'sine', 0.05, 0.002, 0.06, f / 2);
+  const chord = (t, freqs, peak, len) => freqs.forEach((f, i) => tone(t + i * 0.06, f, 'sine', peak, 0.04, len));
+
+  // drone bed that opens up as the agent grows
+  const lp = ctx.createBiquadFilter();
+  lp.type = 'lowpass';
+  lp.Q.value = 0.7;
+  lp.frequency.setValueAtTime(260, 0);
+  lp.frequency.linearRampToValueAtTime(700, Math.max(0.1, T(S[5])));
+  lp.frequency.linearRampToValueAtTime(1100, Math.max(0.2, T(S[6] + 2)));
+  const drone = ctx.createGain();
+  drone.gain.setValueAtTime(0.0001, 0);
+  drone.gain.linearRampToValueAtTime(0.1, Math.max(0.1, T(4)));
+  drone.gain.linearRampToValueAtTime(0.14, Math.max(0.2, T(S[5])));
+  drone.gain.linearRampToValueAtTime(0.18, Math.max(0.3, T(S[6] + 2)));
+  drone.gain.linearRampToValueAtTime(0.0001, dur);
+  [55, 82.41, 110.3, 164.8, 220.6].forEach((f, i) => {
+    const o = ctx.createOscillator();
+    o.type = i < 2 ? 'sawtooth' : 'triangle';
+    o.frequency.value = f;
+    o.detune.value = i % 2 ? 6 : -6;
+    const g = ctx.createGain();
+    g.gain.value = i < 2 ? 0.3 : 0.16;
+    o.connect(g).connect(lp);
+    o.start(0);
+    o.stop(dur);
+  });
+  lp.connect(drone).connect(bus);
+
+  // core build sparkle
+  for (let i = 0; i < 26; i++) tone(0.8 + i * 0.18 + rnd() * 0.08, [880, 1046.5, 1318.5, 1760][i % 4] * (rnd() > 0.5 ? 1 : 0.5), 'sine', 0.025, 0.01, 0.5);
+  // stage transitions
+  S.slice(1, 7).forEach((t) => whoosh(t - 0.2));
+  // prompt rings
+  [0, 0.6, 1.2].forEach((d, i) => tone(S[1] + 0.6 + d, [392, 523.25, 659.25][i], 'sine', 0.05, 0.3, 1.8));
+  // tool docking
+  for (let i = 0; i < tools; i++) snap(S[2] + 0.5 + i * 1.9 + 1.45);
+  // memory
+  tone(S[3] + 0.5, 220, 'sine', 0.06, 0.8, 2.2, 330);
+  // loop ignition
+  tone(S[4] + 0.3, 110, 'sawtooth', 0.05, 2.6, 0.6, 440);
+  chord(S[4] + 2.9, [220, 277.18, 329.63, 493.88], 0.05, 2.4);
+  // run: packets and trace lines
+  whoosh(S[5] + 3.0, 0.9, 0.16);
+  rows.forEach((r) => {
+    const t = T0 + r.t;
+    if (r.kind === 'call') whoosh(t, 0.7, 0.07);
+    tick(t, r.kind === 'result' ? 1760 : r.kind === 'think' ? 1320 : 2400);
+  });
+  // finale
+  tone(S[6] + 1.8, 60, 'sine', 0.6, 0.01, 2.8, 38);
+  whoosh(S[6] + 1.2, 1.4, 0.25);
+  chord(S[6] + 1.8, [220, 329.63, 440, 554.37, 659.25, 987.77], 0.06, 4.5);
+
+  const buf = await ctx.startRendering();
+  // 16-bit PCM WAV
+  const n = buf.length;
+  const out = new DataView(new ArrayBuffer(44 + n * 4));
+  const w = (o, s) => [...s].forEach((c, i) => out.setUint8(o + i, c.charCodeAt(0)));
+  w(0, 'RIFF');
+  out.setUint32(4, 36 + n * 4, true);
+  w(8, 'WAVEfmt ');
+  out.setUint32(16, 16, true);
+  out.setUint16(20, 1, true);
+  out.setUint16(22, 2, true);
+  out.setUint32(24, sr, true);
+  out.setUint32(28, sr * 4, true);
+  out.setUint16(32, 4, true);
+  out.setUint16(34, 16, true);
+  w(36, 'data');
+  out.setUint32(40, n * 4, true);
+  const L = buf.getChannelData(0);
+  const R = buf.getChannelData(1);
+  for (let i = 0; i < n; i++) {
+    out.setInt16(44 + i * 4, Math.max(-1, Math.min(1, L[i])) * 32767, true);
+    out.setInt16(46 + i * 4, Math.max(-1, Math.min(1, R[i])) * 32767, true);
+  }
+  const bytes = new Uint8Array(out.buffer);
+  let bin = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+
 // ---------------------------------------------------------------- Showpiece: assembly
 const CAPS = [
   ['01', 'LLM', 'Miya bor, qoʻl yoʻq. Matn oladi — matn qaytaradi.'],
@@ -50,7 +204,7 @@ const CAPS = [
   ['03', 'Vositalar', 'Har biri — aniq kontrakt: nom, tavsif, sxema.'],
   ['04', 'Xotira', 'Qisqa muddatli — kontekst. Uzoq muddatli — fayl va baza.'],
   ['05', 'Sikl', 'Oʻyla → Harakat qil → Kuzat. Vazifa bajarilguncha.'],
-  ['06', 'Ishga tushirish', 'Vazifa keldi: agent reja tuzadi va vositalarni zanjir qiladi.'],
+  ['06', 'Ishga tushirish', 'Vazifa keldi: agent reja tuzadi va vositalarni zanjirga ulaydi.'],
   ['07', 'Tayyor', ''],
 ];
 const STAGE_AT = [0, 7, 14, 27, 33, 40, 62, 71];
@@ -85,7 +239,16 @@ const assembly = {
   </div>
   <button class="btn as-play" data-play><span class="dot" style="color:var(--tool)"></span>Toʻliq ijro · 70 s</button>`,
   setup(el, ctx) {
-    if (!ctx.gl) return;
+    if (!ctx.gl) {
+      gsap.set(el.querySelectorAll('.as-caps, .as-task, .as-trace, .as-play, .as-final'), { autoAlpha: 0 });
+      el.insertAdjacentHTML(
+        'beforeend',
+        `<div class="as-nogl"><h2 class="h1">Agent = <span class="ink-warm">5 qatlam</span></h2><div class="as-nogl-chain">${['LLM — miya', 'Tizim prompti', '6 ta vosita', 'Xotira', 'Sikl: Oʻyla → Harakat qil → Kuzat']
+          .map((t, i) => `<span class="chip" data-c="${['model', 'prompt', 'tool', 'data', 'data'][i]}">${t}</span>`)
+          .join('<span class="mono muted">+</span>')}</div></div>`,
+      );
+      return;
+    }
     const gl = ctx.gl;
     const A = gl.ensureAgent(ctx.index);
     this.A = A;
@@ -205,6 +368,7 @@ const assembly = {
         clock.setManual(time);
         gl.frame(time);
       },
+      soundtrack: (from, to) => renderSoundtrack(from, to, { S, T0, rows, tools: TOOLS.length }),
     };
 
     el.querySelector('[data-play]').addEventListener('click', () => {

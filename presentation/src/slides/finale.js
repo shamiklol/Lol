@@ -28,7 +28,7 @@ const ECO = [
   ['No-code avtomatlashtirish', 'tool', ['n8n', 'Make', 'Zapier', 'Dify', 'Flowise', 'Langflow']],
   ['Kodlash agentlari', 'data', ['Claude Code', 'Cursor', 'OpenAI Codex', 'GitHub Copilot']],
   ['Protokol va standartlar', 'tool', ['MCP', 'A2A', 'Agent Skills (SKILL.md)', 'AGENTS.md']],
-  ['Kuzatuv va eval', 'prompt', ['Langfuse', 'LangSmith', 'Braintrust', 'Promptfoo', 'Arize Phoenix']],
+  ['Monitoring va test', 'prompt', ['Langfuse', 'LangSmith', 'Braintrust', 'Promptfoo', 'Arize Phoenix']],
 ];
 const ecosystem = {
   id: 'ecosystem',
@@ -65,7 +65,7 @@ const ecosystem = {
     ).join('')}
   </div>
   <div class="eco-start panel" data-step="1" data-anim="up">
-    <b>Boshlash uchun:</b> Claude Console’da prompt → n8n yoki Agent SDK’da chain → MCP bilan tool’lar → Langfuse bilan kuzatuv
+    <b>Boshlash uchun:</b> Claude Console’da prompt → n8n yoki Agent SDK’da chain → MCP bilan tool’lar → Langfuse bilan monitoring
   </div>`,
   enter(el) {
     const tl = gsap.timeline();
@@ -78,12 +78,12 @@ const ecosystem = {
 
 // ---------------------------------------------------------------- Bonus skills
 const SKILLS = [
-  ['maktab-prompt', 'Xom soʻrovni MAKTAB boʻyicha kuchli promptga aylantiradi'],
-  ['prompt-doctor', 'Promptdagi xatolarni topadi, tashxis qoʻyadi va tuzatadi'],
-  ['prompt-evals', 'Test toʻplami, rubrika va LLM-hakam promptini yozadi'],
+  ['maktab-prompt', 'Oddiy soʻrovni MAKTAB boʻyicha kuchli promptga aylantiradi'],
+  ['prompt-doctor', 'Promptdagi xatolarni topadi, sababini aytadi va tuzatadi'],
+  ['prompt-evals', 'Test toʻplami, baholash jadvali va LLM-hakam promptini yozadi'],
   ['few-shot-studio', 'Xilma-xil va nostandart misollar toʻplamini tuzadi'],
   ['structured-output', 'JSON sxema va unga qatʼiy mos javob beruvchi prompt'],
-  ['prompt-chain-architect', 'Vazifani qadamlarga boʻladi: kontrakt va tekshiruvlar bilan'],
+  ['prompt-chain-architect', 'Vazifani qadamlarga boʻladi va har qadamga tekshiruv qoʻyadi'],
   ['tool-contract-writer', 'Agent tool’lari uchun nom, tavsif va sxema yozadi'],
   ['agent-system-prompt', 'Agent tizim prompti: rol, qoidalar, toʻxtash shartlari'],
 ];
@@ -202,7 +202,7 @@ const final = {
     <div class="fn-left">
       <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Yakun · 3 ta asosiy fikr</div>
       <ol class="fn-list">
-        <li data-in="1"><b>Prompt — dastur.</b> MAKTAB bilan yozing, eval bilan oʻlchang.</li>
+        <li data-in="1"><b>Prompt — dastur.</b> MAKTAB bilan yozing, test bilan oʻlchang.</li>
         <li data-in="2"><b>Tool — modelning qoʻli.</b> Tavsif ham prompt.</li>
         <li data-in="3"><b>Oddiydan boshlang:</b> prompt → chain → workflow → agent.</li>
       </ol>

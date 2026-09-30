@@ -121,9 +121,9 @@ Lekin uni qatlamlarga ajratsak, oltita qatlam chiqadi. Men buni **MAKTAB** deb n
 
 **A — Agar**: shartlar va cheklovlar. «Chegirma 10% dan oshmasin» — busiz model saxiylik qilib yuboradi.
 
-**K — Kontekst**: kim gapiryapti, kim bilan, qanday vaziyatda. **T — Tuzilma**: javob formati va hajmi.
+**K — Kontekst**: kim gapiryapti, kim bilan, qanday vaziyatda. **T — Tartib**: javob qanday koʻrinishda va qancha hajmda boʻladi.
 
-**A — Andoza**: namuna. Bitta misol ohangni oʻnta qoidadan yaxshiroq tushuntiradi. **B — Baholash**: model javobni yuborishdan oldin oʻzini tekshiradi.
+**A — Aniq misol**: qanday javob kerakligini misolda koʻrsatamiz. Bitta misol ohangni oʻnta qoidadan yaxshiroq tushuntiradi. **B — Baholash**: model javobni yuborishdan oldin oʻzini tekshiradi.
 
 **[SAVOL]** Oxirgi yozgan promptingizni eslang — undan qaysi harflar tushib qolgan edi?
 
@@ -139,11 +139,11 @@ Keyin soʻrov turini aniqlaymiz: qaytarish soʻrovi — muddatiga qarab ikki xil
 
 Qoida oddiy: **har bir «agar»ning «aks holda»si boʻlsin**. Ochiq qolgan shox — gallyutsinatsiyaga eshik. Model qayerga borishni bilmasa, yoʻlni oʻzi oʻylab topadi.
 
-### 9. Tuzilma: teglar va sxema
+### 9. Tartib: teg va sxema
 
 ⏱ 1:30 · boshlanishi 11:05 · kliklar: 3
 
-**T — Tuzilma**. Uning ikki tomoni bor: kirish va chiqish. Kirishda XML teglardan foydalanamiz: hujjat alohida, qoidalar alohida, savol alohida. Model qayerda maʼlumot, qayerda buyruq ekanini aniq koʻradi.
+**T — Tartib**, yaʼni promptning va javobning koʻrinishi. Uning ikki tomoni bor: kirish va chiqish. Kirishda XML teglardan foydalanamiz: hujjat alohida, qoidalar alohida, savol alohida. Model qayerda maʼlumot, qayerda buyruq ekanini aniq koʻradi.
 
 Uzun hujjatni tepaga, savolni oxiriga qoʻying — bu sifatni sezilarli oshiradi. **[KLIK]**
 
@@ -153,11 +153,11 @@ Mana javob: sxemaga toʻliq mos. Bunday javobni kod oʻqiy oladi — bu esa keyi
 
 Claude’da **structured outputs** rejimi bor: javob sxemaga qatʼiy mos keladi.
 
-### 10. Andoza: misollar kuchi
+### 10. Aniq misol kuchi
 
 ⏱ 1:15 · boshlanishi 12:35 · kliklar: 1
 
-**A — Andoza**, yaʼni misollar. Oʻngdagi nishonga qarang: har bir nuqta — modelning bitta javobi. Misolsiz javoblar tarqoq: har safar boshqa uzunlik, boshqa ohang. **[KLIK]**
+**A — Aniq misol**. Oʻngdagi nishonga qarang: har bir nuqta — modelning bitta javobi. Misolsiz javoblar tarqoq: har safar boshqa uzunlik, boshqa ohang. **[KLIK]**
 
 Uchta xilma-xil misol qoʻshdik — javoblar nishonga yigʻildi.
 
@@ -173,19 +173,19 @@ Bugungi modellar javob berishdan oldin oʻzi fikrlaydi va qadamlarni koʻpincha 
 
 Qancha fikrlashni **effort** parametri bilan boshqaramiz. Oddiy vazifaga — low: tez va arzon. Murakkab tahlilga — high yoki max. Hamma narsaga max qoʻyish — vaqt va pulni behuda sarflash.
 
-### 12. Evalsiz prompt — taxmin
+### 12. Testsiz prompt — taxmin
 
 ⏱ 1:30 · boshlanishi 15:20 · kliklar: 3
 
-**B — Baholash**. Bu yerda koʻpchilik adashadi: promptni yozadi, ikki-uch marta sinaydi va «ishlayapti» deydi. Bu — taxmin, oʻlchov emas.
+**B — Baholash**. Bu yerda koʻpchilik adashadi: promptni yozadi, ikki-uch marta sinaydi va «ishlayapti» deydi. Bu — taxmin, oʻlchov emas. Promptni test qilish kerak — buni eval deyishadi.
 
-Toʻgʻri jarayon: 30 ta real holatdan test toʻplami va har bir javobni rubrika boʻyicha baholash. Buni boshqa model — LLM-hakam qila oladi. **[KLIK]**
+Toʻgʻri jarayon: 30 ta real holatdan test toʻplami va har bir javobni baholash jadvali boʻyicha tekshirish. Buni boshqa model — LLM-hakam qila oladi. **[KLIK]**
 
 Birinchi versiya: 30 tadan 19 tasi toʻgʻri, 63 foiz. Xatolarni koʻramiz: 5 tasi format, 4 tasi ohang, 2 tasi fakt. Demak, T va K qatlamlarini tuzatish kerak. **[KLIK]**
 
 Ikkinchi versiya — 80 foiz. **[KLIK]** Uchinchisi — 93 foiz.
 
-Xulosa: **evalsiz prompt — bu taxmin, eval bilan — aniq oʻlchov**.
+Xulosa: **testsiz prompt — bu taxmin, test bilan — aniq oʻlchov**.
 
 ### 13. Prompt laboratoriyasi
 
@@ -193,7 +193,7 @@ Xulosa: **evalsiz prompt — bu taxmin, eval bilan — aniq oʻlchov**.
 
 Endi hammasini jonli koʻramiz. Chapda — prompt, tepada — MAKTAB harflari, oʻngda — natija. **[KLIK]**
 
-Har bir klikda bitta qatlam qoʻshiladi: maqsad… **[KLIK]** shartlar… **[KLIK]** kontekst… **[KLIK]** tuzilma… **[KLIK]** andoza… **[KLIK]** va baholash. Ball 12 dan 96 ga chiqdi.
+Har bir klikda bitta qatlam qoʻshiladi: maqsad… **[KLIK]** shartlar… **[KLIK]** kontekst… **[KLIK]** tartib… **[KLIK]** aniq misol… **[KLIK]** va baholash. Ball 12 dan 96 ga chiqdi.
 
 **[JONLI]** «Claude’da ishga tushirish» tugmasi promptni shu zahoti modelga yuboradi. Zaldan biror mahsulot nomini soʻrang, promptdagi mahsulotni almashtiring va natijani birga koʻring.
 
@@ -263,7 +263,7 @@ Barcha agent tizimlari oltita asosiy patterndan yigʻiladi. Bu roʻyxat Anthropi
 
 **Parallel ishlash**: vazifa boʻlaklarga boʻlinadi yoki bir nechta model ovoz beradi. **[KLIK]**
 
-**Orkestrator va ishchilar**: bosh model vazifani oʻzi boʻladi va ishchilarga tarqatadi. **[KLIK]**
+**Bosh model va ishchilar**: bosh model vazifani oʻzi boʻladi va ishchilarga tarqatadi. **[KLIK]**
 
 **Yozuvchi va tekshiruvchi**: biri yozadi, ikkinchisi tekshiradi — natija yaxshi boʻlguncha takrorlanadi. **[KLIK]**
 
@@ -279,7 +279,7 @@ Endi agentni koʻz oldimizda yigʻamiz. Markazda — LLM, yaʼni miya. Hozircha 
 
 **Tizim prompti** — agentning xarakteri: rol, maqsad, qoidalar. Birinchi qismdagi MAKTAB aynan shu yerda ishlaydi. **[KLIK]**
 
-**Tool’lar** — oltita modul: tadbirlar, ob-havo, kalkulyator, valyuta, hisobot va xabar. Har biri — aniq kontrakt. **[KLIK]**
+**Tool’lar** — oltita modul: tadbirlar, ob-havo, kalkulyator, valyuta, hisobot va xabar. Har birining nomi, tavsifi va sxemasi bor. **[KLIK]**
 
 **Xotira**: qisqa muddatli — kontekst oynasi, uzoq muddatli — fayllar va baza. **[KLIK]**
 
@@ -321,7 +321,7 @@ Endi integratsiya muammosi. Deylik, sizda uchta AI ilova va beshta servis bor. *
 
 **MCP — Model Context Protocol** buni hal qiladi: har bir servis bir marta MCP server sifatida yoziladi, har bir ilova MCP’ni bir marta qoʻllab-quvvatlaydi. 15 emas — 8. Xuddi USB-C kabi: bitta ulagich — istalgan qurilma. **[KLIK]**
 
-MCP server uch narsa beradi: tools — amallar, resources — maʼlumotlar va prompts — tayyor shablonlar. MCP’ni 2024-yil noyabrda Anthropic taqdim etgan, bugun u Linux Foundation qoshidagi ochiq standart.
+MCP server uch narsa beradi: tools — amallar, resources — maʼlumotlar va prompts — tayyor shablonlar. MCP’ni 2024-yil noyabrda Anthropic taqdim etgan, bugun u Linux Foundation tarkibidagi ochiq standart.
 
 ### 24. Context engineering
 
@@ -345,7 +345,7 @@ Oxirgi mavzu — ishonchlilik. Agent qayerda sinadi? **[KLIK]**
 
 **Prompt injection** — eng xavflisi: tool qaytargan matn ichida yashirin buyruq boʻlishi mumkin. Qoida: tashqi matn — buyruq emas, maʼlumot; ruxsatlar esa minimal. **Notoʻgʻri tool tanlash** — aniq tavsif va kamroq tool. **[KLIK]**
 
-**Qaytarib boʻlmaydigan harakatlar** — pul oʻtkazish, oʻchirish — faqat inson tasdigʻi bilan. **«Qora quti»** muammosi esa trace, log va evallar bilan hal qilinadi.
+**Qaytarib boʻlmaydigan harakatlar** — pul oʻtkazish, oʻchirish — faqat inson tasdigʻi bilan. **«Qora quti»** muammosi esa trace, log va testlar bilan hal qilinadi.
 
 ### 26. Asboblar xaritasi 2026
 
@@ -353,15 +353,15 @@ Oxirgi mavzu — ishonchlilik. Agent qayerda sinadi? **[KLIK]**
 
 Qisqacha asboblar xaritasi. Promptni sinash uchun — Claude Console yoki boshqa «playground»lar. Agent yozish uchun — SDK va freymvorklar: Claude Agent SDK, LangGraph, CrewAI va boshqalar.
 
-Kod yozmasdan — n8n, Make, Dify. Kodlash agentlari — Claude Code, Cursor. Protokollar — MCP, A2A va Agent Skills. Va albatta, kuzatuv va eval — Langfuse, LangSmith, Promptfoo. **[KLIK]**
+Kod yozmasdan — n8n, Make, Dify. Kodlash agentlari — Claude Code, Cursor. Protokollar — MCP, A2A va Agent Skills. Va albatta, monitoring va test — Langfuse, LangSmith, Promptfoo. **[KLIK]**
 
-Qayerdan boshlash kerak? Claude Console’da prompt, n8n yoki Agent SDK’da chain, MCP bilan tool’lar va Langfuse bilan kuzatuv.
+Qayerdan boshlash kerak? Claude Console’da prompt, n8n yoki Agent SDK’da chain, MCP bilan tool’lar va Langfuse bilan monitoring.
 
 ### 27. Bonus: 8 ta skill
 
 ⏱ 1:10 · boshlanishi 39:50 · kliklar: 0
 
-Va sovgʻa: **sakkizta skill** — prompt engineering uchun. Skill — Claude’ga yangi mahorat qoʻshadigan papka. Oʻrnatasiz — va Claude MAKTAB boʻyicha prompt yozadi, promptni tekshiradi, eval tuzadi, tool’lar tavsifini yozadi.
+Va sovgʻa: **sakkizta skill** — prompt engineering uchun. Skill — Claude’ga yangi mahorat qoʻshadigan papka. Oʻrnatasiz — va Claude MAKTAB boʻyicha prompt yozadi, promptni tekshiradi, test tuzadi, tool’lar tavsifini yozadi.
 
 QR orqali yuklab olasiz. SKILL.md — ochiq standart, shuning uchun boshqa agentlar ham uni tushunadi.
 
@@ -383,7 +383,7 @@ Bugun gaplashgan hamma narsa — prompt logikasi, tool chaining, sikl — shu ta
 
 ⏱ 1:00 · boshlanishi 42:30 · kliklar: 0
 
-Uchta fikrni olib keting. Birinchi: **prompt — bu dastur**; uni MAKTAB bilan yozing va eval bilan oʻlchang.
+Uchta fikrni olib keting. Birinchi: **prompt — bu dastur**; uni MAKTAB bilan yozing va test bilan oʻlchang.
 
 Ikkinchi: **tool — modelning qoʻli**, uning tavsifi ham prompt.
 

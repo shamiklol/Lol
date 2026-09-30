@@ -54,7 +54,7 @@ const tokens = {
         <li data-step="2"><b class="hl-prompt">Chegara</b> Teglar va sarlavhalar model uchun aniq chegara boʻladi — matn «bir boʻtqa» boʻlib qolmaydi.</li>
         <li data-step="2"><b class="hl-model">Ehtimol</b> Model har safar keyingi tokenni ehtimollik boʻyicha tanlaydi. Prompt shu ehtimollarni boshqaradi.</li>
       </ul>
-      <p class="small tk-foot" data-in="6">GPT-4o tokenizatori (o200k) misolida. Claude tokenizatori boshqacha, lekin tamoyil bir xil.</p>
+      <p class="small tk-foot" data-in="6">GPT-4o tokenizatori (o200k) misolida. Claude tokenizatori boshqacha, lekin ishlash usuli bir xil.</p>
     </div>
     <div class="tk-right panel" data-in="2" data-anim="right" data-interactive>
       <div class="tk-row">
@@ -161,9 +161,9 @@ const LAYERS = [
   ['M', 'Maqsad', 'Nima kerak va nima uchun', 'Maqsad: kechikkan buyurtma haqidagi shikoyatga javob yoz — mijoz bizda qolsin.', 'prompt'],
   ['A', 'Agar', 'Shartlar va cheklovlar', 'Agar buyurtma raqami yoʻq boʻlsa — avval uni soʻra. Chegirma 10% dan oshmasin.', 'danger'],
   ['K', 'Kontekst', 'Kim, kim uchun, qanday vaziyatda', 'Sen — onlayn doʻkon yordam xizmati mutaxassissan. Mijoz 2 yildan beri xarid qiladi.', 'model'],
-  ['T', 'Tuzilma', 'Javob formati va hajmi', 'Format: 1) uzr 2) yechim 3) keyingi qadam. 80 soʻzdan oshmasin.', 'tool'],
-  ['A', 'Andoza', 'Namuna va misollar', '<misol>Hurmatli Aziza opa, kechikish uchun uzr soʻraymiz…</misol>', 'data'],
-  ['B', 'Baholash', 'Yaxshi javob talabi va oʻzini tekshirish', 'Yuborishdan oldin tekshir: yechim aniqmi? Ohang samimiymi?', 'prompt'],
+  ['T', 'Tartib', 'Javob qanday koʻrinishda va qancha hajmda', 'Tartib: 1) uzr 2) yechim 3) keyingi qadam. 80 soʻzdan oshmasin.', 'tool'],
+  ['A', 'Aniq misol', 'Qanday javob kerakligini misolda koʻrsatish', '<misol>Hurmatli Aziza opa, kechikish uchun uzr soʻraymiz…</misol>', 'data'],
+  ['B', 'Baholash', 'Javobni yuborishdan oldin oʻzini tekshirish', 'Yuborishdan oldin tekshir: yechim aniqmi? Ohang samimiymi?', 'prompt'],
 ];
 
 const maktab = {
@@ -346,12 +346,12 @@ const tuzilma = {
   id: 'tuzilma',
   act: 1,
   station: 1,
-  title: 'Tuzilma: teglar va sxema',
+  title: 'Tartib: teg va sxema',
   time: 90,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode>M · A · K · <b>T</b> · A · B</div>
-    <h2 class="h1 kinetic"><span class="ink-cool">Tuzilma:</span> teg va sxema</h2>
+    <h2 class="h1 kinetic"><span class="ink-cool">Tartib:</span> teg va sxema</h2>
   </header>
   <div class="tz-grid">
     <div class="tz-left">
@@ -395,14 +395,14 @@ const andoza = {
   id: 'andoza',
   act: 1,
   station: 1,
-  title: 'Andoza: misollar kuchi',
+  title: 'Aniq misol kuchi',
   time: 75,
   html: `
   <div class="an-grid">
     <div class="an-left">
       <header class="head">
         <div class="eyebrow" data-in="0" data-decode>M · A · K · T · <b>A</b> · B</div>
-        <h2 class="h1 kinetic"><span class="ink-cool">Andoza:</span> bitta yaxshi misol oʻnta qoidadan kuchli</h2>
+        <h2 class="h1 kinetic"><span class="ink-cool">Aniq misol:</span> bitta yaxshi misol oʻnta qoidadan kuchli</h2>
       </header>
       <ul class="an-tips">
         <li data-in="3">Misollar <b>xilma-xil</b> boʻlsin: oddiy, murakkab va nostandart holat.</li>
@@ -470,7 +470,7 @@ const fikrlash = {
   </header>
   <div class="fk-grid">
     <div class="panel window fk-old" data-in="2" data-anim="left">
-      <div class="window-bar"><i></i><i></i><i></i><span>oldin · mikro-boshqaruv</span></div>
+      <div class="window-bar"><i></i><i></i><i></i><span>oldin · har qadamni yozib berardik</span></div>
       <pre class="code window-body">${codeLines(OLD, 'prompt')}</pre>
     </div>
     <div class="fk-vs mono" data-in="3" aria-hidden="true">→</div>
@@ -507,19 +507,19 @@ const baholash = {
   id: 'baholash',
   act: 1,
   station: 1,
-  title: 'Evalsiz prompt — taxmin',
+  title: 'Testsiz prompt — taxmin',
   time: 90,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode>M · A · K · T · A · <b>B</b></div>
-    <h2 class="h1 kinetic"><span class="ink-cool">Baholash:</span> evalsiz prompt — bu taxmin</h2>
+    <h2 class="h1 kinetic"><span class="ink-cool">Baholash:</span> testsiz prompt — bu taxmin</h2>
   </header>
   <div class="ev-flow" data-in="2" data-anim="fade">
     <div class="ev-step panel"><span class="mono small">1</span><b>Prompt</b><em>v1</em></div>
     <i class="ev-arrow"></i>
     <div class="ev-step panel"><span class="mono small">2</span><b>Test toʻplami</b><em>30 ta real holat</em></div>
     <i class="ev-arrow"></i>
-    <div class="ev-step panel"><span class="mono small">3</span><b>Rubrika + LLM-hakam</b><em>har bir javobga baho</em></div>
+    <div class="ev-step panel"><span class="mono small">3</span><b>LLM-hakam</b><em>jadval boʻyicha baho qoʻyadi</em></div>
     <i class="ev-arrow"></i>
     <div class="ev-step panel"><span class="mono small">4</span><b>Xatolar tahlili</b><em>→ yangi versiya</em></div>
   </div>
@@ -575,7 +575,7 @@ const LEVELS = [
   ['M', 'Maqsad: marketpleysdagi termos sahifasi uchun sotadigan tavsif yoz.'],
   ['A', 'Agar biror xususiyat berilmagan boʻlsa — oʻylab topma.'],
   ['K', 'Kontekst: 0,5 l, 12 soat issiq saqlaydi, zanglamas poʻlat. Xaridor — talabalar va haydovchilar.'],
-  ['T', 'Tuzilma: sarlavha (60 belgigacha) + 3 ta afzallik + 1 ta chaqiriq.'],
+  ['T', 'Tartib: sarlavha (60 belgigacha) + 3 ta afzallik + 1 ta chaqiriq.'],
   ['A', '<misol>Sarlavha: Ertalabki choy — kechgacha issiq</misol>'],
   ['B', 'Yuborishdan oldin tekshir: raqamlar kontekstdagiga mosmi?'],
 ];
@@ -696,7 +696,7 @@ const chain = {
   time: 75,
   html: `
   <header class="head">
-    <div class="eyebrow" data-in="0" data-decode style="--accent:var(--model)">Dekompozitsiya</div>
+    <div class="eyebrow" data-in="0" data-decode style="--accent:var(--model)">Boʻlib ishlash</div>
     <h2 class="h1 kinetic">Bitta ulkan prompt oʻrniga — <span class="ink">chain</span></h2>
   </header>
   <div class="ch-stage">

@@ -235,7 +235,7 @@ const P = [
     `<path class="pt-p" d="M30 75 H120"/><path class="pt-p" d="M150 75 C220 75 220 25 320 25"/><path class="pt-p" d="M150 75 H320"/><path class="pt-p" d="M150 75 C220 75 220 125 320 125"/><circle class="pt-n" cx="30" cy="75" r="14"/><rect class="pt-g" x="118" y="61" width="28" height="28" transform="rotate(45 132 75)"/><circle class="pt-n" cx="330" cy="25" r="12"/><circle class="pt-n" cx="330" cy="75" r="12"/><circle class="pt-n" cx="330" cy="125" r="12"/>`],
   ['Parallel ishlash', 'Bir vaqtda bir necha model ishlaydi: vazifani boʻlib yoki ovoz berib.', 'kodni 3 tomondan tekshirish', 'tool',
     `<path class="pt-p" d="M30 75 C100 75 100 25 180 25 C260 25 260 75 330 75"/><path class="pt-p" d="M30 75 H330"/><path class="pt-p" d="M30 75 C100 75 100 125 180 125 C260 125 260 75 330 75"/><circle class="pt-n" cx="30" cy="75" r="14"/><circle class="pt-n" cx="180" cy="25" r="12"/><circle class="pt-n" cx="180" cy="75" r="12"/><circle class="pt-n" cx="180" cy="125" r="12"/><circle class="pt-n" cx="330" cy="75" r="14"/>`],
-  ['Orkestrator va ishchilar', 'Bosh model vazifani oʻzi boʻladi va ishchilarga tarqatadi.', 'koʻp faylli kod oʻzgarishi', 'data',
+  ['Bosh model va ishchilar', 'Bosh model vazifani oʻzi boʻladi va ishchilarga tarqatadi.', 'koʻp faylli kod oʻzgarishi', 'data',
     `<path class="pt-p" d="M60 75 L200 20"/><path class="pt-p" d="M60 75 L200 60"/><path class="pt-p" d="M60 75 L200 100"/><path class="pt-p" d="M60 75 L200 140"/><path class="pt-p" d="M200 20 L330 75 M200 60 L330 75 M200 100 L330 75 M200 140 L330 75"/><circle class="pt-n pt-big" cx="60" cy="75" r="22"/><circle class="pt-n" cx="200" cy="20" r="10"/><circle class="pt-n" cx="200" cy="60" r="10"/><circle class="pt-n" cx="200" cy="100" r="10"/><circle class="pt-n" cx="200" cy="140" r="10"/><circle class="pt-n" cx="330" cy="75" r="14"/>`],
   ['Yozuvchi va tekshiruvchi', 'Biri yozadi, ikkinchisi tekshiradi — natija yaxshi boʻlguncha.', 'adabiy tarjima', 'prompt',
     `<path class="pt-p" d="M90 60 C170 10 190 10 270 60"/><path class="pt-p" d="M270 90 C190 140 170 140 90 90"/><circle class="pt-n pt-big" cx="70" cy="75" r="24"/><circle class="pt-n pt-big" cx="290" cy="75" r="24"/><text x="70" y="81" text-anchor="middle" class="pt-t">yoz</text><text x="290" y="81" text-anchor="middle" class="pt-t">baho</text>`],
@@ -314,7 +314,7 @@ const aci = {
   time: 80,
   html: `
   <header class="head">
-    <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Agent–kompyuter interfeysi</div>
+    <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Tool’ni toʻgʻri yozish</div>
     <h2 class="h1 kinetic">Tool tavsifi — <span class="ink-warm">bu ham prompt</span></h2>
   </header>
   <div class="ac-grid">
@@ -372,7 +372,7 @@ const mcp = {
         <span class="chip" data-c="tool">Tools — amallar</span>
         <span class="chip" data-c="data">Resources — maʼlumotlar</span>
         <span class="chip" data-c="prompt">Prompts — shablonlar</span>
-        <p class="small">2024-yil noyabrda Anthropic taqdim etgan ochiq standart. 2025-yil dekabridan — Linux Foundation qoshidagi Agentic AI Foundation loyihasi.</p>
+        <p class="small">2024-yil noyabrda Anthropic taqdim etgan ochiq standart. 2025-yil dekabridan — Linux Foundation tarkibidagi Agentic AI Foundation loyihasi.</p>
       </div>
     </div>
   </div>`,
@@ -459,7 +459,7 @@ const FAILS = [
   ['Prompt injection (tool natijasida)', 'Tashqi matn — buyruq emas, maʼlumot. Ruxsatlar minimal'],
   ['Notoʻgʻri tool tanlash', 'Aniq tavsif, kamroq tool'],
   ['Qaytarib boʻlmaydigan harakat', 'Inson tasdigʻi (human-in-the-loop)'],
-  ['«Qora quti»', 'Trace, log va evallar'],
+  ['«Qora quti»', 'Trace, log va testlar'],
 ];
 const failures = {
   id: 'failures',

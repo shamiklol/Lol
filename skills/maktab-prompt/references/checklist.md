@@ -18,11 +18,11 @@ Run through this before delivering a prompt. Fix every "no".
 - Is reference data wrapped in its own tags and placed before the question?
 - Is a role given only where it adds expertise or voice?
 
-## Tuzilma (structure)
+## Tartib (format)
 - Is the output shape unambiguous: sections, order, length, language, formatting?
 - If software parses the output, is a JSON schema / structured output recommended?
 
-## Andoza (examples)
+## Aniq misol (examples)
 - Are examples varied (typical, hard, edge case) rather than three near-copies?
 - Would you be happy if the model copied the example's length and tone exactly?
 - Are examples fenced in tags so they are not mistaken for instructions?

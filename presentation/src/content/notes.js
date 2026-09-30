@@ -46,8 +46,8 @@ export const NOTES = {
 <p>Lekin uni qatlamlarga ajratsak, oltita qatlam chiqadi. Men buni <b>MAKTAB</b> deb nomladim. ${KLIK}</p>
 <p><b>M — Maqsad</b>: nima kerak va nima uchun. «Mijoz bizda qolsin» — bu modelga qaror qabul qilish uchun yoʻnalish beradi.</p>
 <p><b>A — Agar</b>: shartlar va cheklovlar. «Chegirma 10% dan oshmasin» — busiz model saxiylik qilib yuboradi.</p>
-<p><b>K — Kontekst</b>: kim gapiryapti, kim bilan, qanday vaziyatda. <b>T — Tuzilma</b>: javob formati va hajmi.</p>
-<p><b>A — Andoza</b>: namuna. Bitta misol ohangni oʻnta qoidadan yaxshiroq tushuntiradi. <b>B — Baholash</b>: model javobni yuborishdan oldin oʻzini tekshiradi.</p>
+<p><b>K — Kontekst</b>: kim gapiryapti, kim bilan, qanday vaziyatda. <b>T — Tartib</b>: javob qanday koʻrinishda va qancha hajmda boʻladi.</p>
+<p><b>A — Aniq misol</b>: qanday javob kerakligini misolda koʻrsatamiz. Bitta misol ohangni oʻnta qoidadan yaxshiroq tushuntiradi. <b>B — Baholash</b>: model javobni yuborishdan oldin oʻzini tekshiradi.</p>
 <p>${SAVOL} Oxirgi yozgan promptingizni eslang — undan qaysi harflar tushib qolgan edi?</p>`,
 
   agar: `
@@ -57,14 +57,14 @@ export const NOTES = {
 <p>Qoida oddiy: <b>har bir «agar»ning «aks holda»si boʻlsin</b>. Ochiq qolgan shox — gallyutsinatsiyaga eshik. Model qayerga borishni bilmasa, yoʻlni oʻzi oʻylab topadi.</p>`,
 
   tuzilma: `
-<p><b>T — Tuzilma</b>. Uning ikki tomoni bor: kirish va chiqish. Kirishda XML teglardan foydalanamiz: hujjat alohida, qoidalar alohida, savol alohida. Model qayerda maʼlumot, qayerda buyruq ekanini aniq koʻradi.</p>
+<p><b>T — Tartib</b>, yaʼni promptning va javobning koʻrinishi. Uning ikki tomoni bor: kirish va chiqish. Kirishda XML teglardan foydalanamiz: hujjat alohida, qoidalar alohida, savol alohida. Model qayerda maʼlumot, qayerda buyruq ekanini aniq koʻradi.</p>
 <p>Uzun hujjatni tepaga, savolni oxiriga qoʻying — bu sifatni sezilarli oshiradi. ${KLIK}</p>
 <p>Chiqishda — JSON sxema. Modeldan erkin matn emas, aniq maydonlar soʻraymiz: javob, manba, ishonch darajasi. ${KLIK}</p>
 <p>Mana javob: sxemaga toʻliq mos. Bunday javobni kod oʻqiy oladi — bu esa keyingi qismga, tool’lar va agentlarga koʻprik. ${KLIK}</p>
 <p>Claude’da <b>structured outputs</b> rejimi bor: javob sxemaga qatʼiy mos keladi.</p>`,
 
   andoza: `
-<p><b>A — Andoza</b>, yaʼni misollar. Oʻngdagi nishonga qarang: har bir nuqta — modelning bitta javobi. Misolsiz javoblar tarqoq: har safar boshqa uzunlik, boshqa ohang. ${KLIK}</p>
+<p><b>A — Aniq misol</b>. Oʻngdagi nishonga qarang: har bir nuqta — modelning bitta javobi. Misolsiz javoblar tarqoq: har safar boshqa uzunlik, boshqa ohang. ${KLIK}</p>
 <p>Uchta xilma-xil misol qoʻshdik — javoblar nishonga yigʻildi.</p>
 <p>Lekin ehtiyot boʻling: model misoldagi hamma narsani koʻchiradi. Misolingiz uch qator boʻlsa — javob ham uch qator. Misolda xato boʻlsa — xato ham koʻchadi. Shuning uchun misol tanlashga qoida yozishdan koʻra koʻproq vaqt ajrating.</p>`,
 
@@ -74,15 +74,15 @@ export const NOTES = {
 <p>Qancha fikrlashni <b>effort</b> parametri bilan boshqaramiz. Oddiy vazifaga — low: tez va arzon. Murakkab tahlilga — high yoki max. Hamma narsaga max qoʻyish — vaqt va pulni behuda sarflash.</p>`,
 
   baholash: `
-<p><b>B — Baholash</b>. Bu yerda koʻpchilik adashadi: promptni yozadi, ikki-uch marta sinaydi va «ishlayapti» deydi. Bu — taxmin, oʻlchov emas.</p>
-<p>Toʻgʻri jarayon: 30 ta real holatdan test toʻplami va har bir javobni rubrika boʻyicha baholash. Buni boshqa model — LLM-hakam qila oladi. ${KLIK}</p>
+<p><b>B — Baholash</b>. Bu yerda koʻpchilik adashadi: promptni yozadi, ikki-uch marta sinaydi va «ishlayapti» deydi. Bu — taxmin, oʻlchov emas. Promptni test qilish kerak — buni eval deyishadi.</p>
+<p>Toʻgʻri jarayon: 30 ta real holatdan test toʻplami va har bir javobni baholash jadvali boʻyicha tekshirish. Buni boshqa model — LLM-hakam qila oladi. ${KLIK}</p>
 <p>Birinchi versiya: 30 tadan 19 tasi toʻgʻri, 63 foiz. Xatolarni koʻramiz: 5 tasi format, 4 tasi ohang, 2 tasi fakt. Demak, T va K qatlamlarini tuzatish kerak. ${KLIK}</p>
 <p>Ikkinchi versiya — 80 foiz. ${KLIK} Uchinchisi — 93 foiz.</p>
-<p>Xulosa: <b>evalsiz prompt — bu taxmin, eval bilan — aniq oʻlchov</b>.</p>`,
+<p>Xulosa: <b>testsiz prompt — bu taxmin, test bilan — aniq oʻlchov</b>.</p>`,
 
   lab: `
 <p>Endi hammasini jonli koʻramiz. Chapda — prompt, tepada — MAKTAB harflari, oʻngda — natija. ${KLIK}</p>
-<p>Har bir klikda bitta qatlam qoʻshiladi: maqsad… ${KLIK} shartlar… ${KLIK} kontekst… ${KLIK} tuzilma… ${KLIK} andoza… ${KLIK} va baholash. Ball 12 dan 96 ga chiqdi.</p>
+<p>Har bir klikda bitta qatlam qoʻshiladi: maqsad… ${KLIK} shartlar… ${KLIK} kontekst… ${KLIK} tartib… ${KLIK} aniq misol… ${KLIK} va baholash. Ball 12 dan 96 ga chiqdi.</p>
 <p>${JONLI} «Claude’da ishga tushirish» tugmasi promptni shu zahoti modelga yuboradi. Zaldan biror mahsulot nomini soʻrang, promptdagi mahsulotni almashtiring va natijani birga koʻring.</p>`,
 
   chain: `
@@ -117,7 +117,7 @@ export const NOTES = {
 <p><b>Ketma-ket chain</b>: bir qadamning natijasi keyingi qadamga uzatiladi. Oraliqda tekshiruv sifatni nazorat qiladi. Misol: reja, keyin matn, keyin tarjima. ${KLIK}</p>
 <p><b>Routing</b>: avval soʻrov turi aniqlanadi, keyin mos yoʻlga yuboriladi. Misol: yordam xizmati — savol, shikoyat, qaytarish. ${KLIK}</p>
 <p><b>Parallel ishlash</b>: vazifa boʻlaklarga boʻlinadi yoki bir nechta model ovoz beradi. ${KLIK}</p>
-<p><b>Orkestrator va ishchilar</b>: bosh model vazifani oʻzi boʻladi va ishchilarga tarqatadi. ${KLIK}</p>
+<p><b>Bosh model va ishchilar</b>: bosh model vazifani oʻzi boʻladi va ishchilarga tarqatadi. ${KLIK}</p>
 <p><b>Yozuvchi va tekshiruvchi</b>: biri yozadi, ikkinchisi tekshiradi — natija yaxshi boʻlguncha takrorlanadi. ${KLIK}</p>
 <p><b>Avtonom agent</b>: reja, tool’lar va qachon toʻxtashni model oʻzi hal qiladi. ${KLIK}</p>
 <p>Birinchi beshtasi — workflow: yoʻlni biz chizamiz. Oltinchisi — agent: yoʻlni model tanlaydi. Maslahat: oddiydan boshlang. Agent — birinchi emas, oxirgi chora.</p>`,
@@ -125,7 +125,7 @@ export const NOTES = {
   assembly: `
 <p>Endi agentni koʻz oldimizda yigʻamiz. Markazda — LLM, yaʼni miya. Hozircha u faqat matn oladi va matn qaytaradi. ${KLIK}</p>
 <p><b>Tizim prompti</b> — agentning xarakteri: rol, maqsad, qoidalar. Birinchi qismdagi MAKTAB aynan shu yerda ishlaydi. ${KLIK}</p>
-<p><b>Tool’lar</b> — oltita modul: tadbirlar, ob-havo, kalkulyator, valyuta, hisobot va xabar. Har biri — aniq kontrakt. ${KLIK}</p>
+<p><b>Tool’lar</b> — oltita modul: tadbirlar, ob-havo, kalkulyator, valyuta, hisobot va xabar. Har birining nomi, tavsifi va sxemasi bor. ${KLIK}</p>
 <p><b>Xotira</b>: qisqa muddatli — kontekst oynasi, uzoq muddatli — fayllar va baza. ${KLIK}</p>
 <p>Va <b>sikl</b>: Oʻyla, Harakat qil, Kuzat. Shu sikl aylana boshlaganda tizim jonlanadi. ${KLIK}</p>
 <p>Vazifa keldi: oktabrdagi AI tadbirlarini top, ob-havoni tekshir, eng mosini tanla va jamoaga xabar yubor. Qarang: agent rejani oʻzi tuzadi, ob-havoni uchta sana uchun parallel soʻraydi, hisobot tuzadi va yuboradi. ${KLIK}</p>
@@ -146,7 +146,7 @@ export const NOTES = {
   mcp: `
 <p>Endi integratsiya muammosi. Deylik, sizda uchta AI ilova va beshta servis bor. ${KLIK} Har birini alohida ulash — 15 ta integratsiya. Yangi servis qoʻshilsa — yana uchta. ${KLIK}</p>
 <p><b>MCP — Model Context Protocol</b> buni hal qiladi: har bir servis bir marta MCP server sifatida yoziladi, har bir ilova MCP’ni bir marta qoʻllab-quvvatlaydi. 15 emas — 8. Xuddi USB-C kabi: bitta ulagich — istalgan qurilma. ${KLIK}</p>
-<p>MCP server uch narsa beradi: tools — amallar, resources — maʼlumotlar va prompts — tayyor shablonlar. MCP’ni 2024-yil noyabrda Anthropic taqdim etgan, bugun u Linux Foundation qoshidagi ochiq standart.</p>`,
+<p>MCP server uch narsa beradi: tools — amallar, resources — maʼlumotlar va prompts — tayyor shablonlar. MCP’ni 2024-yil noyabrda Anthropic taqdim etgan, bugun u Linux Foundation tarkibidagi ochiq standart.</p>`,
 
   context: `
 <p>Birinchi qismda promptni qanday yozishni gapirdik. Agentlarda yangi savol paydo boʻladi: model aynan nimani koʻradi? ${KLIK}</p>
@@ -158,15 +158,15 @@ export const NOTES = {
 <p>Oxirgi mavzu — ishonchlilik. Agent qayerda sinadi? ${KLIK}</p>
 <p><b>Cheksiz sikl</b> — himoya: qadamlar limiti va byudjet. <b>Oʻylab topilgan parametrlar</b> — himoya: sxema tekshiruvi va tushunarli xato matni. ${KLIK}</p>
 <p><b>Prompt injection</b> — eng xavflisi: tool qaytargan matn ichida yashirin buyruq boʻlishi mumkin. Qoida: tashqi matn — buyruq emas, maʼlumot; ruxsatlar esa minimal. <b>Notoʻgʻri tool tanlash</b> — aniq tavsif va kamroq tool. ${KLIK}</p>
-<p><b>Qaytarib boʻlmaydigan harakatlar</b> — pul oʻtkazish, oʻchirish — faqat inson tasdigʻi bilan. <b>«Qora quti»</b> muammosi esa trace, log va evallar bilan hal qilinadi.</p>`,
+<p><b>Qaytarib boʻlmaydigan harakatlar</b> — pul oʻtkazish, oʻchirish — faqat inson tasdigʻi bilan. <b>«Qora quti»</b> muammosi esa trace, log va testlar bilan hal qilinadi.</p>`,
 
   ecosystem: `
 <p>Qisqacha asboblar xaritasi. Promptni sinash uchun — Claude Console yoki boshqa «playground»lar. Agent yozish uchun — SDK va freymvorklar: Claude Agent SDK, LangGraph, CrewAI va boshqalar.</p>
-<p>Kod yozmasdan — n8n, Make, Dify. Kodlash agentlari — Claude Code, Cursor. Protokollar — MCP, A2A va Agent Skills. Va albatta, kuzatuv va eval — Langfuse, LangSmith, Promptfoo. ${KLIK}</p>
-<p>Qayerdan boshlash kerak? Claude Console’da prompt, n8n yoki Agent SDK’da chain, MCP bilan tool’lar va Langfuse bilan kuzatuv.</p>`,
+<p>Kod yozmasdan — n8n, Make, Dify. Kodlash agentlari — Claude Code, Cursor. Protokollar — MCP, A2A va Agent Skills. Va albatta, monitoring va test — Langfuse, LangSmith, Promptfoo. ${KLIK}</p>
+<p>Qayerdan boshlash kerak? Claude Console’da prompt, n8n yoki Agent SDK’da chain, MCP bilan tool’lar va Langfuse bilan monitoring.</p>`,
 
   bonus: `
-<p>Va sovgʻa: <b>sakkizta skill</b> — prompt engineering uchun. Skill — Claude’ga yangi mahorat qoʻshadigan papka. Oʻrnatasiz — va Claude MAKTAB boʻyicha prompt yozadi, promptni tekshiradi, eval tuzadi, tool’lar tavsifini yozadi.</p>
+<p>Va sovgʻa: <b>sakkizta skill</b> — prompt engineering uchun. Skill — Claude’ga yangi mahorat qoʻshadigan papka. Oʻrnatasiz — va Claude MAKTAB boʻyicha prompt yozadi, promptni tekshiradi, test tuzadi, tool’lar tavsifini yozadi.</p>
 <p>QR orqali yuklab olasiz. SKILL.md — ochiq standart, shuning uchun boshqa agentlar ham uni tushunadi.</p>
 <p>${PAUZA} QR hali tayyor boʻlmasa: «havolani kanalda qoldiraman» deng.</p>`,
 
@@ -177,7 +177,7 @@ export const NOTES = {
 <p>Bugun gaplashgan hamma narsa — prompt logikasi, tool chaining, sikl — shu taqdimot ichida ishladi.</p>`,
 
   final: `
-<p>Uchta fikrni olib keting. Birinchi: <b>prompt — bu dastur</b>; uni MAKTAB bilan yozing va eval bilan oʻlchang.</p>
+<p>Uchta fikrni olib keting. Birinchi: <b>prompt — bu dastur</b>; uni MAKTAB bilan yozing va test bilan oʻlchang.</p>
 <p>Ikkinchi: <b>tool — modelning qoʻli</b>, uning tavsifi ham prompt.</p>
 <p>Uchinchi: <b>oddiydan boshlang</b> — prompt, keyin chain, keyin workflow, va faqat kerak boʻlsa — agent.</p>
 <p>Rahmat! Savollaringizni kutaman.</p>`,

@@ -1,6 +1,6 @@
 ---
 name: maktab-prompt
-description: Turns a rough request into a production-grade prompt using the MAKTAB framework (Maqsad/goal, Agar/conditions, Kontekst/context, Tuzilma/structure, Andoza/examples, Baholash/self-check). Use this whenever someone asks to write, draft, improve or "make better" a prompt, system prompt or instructions for any LLM (Claude, ChatGPT, Gemini), or pastes a one-line request and wants reliable output from a model — even if they never say "prompt engineering". Also triggers on Uzbek and Russian requests such as "prompt yozib ber", "promptni kuchaytir", "MAKTAB bo'yicha", "напиши промпт", "улучши промпт".
+description: Turns a rough request into a production-grade prompt using the MAKTAB framework (Maqsad/goal, Agar/conditions, Kontekst/context, Tartib/format, Aniq misol/examples, Baholash/self-check). Use this whenever someone asks to write, draft, improve or "make better" a prompt, system prompt or instructions for any LLM (Claude, ChatGPT, Gemini), or pastes a one-line request and wants reliable output from a model — even if they never say "prompt engineering". Also triggers on Uzbek and Russian requests such as "prompt yozib ber", "promptni kuchaytir", "MAKTAB bo'yicha", "напиши промпт", "улучши промпт".
 ---
 
 # MAKTAB prompt architect
@@ -12,8 +12,8 @@ MAKTAB is a six-layer checklist for prompts that behave the same way every time.
 | **M** | Maqsad — goal | What outcome is needed, and why does it matter? |
 | **A** | Agar — conditions | What must happen *if* X? What are the limits, exceptions, fallbacks? |
 | **K** | Kontekst — context | Who is speaking, to whom, in which situation, with what data? |
-| **T** | Tuzilma — structure | What exact shape, length and format should the answer have? |
-| **A** | Andoza — examples | What does a great answer look like (and a tricky edge case)? |
+| **T** | Tartib — format | What exact shape, length and format should the answer have? |
+| **A** | Aniq misol — examples | What does a great answer look like (and a tricky edge case)? |
 | **B** | Baholash — self-check | How does the model verify its answer before returning it? |
 
 A model fills every gap you leave with the most average guess. MAKTAB closes the gaps that cause most failures, so write each layer only as long as it needs to be.
@@ -32,8 +32,8 @@ A model fills every gap you leave with the most average guess. MAKTAB closes the
 - **Maqsad.** One or two sentences: the outcome plus the reason. The reason matters because it lets the model make good judgment calls in cases you did not foresee ("…so the customer stays with us" changes tone and decisions).
 - **Agar.** Write explicit branches: `Agar <condition> → <action>`. Every branch needs an "otherwise" (`Aks holda`) — an open branch is where models improvise. Always include the missing-information branch: *if data is insufficient, do not guess; ask or say so.* State numeric limits as numbers.
 - **Kontekst.** Role (only if it adds real expertise or voice), audience, situation, and the data the model needs. Put documents inside their own tags (`<hujjat>`, `<document>`).
-- **Tuzilma.** Exact format: sections, order, length in words or items, language, whether to use Markdown, JSON shape if machine-read. If code will parse the answer, recommend structured outputs / a JSON schema instead of prose instructions (see the `structured-output` skill).
-- **Andoza.** 1–3 short examples inside `<misol>`/`<example>` tags, deliberately varied (typical, hard, edge case). Models copy everything in an example — length, tone and mistakes — so make them exactly what you want. Skip this layer when examples would over-constrain creative work, and say so.
+- **Tartib.** Exact format: sections, order, length in words or items, language, whether to use Markdown, JSON shape if machine-read. If code will parse the answer, recommend structured outputs / a JSON schema instead of prose instructions (see the `structured-output` skill).
+- **Aniq misol.** 1–3 short examples inside `<misol>`/`<example>` tags, deliberately varied (typical, hard, edge case). Models copy everything in an example — length, tone and mistakes — so make them exactly what you want. Skip this layer when examples would over-constrain creative work, and say so.
 - **Baholash.** 2–4 concrete checks the model runs before answering ("numbers match the context", "no promise we cannot keep", "under 80 words"). Criteria, not vague "double-check your work".
 
 ## Modern-model guidance
@@ -86,9 +86,9 @@ Agar savol oʻlcham haqida boʻlsa → oʻlchamlar jadvalidan javob ber va boʻy
 Agar qaytarish soʻralsa va xarid 14 kundan kam boʻlsa → qaytarish tartibini yubor.
 Agar 14 kundan oshgan boʻlsa → xushmuomala rad et va almashtirishni taklif qil.
 Agar kerakli maʼlumot <siyosat>da boʻlmasa → oʻylab topma: «Operatorga ulayman» deb yoz.
-Aks holda → qisqa javob ber va bitta aniqlovchi savol ber.
+Aks holda → qisqa javob ber va bitta savol berib aniqlashtir.
 </shartlar>
-<tuzilma>Oʻzbek tilida, 60 soʻzgacha, 1 ta emoji ruxsat. Oxirida bitta keyingi qadam.</tuzilma>
+<tartib>Oʻzbek tilida, 60 soʻzgacha, 1 ta emoji ruxsat. Oxirida bitta keyingi qadam.</tartib>
 <misollar>…</misollar>
 <tekshiruv>Yuborishdan oldin: narx va muddatlar <siyosat> bilan mosmi? Vaʼda berilmaganmi?</tekshiruv>
 ```

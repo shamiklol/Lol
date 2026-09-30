@@ -201,7 +201,7 @@ async function renderSoundtrack(from, to, { S, T0, rows, tools }) {
 const CAPS = [
   ['01', 'LLM', 'Miya bor, qoʻl yoʻq. Matn oladi — matn qaytaradi.'],
   ['02', 'Tizim prompti', 'Rol, maqsad va qoidalar — agentning xarakteri.'],
-  ['03', 'Tool’lar', 'Har biri — aniq kontrakt: nom, tavsif, sxema.'],
+  ['03', 'Tool’lar', 'Har birining nomi, tavsifi va sxemasi bor.'],
   ['04', 'Xotira', 'Qisqa muddatli — kontekst. Uzoq muddatli — fayl va baza.'],
   ['05', 'Sikl', 'Oʻyla → Harakat qil → Kuzat. Vazifa bajarilguncha.'],
   ['06', 'Ishga tushirish', 'Vazifa keldi: agent reja tuzadi va tool’larni ketma-ket chaqiradi.'],

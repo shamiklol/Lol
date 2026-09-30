@@ -6,12 +6,12 @@ Skill ichidagi koʻrsatmalar ingliz tilida yozilgan — model ularni eng aniq ba
 
 | Skill | Nima qiladi | Qachon ishlatasiz |
 |---|---|---|
-| `maktab-prompt` | Xom soʻrovni MAKTAB freymvorki boʻyicha kuchli promptga aylantiradi | «Prompt yozib ber», «promptni kuchaytir» |
+| `maktab-prompt` | Oddiy soʻrovni MAKTAB freymvorki boʻyicha kuchli promptga aylantiradi | «Prompt yozib ber», «promptni kuchaytir» |
 | `prompt-doctor` | Promptdagi xatoning sababini topadi va eng kichik tuzatishni taklif qiladi | Model koʻrsatmani «eshitmayapti», javoblar har xil |
-| `prompt-evals` | Test toʻplami, rubrika, LLM-hakam va ishga tushirish rejasini tuzadi | Promptni oʻlchash, ikki versiyani solishtirish |
+| `prompt-evals` | Test toʻplami, baholash jadvali, LLM-hakam va ishga tushirish rejasini tuzadi | Promptni oʻlchash, ikki versiyani solishtirish |
 | `few-shot-studio` | Xilma-xil va nostandart misollar toʻplamini tuzadi | Misollar qoʻshish, formatni barqaror qilish |
 | `structured-output` | JSON sxema va unga mos prompt, validator | Javobni kod oʻqiydi, JSON buziladi |
-| `prompt-chain-architect` | Vazifani chain yoki workflow’ga boʻladi: kontrakt va tekshiruvlar bilan | n8n, LangGraph, SDK’da pipeline |
+| `prompt-chain-architect` | Vazifani chain yoki workflow’ga boʻladi va har qadamga tekshiruv qoʻyadi | n8n, LangGraph, SDK’da pipeline |
 | `tool-contract-writer` | Agent uchun tool nomi, tavsifi, sxemasi va xato matnlari | Tool calling, MCP server |
 | `agent-system-prompt` | Agent tizim prompti: qoidalar, xavfsizlik, toʻxtash shartlari | Agent aylanib qoladi yoki xavfli harakat qiladi |
 

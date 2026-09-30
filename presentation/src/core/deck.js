@@ -170,7 +170,7 @@ export class Deck extends EventTarget {
     const info = { dir, from, instant, step: targetStep };
     const extra = def.enter?.(inEl, this.ctx(to), info);
     if (extra && !instant) tl.add(extra, enterAt + 0.1);
-    def.step?.(inEl, this.ctx(to), targetStep, { dir: 0, instant: true, entering: true });
+    def.step?.(inEl, this.ctx(to), targetStep, { dir, instant: true, entering: true, animated: !instant && !reduced });
 
     this.emit();
   }

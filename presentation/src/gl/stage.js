@@ -7,6 +7,8 @@ import { gsap } from '../core/fx.js';
 import { clock } from '../core/clock.js';
 import { Field } from './field.js';
 import { Swarm } from './swarm.js';
+import { AgentScene } from './agent.js';
+import { nodePos } from './field.js';
 
 const MODES = {
   field: { off: [0, 1.3, 11], look: [0, 3.3, 0], dust: 1, thread: 1, tokens: 1 },
@@ -14,6 +16,7 @@ const MODES = {
   title: { off: [-1.5, 0.6, 14], look: [0, 1.4, 0], dust: 0.8, thread: 1, tokens: 1 },
   agent: { off: [0, 3.2, 17], look: [0, 3.2, 0], dust: 0.7, thread: 0.5, tokens: 0.5 },
   calm: { off: [0, 1.6, 13], look: [0, 3.2, 0], dust: 0.8, thread: 0.9, tokens: 0.7 },
+  agentLeft: { off: [5.6, 3.0, 23], look: [5.6, 3.0, 0], dust: 0.6, thread: 0.35, tokens: 0.4 },
 };
 
 export class GL {
@@ -69,6 +72,23 @@ export class GL {
     this.placeCamera(0);
     this.loop = this.loop.bind(this);
     requestAnimationFrame(this.loop);
+  }
+
+  /** The agent lives next to a slide's node; it follows the camera to the live-lab slide. */
+  ensureAgent(index) {
+    if (!this.agent) {
+      this.agent = new AgentScene(this);
+      this.scene.add(this.agent.group);
+      this.extras.push(this.agent);
+      this.agent.group.position.copy(nodePos(index)).add(new THREE.Vector3(0, 3.2, 0));
+    }
+    return this.agent;
+  }
+
+  moveAgentTo(index, duration = 1.1) {
+    if (!this.agent) return;
+    const to = nodePos(index).add(new THREE.Vector3(0, 3.2, 0));
+    gsap.to(this.agent.group.position, { x: to.x, y: to.y, z: to.z, duration, ease: 'power3.inOut' });
   }
 
   resize() {
@@ -142,6 +162,7 @@ export class GL {
     // look slightly ahead along the thread while traveling
     const ahead = this.field.curve.getPointAt(Math.min(1, this.u + this.travel * 0.004));
     this.camera.lookAt(ahead.x + this.cam.look.x, ahead.y + this.cam.look.y, ahead.z + this.cam.look.z);
+    this.camera.updateMatrixWorld();
   }
 
   frame(t) {

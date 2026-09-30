@@ -73,6 +73,7 @@
   white-space: nowrap;
   transition: color 0.5s;
 }
+.metro-station.is-up span { position: absolute; bottom: 26px; }
 .metro-station.is-past i { border-color: var(--c); background: var(--c); box-shadow: 0 0 12px var(--c); }
 .metro-station.is-now span { color: var(--text); }
 .metro-station.is-past span { color: var(--text-2); }

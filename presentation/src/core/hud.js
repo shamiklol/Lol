@@ -40,7 +40,10 @@ export function createHud(root, deck) {
       <div class="metro-track"></div>
       <div class="metro-fill"></div>
       ${STATIONS.map(
-        (s, i) => `<div class="metro-station" style="left:${pos(Math.max(0, starts[i]))}%;--c:${s.c}"><i></i><span>${s.name}</span></div>`,
+        (s, i) => {
+          const close = i > 0 && Math.abs(pos(starts[i]) - pos(starts[i - 1])) < 7;
+          return `<div class="metro-station${close ? ' is-up' : ''}" style="left:${pos(Math.max(0, starts[i]))}%;--c:${s.c}"><i></i><span>${s.name}</span></div>`;
+        },
       ).join('')}
       <div class="metro-head"></div>
     </div>`;

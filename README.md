@@ -81,6 +81,14 @@ node scripts/speaker-doc.mjs  # заново собрать speaker/nutq-matni.m
 npm run video -- ../release/agent-assembly.mp4 60   # рендер видео (долго: ~1.5 ч на 4 ядрах)
 ```
 
+Если рендер нужно разбить на части (например, из-за лимита времени задачи), отрисуйте части с `--from/--to --noaudio`, а затем склейте их со звуком:
+
+```bash
+node scripts/render-video.mjs ../release/part-a.mp4 60 --from=0 --to=35.98333 --noaudio
+node scripts/render-video.mjs ../release/part-b.mp4 60 --from=36 --noaudio
+node scripts/mux-video.mjs ../release/agent-assembly.mp4 ../release/part-a.mp4 ../release/part-b.mp4
+```
+
 Для разработки есть `npm run dev`.
 
 Параметры адресной строки:

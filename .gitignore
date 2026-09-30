@@ -5,3 +5,4 @@ presentation/shots/
 .DS_Store
 release/*.video.mp4
 release/*.wav
+release/part-*.mp4

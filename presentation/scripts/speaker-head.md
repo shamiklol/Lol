@@ -1,6 +1,8 @@
-# Nutq matni · Prompt Logic & AI Agent Tool Chaining
+# Maʼruza skripti · Prompt Logic & AI Agent Tool Chaining
 
 **Shamsiddin · Shams.labs** — 45 daqiqa, auditoriya: AI agentlar bilan ishlaydigan mutaxassislar.
+
+Har bir slayd uchun toʻliq matn: nima deyish va qachon bosish. Xuddi shu matn maʼruzachi oynasida (**P**) va eslatmalarda (**N**) chiqadi.
 
 Belgilar: **[KLIK]** — keyingi klik, **[PAUZA]** — 2–3 soniya jimlik, **[SAVOL]** — zalga savol, **[JONLI]** — jonli namoyish.
 

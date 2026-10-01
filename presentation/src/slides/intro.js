@@ -11,7 +11,7 @@ const title = {
   act: 0,
   station: 0,
   title: 'Titul',
-  time: 45,
+  time: 55,
   gl: 'title',
   hideHud: true,
   html: `
@@ -88,7 +88,7 @@ const hook = {
   act: 0,
   station: 0,
   title: 'Bir xil model, ikki xil prompt',
-  time: 110,
+  time: 115,
   gl: 'dim',
   html: `
   <header class="head">

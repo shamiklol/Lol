@@ -40,7 +40,7 @@ const tokens = {
   act: 1,
   station: 0,
   title: 'Model tokenlarni oʻqiydi',
-  time: 90,
+  time: 95,
   gl: 'dim',
   html: `
   <div class="tk-grid">

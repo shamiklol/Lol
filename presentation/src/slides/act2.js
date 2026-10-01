@@ -50,7 +50,7 @@ const hands = {
   act: 2,
   station: 3,
   title: 'Modelning qoʻli yoʻq',
-  time: 85,
+  time: 90,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Muammo</div>
@@ -247,7 +247,7 @@ const patterns = {
   act: 2,
   station: 4,
   title: 'Chaining: 6 ta pattern',
-  time: 200,
+  time: 180,
   html: `
   <header class="head pt-head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--model)">Anthropic · Building Effective Agents</div>
@@ -311,7 +311,7 @@ const aci = {
   act: 2,
   station: 4,
   title: 'Tool tavsifi — bu ham prompt',
-  time: 80,
+  time: 90,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Tool’ni toʻgʻri yozish</div>

@@ -25,5 +25,5 @@ const parts = defs.map((d, i) => {
   return `### ${i + 1}. ${d.title}\n\n⏱ ${mmss(d.time)} · boshlanishi ${mmss(start)} · kliklar: ${d.steps}\n\n${md(d.notes)}\n`;
 });
 const head = fs.readFileSync('scripts/speaker-head.md', 'utf8');
-fs.writeFileSync('../speaker/nutq-matni.md', `${head}\n## Slaydma-slayd matn\n\nJami reja: **${mmss(acc)}** (qolgan vaqt — savol-javob va pauzalar uchun).\n\n${parts.join('\n')}`);
+fs.writeFileSync('../speaker/nutq-matni.md', `${head}\n## Slaydma-slayd skript\n\nJami reja: **${mmss(acc)}** (qolgan vaqt — savol-javob va pauzalar uchun).\n\n${parts.join('\n')}`);
 console.log('written', defs.length, 'slides', mmss(acc));

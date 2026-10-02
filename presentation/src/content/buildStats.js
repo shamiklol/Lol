@@ -10,7 +10,7 @@ export const BUILD = {
     ['Nashr', 'havola', 'tayyor fayl va havola'],
   ],
   stats: [
-    ['21', 'slayd'],
+    ['20', 'slayd'],
     ['6 967', 'qator kod'],
     ['396', 'skrinshot tekshiruvi'],
     ['4 261', 'video kadr'],

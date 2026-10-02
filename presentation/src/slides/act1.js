@@ -191,63 +191,6 @@ const agar = {
   notes: NOTES.agar,
 };
 
-// ---------------------------------------------------------------- Andoza (few-shot)
-const DOTS = 44;
-const andoza = {
-  id: 'andoza',
-  act: 1,
-  station: 1,
-  title: 'Aniq misol kuchi',
-  time: 90,
-  html: `
-  <div class="an-grid">
-    <div class="an-left">
-      <header class="head">
-        <div class="eyebrow" data-in="0" data-decode>M · A · K · T · <b>A</b> · B</div>
-        <h2 class="h1 kinetic"><span class="ink-cool">Aniq misol:</span> bitta yaxshi misol oʻnta qoidadan kuchli</h2>
-      </header>
-      <ul class="an-tips">
-        <li data-in="3">Misollar <b>xilma-xil</b> boʻlsin: oddiy, murakkab va nostandart holat.</li>
-        <li data-in="4">Misolni qoidalardan <b class="hl-model">alohida</b> yozing — model chalkashmasin.</li>
-        <li data-in="5">Model misoldagi <b class="hl-danger">hamma narsani</b> koʻchiradi: uzunlikni ham, xatoni ham.</li>
-      </ul>
-    </div>
-    <div class="an-right panel" data-in="2" data-anim="right">
-      <div class="an-top">
-        <span class="chip" data-c="danger" data-step-out="1">0 ta misol · javoblar tarqoq</span>
-        <span class="chip an-chip2" data-c="data" data-step="1">3 ta misol · javoblar bir nishonda</span>
-      </div>
-      <svg class="an-target" viewBox="-300 -230 600 460" aria-hidden="true">
-        <circle r="210" class="an-ring"/><circle r="140" class="an-ring"/><circle r="70" class="an-ring"/><circle r="16" class="an-bull"/>
-        ${Array.from({ length: DOTS }, (_, i) => `<circle class="an-dot" r="7" data-i="${i}"/>`).join('')}
-      </svg>
-      <div class="an-examples" data-step="1">
-        <span class="mono">misol: oddiy</span><span class="mono">misol: murakkab</span><span class="mono">misol: nostandart</span>
-      </div>
-    </div>
-  </div>`,
-  setup(el) {
-    const rnd = (a) => (Math.random() - 0.5) * a;
-    this.dots = [...el.querySelectorAll('.an-dot')].map((d) => {
-      const ang = Math.random() * Math.PI * 2;
-      const r = 40 + Math.random() * 190;
-      const ta = Math.random() * Math.PI * 2;
-      const tr = Math.sqrt(Math.random()) * 38;
-      return { el: d, wide: [Math.cos(ang) * r + rnd(40), Math.sin(ang) * r * 0.9 + rnd(30)], tight: [Math.cos(ta) * tr, Math.sin(ta) * tr] };
-    });
-    this.dots.forEach((d) => gsap.set(d.el, { attr: { cx: d.wide[0], cy: d.wide[1] } }));
-  },
-  step(el, ctx, n, info) {
-    const tight = n >= 1;
-    this.dots.forEach((d, i) => {
-      const p = tight ? d.tight : d.wide;
-      gsap.to(d.el, { attr: { cx: p[0], cy: p[1] }, duration: info.instant ? 0 : 1.4, delay: info.instant ? 0 : i * 0.012, ease: 'expo.inOut' });
-      d.el.classList.toggle('is-tight', tight);
-    });
-  },
-  notes: NOTES.andoza,
-};
-
 // ---------------------------------------------------------------- Prompt lab
 const LEVELS = [
   ['', 'Termos haqida tavsif yoz.'],
@@ -409,4 +352,4 @@ const chain = {
   notes: NOTES.chain,
 };
 
-export default [card, maktab, agar, andoza, lab, chain];
+export default [card, maktab, agar, lab, chain];

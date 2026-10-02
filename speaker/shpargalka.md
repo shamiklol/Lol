@@ -28,21 +28,20 @@
 | 4 | I qism | Stajyorga vazifani qanday berish. | 1 |
 | 5 | MAKTAB | Tikuvchi. 6 qism, har biri bitta savolga javob. Zalga: «qaysi harf tushib qolgan?» | 2 |
 | 6 | Agar | Navigator. Maʼlumot yetmasa — soʻra. Har «agar»ga «aks holda». | 5 |
-| 7 | Aniq misol | Sartarosh va rasm. Misolsiz — tarqoq, 3 ta misol — nishonda. | 1 |
-| 8 | Laboratoriya | Har klik — bitta harf. Javob zerikarli gapdan sotuv matniga aylanadi. Jonli: zaldan mahsulot. | 6 |
-| 9 | Chain | Osh damlash. Bitta ulkan prompt — yomon. Qadamlar + tekshiruv — yaxshi. | 3 |
-| 10 | II qism | Endi modelga qoʻl beramiz. | 1 |
-| 11 | Qoʻl yoʻq | 3 zaif joy. Tool kartasi: nomi, nima qiladi (bu ham prompt!), nima kerak. | 4 |
-| 12 | Tool calling | Boshliq va yordamchi, 7 qadam. **Model faqat soʻraydi — bajaradigan sizning dasturingiz.** | 8 |
-| 13 | Agent | Agent = model + tool’lar + sikl. Oshpaz tatib koʻradi. Toʻxtash sharti shart. | 4 |
-| 14 | Chain turlari | Konveyer, registratura, oshpazlar, prorab, talaba+ustoz, tajribali xodim. | 7 |
-| 15 | Yigʻamiz | Model → yoʻriqnoma → tool’lar → xotira → sikl → vazifa. Natija — keyingisiga kirish. | 6 |
-| 16 | Jonli agent | Tartibni model oʻzi tanlaydi. Zaldan vazifa. | 0 |
-| 17 | MCP | Zaryadlovchilar va USB-C. 15 ulanish → 8. | 3 |
-| 18 | Xavflar | Toʻxtamay aylanish, begona gap (kassir), qaytarib boʻlmaydigan ish (PIN-kod), qora quti. | 2 |
-| 19 | Bonus | 8 ta skill, QR orqali. | 0 |
-| 20 | Kim yigʻdi? | AI agent. Men — vazifa, yoʻnaltirish, tekshirish. | 3 |
-| 21 | Yakun | 3 fikr va savollar. | 0 |
+| 7 | Laboratoriya | Har klik — bitta harf. Javob zerikarli gapdan sotuv matniga aylanadi. Jonli: zaldan mahsulot. | 6 |
+| 8 | Chain | Osh damlash. Bitta ulkan prompt — yomon. Qadamlar + tekshiruv — yaxshi. | 3 |
+| 9 | II qism | Endi modelga qoʻl beramiz. | 1 |
+| 10 | Qoʻl yoʻq | 3 zaif joy. Tool kartasi: nomi, nima qiladi (bu ham prompt!), nima kerak. | 4 |
+| 11 | Tool calling | Boshliq va yordamchi, 7 qadam. **Model faqat soʻraydi — bajaradigan sizning dasturingiz.** | 8 |
+| 12 | Agent | Agent = model + tool’lar + sikl. Oshpaz tatib koʻradi. Toʻxtash sharti shart. | 4 |
+| 13 | Chain turlari | Konveyer, registratura, oshpazlar, prorab, talaba+ustoz, tajribali xodim. | 7 |
+| 14 | Yigʻamiz | Model → yoʻriqnoma → tool’lar → xotira → sikl → vazifa. Natija — keyingisiga kirish. | 6 |
+| 15 | Jonli agent | Tartibni model oʻzi tanlaydi. Zaldan vazifa. | 0 |
+| 16 | MCP | Zaryadlovchilar va USB-C. 15 ulanish → 8. | 3 |
+| 17 | Xavflar | Toʻxtamay aylanish, begona gap (kassir), qaytarib boʻlmaydigan ish (PIN-kod), qora quti. | 2 |
+| 18 | Bonus | 8 ta skill, QR orqali. | 0 |
+| 19 | Kim yigʻdi? | AI agent. Men — vazifa, yoʻnaltirish, tekshirish. | 3 |
+| 20 | Yakun | 3 fikr va savollar. | 0 |
 
 ## Если что-то пошло не так
 

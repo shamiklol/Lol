@@ -41,9 +41,7 @@ B — Baholash: oʻzini qanday tekshiradi? «Yuborishdan oldin tekshir: yechim t
 Endi eng muhim harf — «Agar». Navigatorni eslang: yoʻl yopiq boʻlsa, qayerga burilishni oldindan biladi. Nima qilishni bilmagan stajyor esa oʻylab topadi. Sunʼiy intellektda buni gallyutsinatsiya deyishadi. Shuning uchun vazifada yoʻllarni yozamiz. Maʼlumot yetmasa — taxmin qilma, soʻra. Mahsulotni qaytarmoqchi boʻlsa va oʻn toʻrt kun oʻtmagan — qaytarish tartibini yubor, oʻtgan boʻlsa — boshqa variant taklif qil. Texnik muammo boʻlsa — avval ikkita savol ber. Aks holda — operatorga ulab qoʻy. Qoida: har bir «agar»ning oʻz «aks holda»si boʻlsin.
 
 
-=== 4-QISM. MISOL VA CHEYN ===
-
-Misol qoidalardan kuchli. Sartaroshga «chiroyli qilib oling» desangiz, nima chiqishini bilmaysiz. Rasm koʻrsatsangiz — darhol tushunadi. Misolsiz javoblar tarqoq, uchta har xil misol bilan — nishon markazida. Ehtiyot boʻling: model misoldagi hamma narsani koʻchiradi, xatosini ham.
+=== 4-QISM. LABORATORIYA VA CHEYN ===
 
 Maʼruzada jonli laboratoriya ham bor: «Termos haqida tavsif yoz» degan bitta qatorga har klikda bitta Maktab harfi qoʻshiladi, va javob zerikarli gapdan tayyor sotuv matniga aylanadi.
 
@@ -100,7 +98,7 @@ Birinchi qadam — karkasni yod oling. Maʼruzaning beshta bekati: Prompt, Logik
 
 Ikkinchi qadam — Feynman usuli. Har bir mavzuni ovoz chiqarib, oʻz soʻzlaringiz bilan, xuddi oʻn ikki yoshli bolaga tushuntirgandek aytib bering. Qayerda toʻxtab qolsangiz — oʻsha joyni qayta oʻqing va yana tushuntiring.
 
-Uchinchi qadam — qayta oʻqimang, eslang. Matnni yoping va oʻzingizdan soʻrang: «Oʻn ikkinchi slaydda nima bor? Asosiy fikr nima?» Eslash xotirani qayta oʻqishdan bir necha baravar kuchliroq mashq qildiradi.
+Uchinchi qadam — qayta oʻqimang, eslang. Matnni yoping va oʻzingizdan soʻrang: «Oʻn birinchi slaydda nima bor? Asosiy fikr nima?» Eslash xotirani qayta oʻqishdan bir necha baravar kuchliroq mashq qildiradi.
 
 Toʻrtinchi qadam — eshitish va koʻrish birga. Audio darsni tinglang va bir vaqtda slaydlarni varaqlang. Slaydlar — sizning asosiy shpargalkangiz: har birida sxema bor, siz faqat shu sxemani tushuntirasiz.
 

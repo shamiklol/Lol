@@ -11,7 +11,7 @@ Belgilar: **[KLIK]** — keyingi klik, **[PAUZA]** — 2–3 soniya jimlik, **[S
 1. Taqdimotni oʻz noutbukingizda oching: `Prompt-Logic-Shams-labs.html` faylini ikki marta bosing (internet shart emas).
 2. **F** — toʻliq ekran. Ikkinchi ekran boʻlsa, **P** — maʼruzachi oynasi: eslatmalar, taymer, keyingi slayd va rejadan qancha oldinda yoki orqada ekaningiz.
 3. Proyektor xira koʻrsatsa — **T** (yorugʻ rejim). Noutbuk kuchsiz boʻlsa — **M** (yengil rejim, 3D soddalashadi).
-4. Jonli laboratoriyalar (2, 8, 16-slaydlar) uchun ikki yoʻl bor:
+4. Jonli laboratoriyalar (2, 7, 15-slaydlar) uchun ikki yoʻl bor:
    - claude.ai’dagi havoladan oching — taqdimot sizning Claude hisobingiz orqali ishlaydi, birinchi chaqiruvda ruxsat soʻraladi;
    - yoki oflayn faylda **vergul (,)** tugmasi → Anthropic API kalitini kiriting.
 5. Jonli qismni bir marta oldindan sinab koʻring. Internet boʻlmasa ham tugmalar ishlaydi — yozib olingan namoyish koʻrsatiladi.
@@ -41,7 +41,7 @@ Belgilar: **[KLIK]** — keyingi klik, **[PAUZA]** — 2–3 soniya jimlik, **[S
 
 ## Slaydma-slayd skript
 
-Jami reja: **36:00** (qolgan vaqt — savol-javob va pauzalar uchun).
+Jami reja: **34:30** (qolgan vaqt — savol-javob va pauzalar uchun).
 
 ### 1. Titul
 
@@ -129,21 +129,9 @@ Va eng muhimi — **«aks holda»**: hech biriga toʻgʻri kelmasa, operatorga u
 
 Qoida oddiy: **har bir «agar»ning oʻz «aks holda»si boʻlsin**. Yoʻl koʻrsatilmagan joyda model yoʻlni oʻzi oʻylab topadi. Buni gallyutsinatsiya deyishadi — yaʼni ishonch bilan aytilgan yolgʻon.
 
-### 7. Aniq misol kuchi
+### 7. Prompt laboratoriyasi
 
-⏱ 1:30 · boshlanishi 9:00 · kliklar: 1
-
-**A — Aniq misol**. Sartaroshga «chiroyli qilib oling» desangiz, nima chiqishini bilmaysiz. Telefondan rasm koʻrsatsangiz — darhol tushunadi. Model ham shunday: **bitta yaxshi misol oʻnta qoidadan kuchli**.
-
-Oʻngdagi nishonga qarang: har bir nuqta — modelning bitta javobi. Misolsiz javoblar har tomonga sochilgan. **[KLIK]**
-
-Uchta har xil misol qoʻshdik — javoblar markazga yigʻildi.
-
-Lekin ehtiyot boʻling: **model misoldagi hamma narsani koʻchiradi**. Misol uch qator boʻlsa, javob ham uch qator. Misolda xato boʻlsa, xato ham koʻchadi. Shuning uchun misolni ehtiyot boʻlib tanlang.
-
-### 8. Prompt laboratoriyasi
-
-⏱ 2:30 · boshlanishi 10:30 · kliklar: 6
+⏱ 2:30 · boshlanishi 9:00 · kliklar: 6
 
 Endi hammasini jonli koʻramiz. Chapda — vazifa va MAKTAB harflari, oʻngda — natija. Boshida vazifa bitta qator: «Termos haqida tavsif yoz». Javob esa zerikarli, umumiy gap. **[KLIK]**
 
@@ -153,9 +141,9 @@ Javobga qarang: zerikarli gapdan tayyor sotuv matniga aylandi. Model oʻsha-oʻs
 
 **[JONLI]** «Claude’da ishga tushirish» tugmasi vazifani hozir modelga yuboradi. Zaldan biror mahsulot nomini soʻrang, termos oʻrniga yozing va natijani birga koʻring.
 
-### 9. Bitta ulkan prompt oʻrniga — chain
+### 8. Bitta ulkan prompt oʻrniga — chain
 
-⏱ 1:30 · boshlanishi 13:00 · kliklar: 3
+⏱ 1:30 · boshlanishi 11:30 · kliklar: 3
 
 Birinchi qismning oxirgi gapi. Osh damlashni eslang. Hamma narsani bir vaqtda qozonga tashlamaysiz-ku: avval goʻsht, keyin piyoz va sabzi, keyin guruch. Har bosqichning oʻz vaqti bor.
 
@@ -167,15 +155,15 @@ Foydasi: xato qayerda ekani darhol koʻrinadi, har qadamni alohida yaxshilaysiz.
 
 Endi eng qiziq joyi: bu chain’ga **qoʻl** qoʻshamiz.
 
-### 10. II qism · AI Agent Tool Chaining
+### 9. II qism · AI Agent Tool Chaining
 
-⏱ 0:20 · boshlanishi 14:30 · kliklar: 0
+⏱ 0:20 · boshlanishi 13:00 · kliklar: 0
 
 Ikkinchi qism — **Tool Chaining**. Birinchi qismda stajyorga vazifa berishni oʻrgandik. Endi unga qoʻl beramiz. **[KLIK]**
 
-### 11. Modelning qoʻli yoʻq
+### 10. Modelning qoʻli yoʻq
 
-⏱ 1:50 · boshlanishi 14:50 · kliklar: 4
+⏱ 1:50 · boshlanishi 13:20 · kliklar: 4
 
 Eng aqlli model ham uchta narsani qila olmaydi. **[PAUZA]**
 
@@ -193,9 +181,9 @@ Ikkinchisi — **nima qiladi**: «Shahar boʻyicha ob-havoni aytadi». Eʼtibor 
 
 Uchinchisi — **nima kerak**: shahar nomi — albatta, sana — xohlasa.
 
-### 12. Tool calling qanday ishlaydi
+### 11. Tool calling qanday ishlaydi
 
-⏱ 2:10 · boshlanishi 16:40 · kliklar: 8
+⏱ 2:10 · boshlanishi 15:10 · kliklar: 8
 
 Endi tool qanday chaqirilishini qadam-baqadam koʻramiz. Oddiy oʻxshatish: model — **boshliq**, sizning dasturingiz — **yordamchi**. Boshliq oʻzi hech narsa qilmaydi, faqat xatcha yozadi. **[KLIK]**
 
@@ -215,9 +203,9 @@ Va faqat shundan keyin Claude odamga javob beradi: «Ha, ehtimoli 70 foiz. Soyab
 
 Eng muhim gap: **model tool’ni oʻzi ishga tushirmaydi**. U faqat soʻraydi — bajaradigan sizning dasturingiz. Demak, boshqaruv sizning qoʻlingizda: nimaga ruxsat berish, nimani tekshirish — hammasini siz hal qilasiz.
 
-### 13. Agent = model + tool’lar + sikl
+### 12. Agent = model + tool’lar + sikl
 
-⏱ 1:40 · boshlanishi 18:50 · kliklar: 4
+⏱ 1:40 · boshlanishi 17:20 · kliklar: 4
 
 Endi asosiy savol: agent nima? Formula oddiy: **agent = model + tool’lar + sikl**. Model — miya, tool’lar — qoʻl, sikl — ularni ishlatib turadigan motor. Chapda — shu uch qism.
 
@@ -231,9 +219,9 @@ Kerak boʻlsa — **harakat qil**: tool’ni chaqiramiz. Keyin — **kuzat**: na
 
 Muhim: **agentda toʻxtash qoidasi boʻlishi shart**. Vazifa bajarildi; qadamlar soni tugadi, masalan 8 ta; yoki odamning ruxsati kerak, masalan pul oʻtkazishdan oldin. Toʻxtash qoidasi boʻlmasa, agent toʻxtamay aylanib, pulingizni sarflaydi.
 
-### 14. Chain’ning 6 turi
+### 13. Chain’ning 6 turi
 
-⏱ 3:00 · boshlanishi 20:30 · kliklar: 7
+⏱ 3:00 · boshlanishi 19:00 · kliklar: 7
 
 Agentlar qanchalik murakkab koʻrinmasin, ular oltita tayyor sxemadan yigʻiladi. Bu roʻyxatni Claude’ni yaratgan Anthropic kompaniyasi tavsiya qiladi. Har birini hayotiy misol bilan koʻramiz. **[KLIK]**
 
@@ -251,9 +239,9 @@ Oltinchisi — **avtonom agent**. Tajribali xodim kabi: rejani ham, tool’larni
 
 Farqi: birinchi beshtasida yoʻlni biz chizamiz — bu **workflow**. Oltinchisida yoʻlni model tanlaydi — bu **agent**. Maslahat: doim oddiydan boshlang. Agent — birinchi emas, oxirgi chora: kuchli, lekin qimmatroq va boshqarish qiyinroq.
 
-### 15. Agentni yigʻamiz
+### 14. Agentni yigʻamiz
 
-⏱ 2:10 · boshlanishi 23:30 · kliklar: 6
+⏱ 2:10 · boshlanishi 22:00 · kliklar: 6
 
 Endi koʻrganlarimizni bitta joyga yigʻamiz va agentni koʻz oldimizda quramiz. Markazda — miya, yaʼni model. Hozircha u faqat matn oladi va matn qaytaradi. **[KLIK]**
 
@@ -271,9 +259,9 @@ Endi vazifa beramiz: «Oktabrda Toshkentdagi AI tadbirlarini top, ob-havoni teks
 
 **[JONLI]** «Toʻliq koʻrish» tugmasi butun sahnani 70 soniyada uzluksiz koʻrsatadi.
 
-### 16. Jonli agent
+### 15. Jonli agent
 
-⏱ 3:20 · boshlanishi 25:40 · kliklar: 0
+⏱ 3:20 · boshlanishi 24:10 · kliklar: 0
 
 Endi eng qiziq joyi: hozir yigʻgan agentimiz jonli ishlaydi. Bu animatsiya emas — Claude tool’larni haqiqatan oʻzi tanlaydi va chaqiradi. **[JONLI]**
 
@@ -289,9 +277,9 @@ Tool’lardagi maʼlumotlar demo uchun, lekin qarorlar haqiqiy — ularni model 
 
 Internet boʻlmasa, xuddi shu tugma yozib olingan namoyishni koʻrsatadi — maʼruza toʻxtab qolmaydi.
 
-### 17. MCP — AI uchun USB-C
+### 16. MCP — AI uchun USB-C
 
-⏱ 1:30 · boshlanishi 29:00 · kliklar: 3
+⏱ 1:30 · boshlanishi 27:30 · kliklar: 3
 
 Endi ulash muammosi. Bir necha yil oldin har telefonning oʻz zaryadlovchisi bor edi-ku. Sunʼiy intellektda ham shunday edi. Deylik, uchta AI ilova va beshta servis bor: GitHub, Slack, baza, Drive va CRM. **[KLIK]**
 
@@ -301,9 +289,9 @@ Har birini alohida ulasangiz — 3 karra 5, yaʼni 15 ta ulanish. Yangi servis q
 
 Foydasi: yangi servis bir marta ulanadi — hamma AI ilovalar uni ishlata oladi. Bugun MCP’ni koʻplab katta AI ilovalar qoʻllaydi.
 
-### 18. Agent qayerda adashadi
+### 17. Agent qayerda adashadi
 
-⏱ 1:50 · boshlanishi 30:30 · kliklar: 2
+⏱ 1:50 · boshlanishi 29:00 · kliklar: 2
 
 Oxirgi mavzu — xavfsizlik. Agent kuchli, lekin u ham adashadi. Ekranda toʻrtta xavf. Har birining himoyasi bor. **[KLIK]**
 
@@ -315,9 +303,9 @@ Uchinchi — **qaytarib boʻlmaydigan ish**: pul oʻtkazish, maʼlumot oʻchiris
 
 Toʻrtinchi — **agent nima qilganini bilmaysiz**. Himoya: har bir qadam yozib boriladi, keyin koʻrib chiqsa boʻladi.
 
-### 19. Bonus: 8 ta skill
+### 18. Bonus: 8 ta skill
 
-⏱ 1:10 · boshlanishi 32:20 · kliklar: 0
+⏱ 1:10 · boshlanishi 30:50 · kliklar: 0
 
 Va endi — sovgʻa. **Sakkizta skill**.
 
@@ -329,9 +317,9 @@ QR orqali yuklab olasiz.
 
 **[PAUZA]** QR hali tayyor boʻlmasa: «havolani kanalda qoldiraman» deng.
 
-### 20. Bu taqdimotni kim yigʻdi?
+### 19. Bu taqdimotni kim yigʻdi?
 
-⏱ 1:30 · boshlanishi 33:30 · kliklar: 3
+⏱ 1:30 · boshlanishi 32:00 · kliklar: 3
 
 Va oxirgi misol. **[PAUZA]** Bir savol: bu taqdimotni kim yigʻdi? **[KLIK]**
 
@@ -341,9 +329,9 @@ Mana qanday ishladi: avval maʼlumotlarni internetdan tekshirdi, reja tuzdi, kod
 
 Bugun gapirgan hamma narsa — vazifa logikasi, tool’lar, sikl — shu taqdimotning oʻzida ishladi. Mening vazifam esa aynan bugun aytganlarimizni qilish edi: aniq vazifa berish, yoʻnaltirish va tekshirish.
 
-### 21. Yakun va savollar
+### 20. Yakun va savollar
 
-⏱ 1:00 · boshlanishi 35:00 · kliklar: 0
+⏱ 1:00 · boshlanishi 33:30 · kliklar: 0
 
 Uchta gapni olib keting.
 

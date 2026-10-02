@@ -53,12 +53,6 @@ export const NOTES = {
 <p>Va eng muhimi — <b>«aks holda»</b>: hech biriga toʻgʻri kelmasa, operatorga ulaydi. ${KLIK}</p>
 <p>Qoida oddiy: <b>har bir «agar»ning oʻz «aks holda»si boʻlsin</b>. Yoʻl koʻrsatilmagan joyda model yoʻlni oʻzi oʻylab topadi. Buni gallyutsinatsiya deyishadi — yaʼni ishonch bilan aytilgan yolgʻon.</p>`,
 
-  andoza: `
-<p><b>A — Aniq misol</b>. Sartaroshga «chiroyli qilib oling» desangiz, nima chiqishini bilmaysiz. Telefondan rasm koʻrsatsangiz — darhol tushunadi. Model ham shunday: <b>bitta yaxshi misol oʻnta qoidadan kuchli</b>.</p>
-<p>Oʻngdagi nishonga qarang: har bir nuqta — modelning bitta javobi. Misolsiz javoblar har tomonga sochilgan. ${KLIK}</p>
-<p>Uchta har xil misol qoʻshdik — javoblar markazga yigʻildi.</p>
-<p>Lekin ehtiyot boʻling: <b>model misoldagi hamma narsani koʻchiradi</b>. Misol uch qator boʻlsa, javob ham uch qator. Misolda xato boʻlsa, xato ham koʻchadi. Shuning uchun misolni ehtiyot boʻlib tanlang.</p>`,
-
   lab: `
 <p>Endi hammasini jonli koʻramiz. Chapda — vazifa va MAKTAB harflari, oʻngda — natija. Boshida vazifa bitta qator: «Termos haqida tavsif yoz». Javob esa zerikarli, umumiy gap. ${KLIK}</p>
 <p>Har klikda bitta harf qoʻshamiz. <b>Maqsad</b>: marketpleysda sotadigan tavsif. ${KLIK} <b>Agar</b>: berilmagan xususiyatni oʻylab topma. ${KLIK} <b>Kontekst</b>: yarim litr, 12 soat issiq saqlaydi, xaridorlar — talabalar va haydovchilar. ${KLIK} <b>Tartib</b>: sarlavha, 3 ta afzallik va bitta chaqiriq. ${KLIK} <b>Aniq misol</b>: «Ertalabki choy — kechgacha issiq». ${KLIK} Va <b>baholash</b>: yuborishdan oldin raqamlarni tekshir.</p>

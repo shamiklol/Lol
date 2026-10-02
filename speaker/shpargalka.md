@@ -33,7 +33,7 @@
 | 9 | Tartib | Kirish — teglar, chiqish — JSON sxema. Javobni dastur oʻqiy oladi. | 3 |
 | 10 | Aniq misol | Misolsiz — tarqoq, 3 ta misol — nishonda. Model hammasini koʻchiradi. | 1 |
 | 11 | Reasoning | Qadamni emas, maqsadni bering. Effort: low — arzon, high/max — chuqur. | 1 |
-| 12 | Baholash | 30 ta test → 63% → 80% → 93%. Testsiz prompt — taxmin. | 3 |
+| 12 | Baholash | 10 ta mijoz xati: 6/10 → promptga 2 qator (K, A) → 9/10. Testsiz prompt — taxmin. | 3 |
 | 13 | Laboratoriya | Har klik — bitta qatlam. Ball 12 → 96. Jonli: zaldan mahsulot. | 6 |
 | 14 | Chain | Bitta ulkan prompt — yomon. Qadamlar + tekshiruv — yaxshi. | 3 |
 | 15 | II qism | Endi modelga qoʻl beramiz. | 1 |

@@ -199,19 +199,21 @@ Endi esa **manzilni aytamiz**: nima kerak, natija qanday boʻlishi kerak, nimani
 
 Qancha oʻylashini **effort** degan sozlama bilan boshqaramiz. Oddiy ishga — kam: tez va arzon. Murakkab tahlilga — koʻp: chuqurroq, lekin sekinroq va qimmatroq. Hamma narsaga maksimum qoʻyish — pulni bekorga sarflash.
 
-### 12. Testsiz prompt — taxmin
+### 12. Baholash: sinab koʻramiz
 
 ⏱ 1:30 · boshlanishi 15:40 · kliklar: 3
 
-**B — Baholash**. Oshpaz yangi taomni bitta mehmonga tatib koʻrib, menyuga qoʻymaydi. Koʻp odamga beradi, fikrini soʻraydi. Promptda esa koʻpchilik ikki marta sinab, «ishlayapti» deydi. Bu — taxmin.
+**B — Baholash**. Oshpaz yangi taomni bitta mehmonga tatib koʻrib, menyuga qoʻymaydi-ku. Koʻp odamga beradi va nechtasiga yoqqanini sanaydi. Prompt bilan ham xuddi shunday.
 
-Toʻgʻri yoʻl: 30 ta real holat yigʻamiz, hammasini sinaymiz va har bir javobga baho qoʻyamiz. Baholashni boshqa model ham qila oladi — xuddi hakam kabi. **[KLIK]**
+Chapda — bizning prompt: yordam xizmati mijoz xatlariga javob yozadi. Oʻngda — haqiqiy mijozlardan kelgan 10 ta xat. Endi promptni hammasida sinab koʻramiz. **[KLIK]**
 
-Birinchi versiya: 30 tadan 19 tasi yaxshi — 63 foiz. Endi xatolarga qaraymiz: 5 tasida format buzilgan, 4 tasida ohang yomon, 2 tasida fakt xato. Format — bu T harfi, ohang — K harfi. Demak, aynan shularni tuzatamiz. **[KLIK]**
+Natija: 10 tadan 6 tasi yaxshi. 4 tasi yomon: uchtasida ohang qoʻpol, bittasida model narxni oʻzidan toʻqib chiqardi. Ikki marta sinab «ishlayapti» desak, buni hech qachon bilmas edik. **[KLIK]**
 
-Ikkinchi versiya — 80 foiz. **[KLIK]** Uchinchisi — 93 foiz. Har safar nimani tuzatganimizni va qancha yaxshilanganini aniq bilamiz.
+Xatolarga qaraymiz va promptga ikki qator qoʻshamiz. «Ohang samimiy boʻlsin» — bu K harfi, kontekst. «Narxni faqat roʻyxatdan ol, oʻylab topma» — bu A harfi, agar. **[KLIK]**
 
-Xulosa: **testsiz prompt — taxmin, test bilan — aniq natija**.
+Qayta sinaymiz — endi 10 tadan 9 tasi yaxshi. Bittasi hali uzun, uni ham keyin tuzatamiz. Haqiqiy ishda 30–50 ta misol olinadi, lekin gʻoya shu.
+
+Xulosa: **testsiz prompt — taxmin. Test qilsangiz — aniq bilasiz**: yaxshilandimi yoki yoʻqmi.
 
 ### 13. Prompt laboratoriyasi
 

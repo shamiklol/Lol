@@ -62,7 +62,7 @@ Oʻn birinchi slayd — rizoning modellar, yaʼni javobdan oldin oʻylaydigan mo
 
 === 5-QISM. 12–14-SLAYDLAR ===
 
-Oʻn ikkinchi slayd — Baholash. Asosiy jumla: testsiz prompt — bu taxmin. Koʻpchilik promptni ikki-uch marta sinab, «ishlayapti» deydi — bu oʻlchov emas. Toʻgʻri yoʻl: oʻttizta real holatdan test toʻplami yigʻiladi, har bir javobga boshqa model — el el em-hakam baho qoʻyadi, keyin xatolarni koʻrib, promptni tuzatamiz. Raqamlar: birinchi versiya — oltmish uch foiz, ikkinchisi — sakson, uchinchisi — toʻqson uch. Xato turi qaysi harfni tuzatishni aytadi: format xatosi — Tartib, ohang xatosi — Kontekst.
+Oʻn ikkinchi slayd — Baholash. Asosiy jumla: testsiz prompt — bu taxmin. Oshpazni eslang: yangi taomni bitta emas, koʻp mehmonga tatib koʻradi. Slaydda chapda — yordam xizmatining prompti, oʻngda — mijozlardan kelgan oʻnta xat. Birinchi klik: promptni hamma xatda sinaymiz. Oʻntadan oltitasi yaxshi. Uchtasida ohang qoʻpol, bittasida model narxni oʻzidan toʻqib chiqardi. Ikkinchi klik: promptga ikki qator qoʻshamiz. «Ohang samimiy boʻlsin» — bu K harfi. «Narxni faqat roʻyxatdan ol» — bu A harfi. Uchinchi klik: qayta sinaymiz, endi oʻntadan toʻqqiztasi yaxshi. Xato turi qaysi harfni tuzatishni aytib beradi.
 
 Oʻn uchinchi slayd — prompt laboratoriyasi. Bu jonli namoyish. Boshida prompt bitta qator: «Termos haqida tavsif yoz», ball — oʻn ikki. Har klikda bitta Maktab qatlami qoʻshiladi va ball oshadi, oxirida — toʻqson olti. Tugma promptni Klodga yuboradi. Zaldan biror mahsulot nomini soʻrab, promptdagi termosni almashtirsangiz, odamlar natijani oʻz koʻzi bilan koʻradi.
 

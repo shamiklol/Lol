@@ -497,74 +497,112 @@ const fikrlash = {
   notes: NOTES.fikrlash,
 };
 
-// ---------------------------------------------------------------- Baholash (evals)
-const VERSIONS = [
-  ['v1', 19, 'prompt'],
-  ['v2', 24, 'model'],
-  ['v3', 28, 'data'],
+// ---------------------------------------------------------------- Baholash (testing on real cases)
+// One prompt, ten real customer messages. Step 1 runs prompt v1 and stamps each answer,
+// step 2 shows what went wrong and adds two lines to the prompt, step 3 runs it again.
+const TV_MSGS = [
+  'Buyurtmam 3 kundan beri kelmadi',
+  'Rangini almashtirsam boʻladimi?',
+  'Yetkazib berish necha pul?',
+  'Kurtka kichik keldi',
+  'Pulim ikki marta yechildi!',
+  'Chegirma kodim ishlamayapti',
+  'Yangi kolleksiya qachon keladi?',
+  'Kuryer qoʻpol gapirdi',
+  'Boshqa rangdagi koʻylak keldi',
+  'Pulimni qaytara olasizmi?',
 ];
+// '' = good answer, otherwise the reason it failed
+const TV_V1 = ['', '', 'narxni toʻqidi', '', 'qoʻpol ohang', '', '', 'qoʻpol ohang', '', 'qoʻpol ohang'];
+const TV_V2 = ['', '', '', '', '', '', '', '', '', 'juda uzun'];
+const tvGood = (v) => v.filter((x) => !x).length;
+
 const baholash = {
   id: 'baholash',
   act: 1,
   station: 1,
-  title: 'Testsiz prompt — taxmin',
+  title: 'Baholash: sinab koʻramiz',
   time: 90,
+  steps: 3,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode>M · A · K · T · A · <b>B</b></div>
-    <h2 class="h1 kinetic"><span class="ink-cool">Baholash:</span> testsiz prompt — bu taxmin</h2>
+    <h2 class="h1 kinetic"><span class="ink-cool">Baholash:</span> sinab koʻramiz</h2>
+    <p class="body tv-lead" data-in="2">Oshpaz yangi taomni bitta emas, koʻp mehmonga tatib koʻradi. Prompt ham shunday.</p>
   </header>
-  <div class="ev-flow" data-in="2" data-anim="fade">
-    <div class="ev-step panel"><span class="mono small">1</span><b>Prompt</b><em>v1</em></div>
-    <i class="ev-arrow"></i>
-    <div class="ev-step panel"><span class="mono small">2</span><b>Test toʻplami</b><em>30 ta real holat</em></div>
-    <i class="ev-arrow"></i>
-    <div class="ev-step panel"><span class="mono small">3</span><b>LLM-hakam</b><em>jadval boʻyicha baho qoʻyadi</em></div>
-    <i class="ev-arrow"></i>
-    <div class="ev-step panel"><span class="mono small">4</span><b>Xatolar tahlili</b><em>→ yangi versiya</em></div>
+  <div class="tv-wrap">
+    <div class="tv-left">
+      <div class="panel window tv-prompt" data-in="3" data-anim="left">
+        <div class="window-bar"><i></i><i></i><i></i><span>prompt</span></div>
+        <div class="window-body mono">
+          <p>Sen — doʻkon yordam xizmati xodimisan.</p>
+          <p>Mijoz xatiga qisqa javob yoz.</p>
+          <p>Narxlar roʻyxati: …</p>
+          <p class="tv-add" data-step="2"><b>+</b> Ohang: samimiy, «Hurmatli mijoz» deb boshla. <span class="tv-tag" data-c="model">K</span></p>
+          <p class="tv-add" data-step="2"><b>+</b> Narxni faqat roʻyxatdan ol, oʻylab topma. <span class="tv-tag" data-c="danger">A</span></p>
+        </div>
+      </div>
+      <div class="panel tv-score" data-in="4" data-anim="up">
+        <div class="tv-score-top"><b class="tv-count tabular">—</b><span>/ 10 ta javob yaxshi</span></div>
+        <div class="tv-bar"><i></i></div>
+        <span class="mono small tv-run">prompt hali sinalmagan</span>
+      </div>
+    </div>
+    <div class="tv-right">
+      <div class="tv-grid" data-in="3" data-anim="fade">
+        ${TV_MSGS.map(
+          (m, i) => `
+          <div class="tv-card panel">
+            <span class="mono tv-n">mijoz ${i + 1}</span>
+            <p>«${m}»</p>
+            <div class="tv-v is-wait"><i>?</i><span>javob yoʻq</span></div>
+          </div>`,
+        ).join('')}
+      </div>
+      <div class="tv-tally" data-step="2" data-anim="up">
+        <span class="chip" data-c="danger">3 ta — qoʻpol ohang → K harfini tuzatamiz</span>
+        <span class="chip" data-c="danger">1 ta — narxni toʻqidi → A harfini tuzatamiz</span>
+      </div>
+    </div>
   </div>
-  <div class="ev-bottom">
-    <div class="ev-chart panel" data-step="1" data-anim="up">
-      ${VERSIONS.map(
-        ([v, ok, c], i) => `
-        <div class="ev-bar" style="--c:var(--${c})" data-step="${i + 1}" data-anim="fade">
-          <b class="tabular" data-pct="${Math.round((ok / 30) * 100)}">0%</b>
-          <div class="ev-col"><i style="height:${(ok / 30) * 100}%"></i></div>
-          <span class="mono">${v} · ${ok}/30</span>
-        </div>`,
-      ).join('')}
-    </div>
-    <div class="ev-fails panel" data-step="1" data-anim="right">
-      <p class="mono small">v1 da 11 ta xato qayerda?</p>
-      <div class="ev-fail"><span>Format buzilgan</span><i style="--w:5"></i><b>5</b></div>
-      <div class="ev-fail"><span>Ohang notoʻgʻri</span><i style="--w:4"></i><b>4</b></div>
-      <div class="ev-fail"><span>Fakt xatosi</span><i style="--w:2"></i><b>2</b></div>
-      <p class="small ev-tip">Xato turini koʻrsangiz — promptning qaysi qatlamini tuzatishni bilasiz.</p>
-    </div>
-  </div>`,
+  <div class="tv-punch panel" data-step="3" data-anim="up"><b>Testsiz prompt — taxmin.</b> Test bilan — <b class="hl-data">aniq bilasiz</b>. <span class="small">Haqiqiy ishda 30–50 ta misol olinadi.</span></div>`,
   step(el, ctx, n, info) {
-    el.querySelectorAll('.ev-bar').forEach((b, i) => {
-      const on = n >= i + 1;
-      const col = b.querySelector('.ev-col i');
-      const pct = b.querySelector('[data-pct]');
-      if (on && !b._on) {
-        if (info.instant) {
-          gsap.set(col, { scaleY: 1 });
-          pct.textContent = pct.dataset.pct + '%';
-        } else {
-          gsap.fromTo(col, { scaleY: 0 }, { scaleY: 1, transformOrigin: '50% 100%', duration: 1.2, ease: 'expo.out' });
-          countUp(pct, +pct.dataset.pct, { suffix: '%', duration: 1.2 });
-        }
-      }
-      if (!on) {
-        gsap.set(col, { scaleY: 0 });
-        pct.textContent = '0%';
-      }
-      b._on = on;
+    const verdicts = n >= 3 ? TV_V2 : n >= 1 ? TV_V1 : null;
+    const animate = !info.instant;
+    const cards = [...el.querySelectorAll('.tv-card')];
+    const changed = [];
+    cards.forEach((card, i) => {
+      const v = card.querySelector('.tv-v');
+      const state = verdicts ? (verdicts[i] ? 'bad' : 'ok') : 'wait';
+      const label = state === 'wait' ? 'javob yoʻq' : state === 'ok' ? 'yaxshi' : verdicts[i];
+      card.classList.toggle('is-flag', n === 2 && state === 'bad');
+      if (v.dataset.state === state && v.dataset.label === label) return;
+      v.dataset.state = state;
+      v.dataset.label = label;
+      v.className = `tv-v is-${state}`;
+      v.innerHTML = `<i>${state === 'wait' ? '?' : state === 'ok' ? '✓' : '✗'}</i><span>${label}</span>`;
+      changed.push(v);
     });
-  },
-  leave(el) {
-    el.querySelectorAll('.ev-bar').forEach((b) => (b._on = false));
+    if (animate && changed.length) {
+      gsap.fromTo(changed, { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.45, stagger: 0.09, ease: 'back.out(2.2)' });
+    } else if (changed.length) gsap.set(changed, { autoAlpha: 1, scale: 1 });
+
+    const good = verdicts ? tvGood(verdicts) : 0;
+    const count = el.querySelector('.tv-count');
+    const bar = el.querySelector('.tv-bar i');
+    const run = el.querySelector('.tv-run');
+    run.textContent = n >= 3 ? '2-sinov: tuzatilgan prompt' : n >= 1 ? '1-sinov: birinchi prompt' : 'prompt hali sinalmagan';
+    el.querySelector('.tv-score').classList.toggle('is-good', n >= 3);
+    if (!verdicts) {
+      count.textContent = '—';
+      gsap.set(bar, { scaleX: 0 });
+    } else if (animate) {
+      countUp(count, good, { duration: 1.1, delay: 0.3 });
+      gsap.to(bar, { scaleX: good / 10, duration: 1.1, delay: 0.3, ease: 'expo.out' });
+    } else {
+      count.textContent = String(good);
+      gsap.set(bar, { scaleX: good / 10 });
+    }
   },
   notes: NOTES.baholash,
 };

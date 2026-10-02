@@ -89,11 +89,12 @@ export const NOTES = {
 <p>Qancha oʻylashini <b>effort</b> degan sozlama bilan boshqaramiz. Oddiy ishga — kam: tez va arzon. Murakkab tahlilga — koʻp: chuqurroq, lekin sekinroq va qimmatroq. Hamma narsaga maksimum qoʻyish — pulni bekorga sarflash.</p>`,
 
   baholash: `
-<p><b>B — Baholash</b>. Oshpaz yangi taomni bitta mehmonga tatib koʻrib, menyuga qoʻymaydi. Koʻp odamga beradi, fikrini soʻraydi. Promptda esa koʻpchilik ikki marta sinab, «ishlayapti» deydi. Bu — taxmin.</p>
-<p>Toʻgʻri yoʻl: 30 ta real holat yigʻamiz, hammasini sinaymiz va har bir javobga baho qoʻyamiz. Baholashni boshqa model ham qila oladi — xuddi hakam kabi. ${KLIK}</p>
-<p>Birinchi versiya: 30 tadan 19 tasi yaxshi — 63 foiz. Endi xatolarga qaraymiz: 5 tasida format buzilgan, 4 tasida ohang yomon, 2 tasida fakt xato. Format — bu T harfi, ohang — K harfi. Demak, aynan shularni tuzatamiz. ${KLIK}</p>
-<p>Ikkinchi versiya — 80 foiz. ${KLIK} Uchinchisi — 93 foiz. Har safar nimani tuzatganimizni va qancha yaxshilanganini aniq bilamiz.</p>
-<p>Xulosa: <b>testsiz prompt — taxmin, test bilan — aniq natija</b>.</p>`,
+<p><b>B — Baholash</b>. Oshpaz yangi taomni bitta mehmonga tatib koʻrib, menyuga qoʻymaydi-ku. Koʻp odamga beradi va nechtasiga yoqqanini sanaydi. Prompt bilan ham xuddi shunday.</p>
+<p>Chapda — bizning prompt: yordam xizmati mijoz xatlariga javob yozadi. Oʻngda — haqiqiy mijozlardan kelgan 10 ta xat. Endi promptni hammasida sinab koʻramiz. ${KLIK}</p>
+<p>Natija: 10 tadan 6 tasi yaxshi. 4 tasi yomon: uchtasida ohang qoʻpol, bittasida model narxni oʻzidan toʻqib chiqardi. Ikki marta sinab «ishlayapti» desak, buni hech qachon bilmas edik. ${KLIK}</p>
+<p>Xatolarga qaraymiz va promptga ikki qator qoʻshamiz. «Ohang samimiy boʻlsin» — bu K harfi, kontekst. «Narxni faqat roʻyxatdan ol, oʻylab topma» — bu A harfi, agar. ${KLIK}</p>
+<p>Qayta sinaymiz — endi 10 tadan 9 tasi yaxshi. Bittasi hali uzun, uni ham keyin tuzatamiz. Haqiqiy ishda 30–50 ta misol olinadi, lekin gʻoya shu.</p>
+<p>Xulosa: <b>testsiz prompt — taxmin. Test qilsangiz — aniq bilasiz</b>: yaxshilandimi yoki yoʻqmi.</p>`,
 
   lab: `
 <p>Endi hammasini jonli koʻramiz. Chapda — vazifa, tepada — MAKTAB harflari va ball, oʻngda — natija. Boshida vazifa bitta qator: «Termos haqida tavsif yoz». Ball — 12. Javob esa zerikarli, umumiy gap. ${KLIK}</p>

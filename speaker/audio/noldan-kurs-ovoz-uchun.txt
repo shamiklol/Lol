@@ -57,7 +57,7 @@ Misol qoidalardan kuchli. «Qisqa va samimiy yoz» deyish — noaniq. Bitta namu
 
 Oʻylaydigan modellar. Ilgari har bir qadamni yozib berardik: «avval oʻqi, keyin yoz». Yangi modellar javobdan oldin oʻzi oʻylaydi. Ularga qadamni emas — maqsad, talab va cheklovni beramiz. Effort sozlamasi — «qancha oʻylash kerak»: lou — tez va arzon, xay va maks — chuqurroq, lekin qimmatroq.
 
-Test. Promptni ikki marta sinab, «ishlayapti» deyish — taxmin. Toʻgʻri yoʻl: oʻttizta real misol yigʻib, hammasini sinash va har bir javobga baho qoʻyish. Baholashni boshqa model — sunʼiy intellekt hakami qila oladi. Keyin qaysi xato koʻp takrorlanayotganini koʻrib, Maktabning kerakli qatlamini tuzatamiz. Misolda natija oltmish uch foizdan saksonga, keyin toʻqson uch foizga oʻsdi.
+Test. Promptni ikki marta sinab, «ishlayapti» deyish — taxmin. Oshpaz yangi taomni koʻp mehmonga tatib koʻradi-ku, prompt ham shunday. Misol: yordam xizmatining promptini mijozlardan kelgan oʻnta xatda sinaymiz. Oʻntadan oltitasi yaxshi chiqdi: uchtasida ohang qoʻpol, bittasida model narxni oʻzidan toʻqidi. Promptga ikki qator qoʻshamiz: «ohang samimiy boʻlsin» va «narxni faqat roʻyxatdan ol». Qayta sinaymiz — endi oʻntadan toʻqqiztasi yaxshi. Haqiqiy ishda oʻttiz-ellikta misol olinadi, lekin gʻoya shu.
 
 Cheyn. Hammasini birdaniga topshirsangiz — «yigʻ, tahlil qil, yoz, tarjima qil, tekshir» — model hammasini yarim-yorti qiladi. Yaxshisi — konveyer kabi: yigʻish, tahlil, matn, tekshiruv. Har bir qadam bitta ish qiladi, bir qadamning natijasi keyingisiga oʻtadi. Buni cheyn deyishadi.
 

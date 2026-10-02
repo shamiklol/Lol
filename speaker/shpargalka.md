@@ -26,7 +26,7 @@
 | 2 | Tajriba | A — umumiy, B — aniq. **Logika boshqa edi.** | 3 |
 | 3 | Yoʻl | 5 bekat: Prompt → Logika → Chain → Tool’lar → Agent. | 1 |
 | 4 | I qism | Stajyorga vazifani qanday berish. | 1 |
-| 5 | MAKTAB | Tikuvchi. 6 qism, har biri bitta savolga javob. Zalga: «qaysi harf tushib qolgan?» | 2 |
+| 5 | MAKTAB | Tikuvchi. 6 qism, har biri bitta savolga javob. 3-klik — tayyor javob: uzr, yechim, 10% chegirma. Zalga: «qaysi harf tushib qolgan?» | 3 |
 | 6 | Agar | Navigator. Maʼlumot yetmasa — soʻra. Har «agar»ga «aks holda». | 5 |
 | 7 | Laboratoriya | Haftalik hisobot. Har klik — bitta harf. Javob «samarali ishladim»dan rahbar uchun aniq hisobotga aylanadi. Jonli: zaldan kimningdir haftasi. | 6 |
 | 8 | Chain | Osh damlash. Bitta ulkan prompt — yomon. Qadamlar + tekshiruv — yaxshi. | 3 |

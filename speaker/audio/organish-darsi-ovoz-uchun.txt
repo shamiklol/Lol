@@ -36,7 +36,7 @@ Toʻrtinchi slayd — birinchi qism boshlanishi. Bitta gap: stajyorga vazifani q
 
 Beshinchi slayd — Maktab. Tikuvchini eslang: koʻylak buyurtma qilganda qayerga kiyishingizni, oʻlchamni aytasiz, «mato yetmasa qoʻngʻiroq qiling» deysiz, rasm koʻrsatasiz, oxirida kiyib koʻrasiz. Yaxshi prompt ham shunday.
 
-Ekranda internet-doʻkon yordam xizmati uchun vazifa. Birinchi klikda u olti qismga ajraladi, ikkinchi klikda harflar chiqadi. Har bir harfni misol bilan aytasiz. Maqsad — mijoz bizdan ketmasin. Agar — buyurtma raqami boʻlmasa, avval soʻra, chegirma oʻn foizdan oshmasin; bu qator boʻlmasa, model ellik foiz chegirma vaʼda qilib yuborishi mumkin. Kontekst — mijoz ikki yildan beri xarid qiladi. Tartib — avval uzr, keyin yechim, keyin keyingi qadam. Aniq misol — tayyor javob namunasi. Baholash — yuborishdan oldin oʻzini tekshirish.
+Ekranda internet-doʻkon yordam xizmati uchun vazifa. Birinchi klikda u olti qismga ajraladi, ikkinchi klikda harflar chiqadi. Har bir harfni misol bilan aytasiz. Maqsad — mijoz bizdan ketmasin. Agar — buyurtma raqami boʻlmasa, avval soʻra, chegirma oʻn foizdan oshmasin; bu qator boʻlmasa, model ellik foiz chegirma vaʼda qilib yuborishi mumkin. Kontekst — mijoz ikki yildan beri xarid qiladi. Tartib — avval uzr, keyin yechim, keyin keyingi qadam. Aniq misol — tayyor javob namunasi. Baholash — yuborishdan oldin oʻzini tekshirish. Uchinchi klikda — natija: shu promptdan chiqqan Klod javobi. Uzr bor, yechim bor, chegirma oʻn foiz — oshmagan, ikki yillik mijoz ekani ham esga olingan. Bunday javobni darhol mijozga yuborsa boʻladi.
 
 Oxirida zalga savol: «Oxirgi vazifangizdan qaysi harflar tushib qolgan edi?» Koʻpincha — A va B.
 

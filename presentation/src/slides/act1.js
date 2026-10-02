@@ -33,12 +33,12 @@ const card = {
 
 // ---------------------------------------------------------------- MAKTAB
 const LAYERS = [
-  ['M', 'Maqsad', 'Nima kerak va nima uchun', 'Maqsad: kechikkan buyurtma haqidagi shikoyatga javob yoz — mijoz bizda qolsin.', 'prompt'],
-  ['A', 'Agar', 'Shartlar va cheklovlar', 'Agar buyurtma raqami yoʻq boʻlsa — avval uni soʻra. Chegirma 10% dan oshmasin.', 'danger'],
-  ['K', 'Kontekst', 'Kim, kim uchun, qanday vaziyatda', 'Sen — onlayn doʻkon yordam xizmati mutaxassissan. Mijoz 2 yildan beri xarid qiladi.', 'model'],
-  ['T', 'Tartib', 'Javob qanday koʻrinishda va qancha hajmda', 'Tartib: 1) uzr 2) yechim 3) keyingi qadam. 80 soʻzdan oshmasin.', 'tool'],
-  ['A', 'Aniq misol', 'Qanday javob kerakligini misolda koʻrsatish', 'Misol: «Hurmatli Aziza opa, kechikish uchun uzr soʻraymiz…»', 'data'],
-  ['B', 'Baholash', 'Javobni yuborishdan oldin oʻzini tekshirish', 'Yuborishdan oldin tekshir: yechim aniqmi? Ohang samimiymi?', 'prompt'],
+  ['M', 'Maqsad', 'Nima kerak va nima uchun', 'Maqsad: buyurtmasi 3 kun kechikkan mijozga javob yoz — u bizdan ketmasin.', 'prompt'],
+  ['A', 'Agar', 'Nima mumkin, nima mumkin emas', 'Agar buyurtma raqami boʻlmasa — avval soʻra. Chegirma 10 foizdan oshmasin.', 'danger'],
+  ['K', 'Kontekst', 'Kim yozyapti, kimga, qanday vaziyatda', 'Sen — yordam xizmati xodimisan. Mijoz 2 yildan beri xaridor. Buyurtma ertaga keladi.', 'model'],
+  ['T', 'Tartib', 'Javob qanday koʻrinishda boʻlsin', 'Tartib: avval uzr, keyin yechim, oxirida keyingi qadam. 80 soʻzdan oshmasin.', 'tool'],
+  ['A', 'Aniq misol', 'Tayyor javob namunasi', 'Misol: «Hurmatli Aziza opa, kechikish uchun uzr soʻraymiz…»', 'data'],
+  ['B', 'Baholash', 'Yuborishdan oldin oʻzini tekshirish', 'Yuborishdan oldin tekshir: yechim aniqmi? Ohang samimiymi?', 'prompt'],
 ];
 
 const maktab = {
@@ -46,7 +46,7 @@ const maktab = {
   act: 1,
   station: 1,
   title: 'MAKTAB formulasi',
-  time: 180,
+  time: 200,
   html: `
   <header class="head mk-head">
     <div class="eyebrow" data-in="0" data-decode>Formula</div>
@@ -70,7 +70,17 @@ const maktab = {
   <div class="mk-word" data-step="2" aria-hidden="true">${'MAKTAB'
     .split('')
     .map((ch, i) => `<span style="--c:var(--${LAYERS[i][4]})">${ch}</span>`)
-    .join('')}</div>`,
+    .join('')}</div>
+  <div class="mk-result panel" data-step="3" data-anim="up">
+    <span class="chip" data-c="data">Natija — Claude javobi</span>
+    <p class="mk-answer">Hurmatli Aziza opa, buyurtmangiz kechikkani uchun uzr soʻraymiz. U ertaga albatta yetib boradi. Ikki yildan beri biz bilan ekaningiz uchun keyingi xaridingizga 10% chegirma beramiz. Yana savolingiz boʻlsa, shu yerga yozing — darhol javob beramiz.</p>
+    <div class="mk-checks">
+      <span class="chip" data-c="tool">T · uzr → yechim → keyingi qadam</span>
+      <span class="chip" data-c="danger">A · chegirma 10 foizdan oshmadi</span>
+      <span class="chip" data-c="model">K · 2 yillik mijoz esga olindi</span>
+      <span class="chip" data-c="prompt">B · ohang samimiy</span>
+    </div>
+  </div>`,
   setup(el) {
     this.stack = el.querySelector('.mk-stack');
     this.rows = [...el.querySelectorAll('.mk-row')];
@@ -102,7 +112,8 @@ const maktab = {
     }
   },
   step(el, ctx, n, info) {
-    this.pose(n, info.instant);
+    this.pose(Math.min(n, 2), info.instant);
+    gsap.to([this.stack, ...el.querySelectorAll('.mk-word span')], { opacity: n >= 3 ? 0.12 : 1, duration: info.instant ? 0 : 0.6 });
   },
   notes: NOTES.maktab,
 };

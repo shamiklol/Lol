@@ -41,7 +41,7 @@ Belgilar: **[KLIK]** — keyingi klik, **[PAUZA]** — 2–3 soniya jimlik, **[S
 
 ## Slaydma-slayd skript
 
-Jami reja: **34:30** (qolgan vaqt — savol-javob va pauzalar uchun).
+Jami reja: **34:50** (qolgan vaqt — savol-javob va pauzalar uchun).
 
 ### 1. Titul
 
@@ -91,31 +91,35 @@ Birinchi qism — **Prompt Logic**, yaʼni stajyorga vazifani qanday berish. Bun
 
 ### 5. MAKTAB formulasi
 
-⏱ 3:00 · boshlanishi 4:00 · kliklar: 2
+⏱ 3:20 · boshlanishi 4:00 · kliklar: 3
 
 Endi kuchli vazifani qanday yozamiz? Tikuvchiga koʻylak buyurtma qilganingizni eslang. Nimalarni aytasiz? Qayerga kiyishingizni, oʻlchamni, «mato yetmasa qoʻngʻiroq qiling» deysiz, rasm koʻrsatasiz, oxirida kiyib koʻrasiz. Yaxshi prompt ham xuddi shunday.
 
-Ekranda oddiy vazifa: internet-doʻkonning yordam xizmati mijoz shikoyatiga javob yozadi. **[KLIK]**
+Ekranda oddiy vazifa: internet-doʻkonning yordam xizmati mijozga javob yozadi. Mijozning buyurtmasi 3 kun kechikdi, u xafa. **[KLIK]**
 
 Uni boʻlaklarga ajratsak, olti qism chiqadi. Eslab qolish oson boʻlsin deb, men ularni bitta soʻzga yigʻdim: **MAKTAB**. **[KLIK]**
 
-**M — Maqsad**: nima kerak va nima uchun. «Shikoyatga javob yoz, mijoz bizdan ketmasin».
+**M — Maqsad**: nima kerak va nima uchun. «Mijozga javob yoz — u bizdan ketmasin».
 
-**A — Agar**: shartlar. «Buyurtma raqami boʻlmasa — avval soʻra. Chegirma 10 foizdan oshmasin». Bu boʻlmasa, model mijozni xursand qilaman deb 50 foiz chegirma vaʼda qilib yuboradi.
+**A — Agar**: nima mumkin, nima mumkin emas. «Buyurtma raqami boʻlmasa — avval soʻra. Chegirma 10 foizdan oshmasin». Bu qator boʻlmasa, model mijozni xursand qilaman deb 50 foiz chegirma vaʼda qilib yuboradi.
 
-**K — Kontekst**: kim, kim bilan, qanday vaziyatda. «Sen — yordam xizmati xodimisan, mijoz bizdan 2 yildan beri xarid qiladi».
+**K — Kontekst**: kim yozyapti, kimga, qanday vaziyatda. «Sen — yordam xizmati xodimisan. Mijoz 2 yildan beri xaridor. Buyurtma ertaga keladi».
 
-**T — Tartib**: javob qanday koʻrinishda. «Avval uzr, keyin yechim, keyin keyingi qadam. 80 soʻzdan oshmasin».
+**T — Tartib**: javob qanday koʻrinishda. «Avval uzr, keyin yechim, oxirida keyingi qadam. 80 soʻzdan oshmasin».
 
 **A — Aniq misol**: tayyor javob namunasi. Tikuvchiga rasm koʻrsatgandek.
 
 **B — Baholash**: yuborishdan oldin oʻzini tekshirish. Koʻylakni kiyib koʻrgandek.
 
+Endi natijaga qaraymiz. **[KLIK]**
+
+Mana Claude javobi. Uzr bor, yechim bor, keyingi qadam bor. Chegirma — 10 foiz, oshmadi. Ikki yillik mijoz ekani ham esga olindi. Ohang samimiy. Bunday javobni oʻqib, darhol mijozga yuborsa boʻladi.
+
 **[SAVOL]** Oxirgi yozgan vazifangizni eslang. Undan qaysi harflar tushib qolgan edi? **[PAUZA]** Koʻpincha — A va B.
 
 ### 6. «Agar» — promptdagi logika
 
-⏱ 2:00 · boshlanishi 7:00 · kliklar: 5
+⏱ 2:00 · boshlanishi 7:20 · kliklar: 5
 
 MAKTAB’dagi eng muhim harf — **«Agar»**. Navigatorni eslang: yoʻl yopiq boʻlsa, boshqa yoʻl topadi. Nima qilishni oldindan biladi. Vazifada ham shunday boʻlishi kerak. Chapda — vazifa, oʻngda — xuddi shu vazifa yoʻllar xaritasi sifatida. **[KLIK]**
 
@@ -131,7 +135,7 @@ Qoida oddiy: **har bir «agar»ning oʻz «aks holda»si boʻlsin**. Yoʻl koʻr
 
 ### 7. Prompt laboratoriyasi
 
-⏱ 2:30 · boshlanishi 9:00 · kliklar: 6
+⏱ 2:30 · boshlanishi 9:20 · kliklar: 6
 
 Endi hammasini jonli koʻramiz. Har hafta rahbarga hisobot yozasiz-ku. Chapda — vazifa va MAKTAB harflari, oʻngda — natija. Boshida vazifa bitta qator: «Haftalik hisobot yoz». Javobga qarang: «samarali ishladim, rejalar bajarilmoqda». Rahbar bundan hech narsa tushunmaydi. **[KLIK]**
 
@@ -143,7 +147,7 @@ Natijaga qarang: rahbar bir qarashda hammasini koʻradi — nima qilindi, qayerd
 
 ### 8. Bitta ulkan prompt oʻrniga — chain
 
-⏱ 1:30 · boshlanishi 11:30 · kliklar: 3
+⏱ 1:30 · boshlanishi 11:50 · kliklar: 3
 
 Birinchi qismning oxirgi gapi. Osh damlashni eslang. Hamma narsani bir vaqtda qozonga tashlamaysiz-ku: avval goʻsht, keyin piyoz va sabzi, keyin guruch. Har bosqichning oʻz vaqti bor.
 
@@ -157,13 +161,13 @@ Endi eng qiziq joyi: bu chain’ga **qoʻl** qoʻshamiz.
 
 ### 9. II qism · AI Agent Tool Chaining
 
-⏱ 0:20 · boshlanishi 13:00 · kliklar: 0
+⏱ 0:20 · boshlanishi 13:20 · kliklar: 0
 
 Ikkinchi qism — **Tool Chaining**. Birinchi qismda stajyorga vazifa berishni oʻrgandik. Endi unga qoʻl beramiz. **[KLIK]**
 
 ### 10. Modelning qoʻli yoʻq
 
-⏱ 1:50 · boshlanishi 13:20 · kliklar: 4
+⏱ 1:50 · boshlanishi 13:40 · kliklar: 4
 
 Eng aqlli model ham uchta narsani qila olmaydi. **[PAUZA]**
 
@@ -183,7 +187,7 @@ Uchinchisi — **nima kerak**: shahar nomi — albatta, sana — xohlasa.
 
 ### 11. Tool calling qanday ishlaydi
 
-⏱ 2:10 · boshlanishi 15:10 · kliklar: 8
+⏱ 2:10 · boshlanishi 15:30 · kliklar: 8
 
 Endi tool qanday chaqirilishini qadam-baqadam koʻramiz. Oddiy oʻxshatish: model — **boshliq**, sizning dasturingiz — **yordamchi**. Boshliq oʻzi hech narsa qilmaydi, faqat xatcha yozadi. **[KLIK]**
 
@@ -205,7 +209,7 @@ Eng muhim gap: **model tool’ni oʻzi ishga tushirmaydi**. U faqat soʻraydi �
 
 ### 12. Agent = model + tool’lar + sikl
 
-⏱ 1:40 · boshlanishi 17:20 · kliklar: 4
+⏱ 1:40 · boshlanishi 17:40 · kliklar: 4
 
 Endi asosiy savol: agent nima? Formula oddiy: **agent = model + tool’lar + sikl**. Model — miya, tool’lar — qoʻl, sikl — ularni ishlatib turadigan motor. Chapda — shu uch qism.
 
@@ -221,7 +225,7 @@ Muhim: **agentda toʻxtash qoidasi boʻlishi shart**. Vazifa bajarildi; qadamlar
 
 ### 13. Chain’ning 6 turi
 
-⏱ 3:00 · boshlanishi 19:00 · kliklar: 7
+⏱ 3:00 · boshlanishi 19:20 · kliklar: 7
 
 Agentlar qanchalik murakkab koʻrinmasin, ular oltita tayyor sxemadan yigʻiladi. Bu roʻyxatni Claude’ni yaratgan Anthropic kompaniyasi tavsiya qiladi. Har birini hayotiy misol bilan koʻramiz. **[KLIK]**
 
@@ -241,7 +245,7 @@ Farqi: birinchi beshtasida yoʻlni biz chizamiz — bu **workflow**. Oltinchisid
 
 ### 14. Agentni yigʻamiz
 
-⏱ 2:10 · boshlanishi 22:00 · kliklar: 6
+⏱ 2:10 · boshlanishi 22:20 · kliklar: 6
 
 Endi koʻrganlarimizni bitta joyga yigʻamiz va agentni koʻz oldimizda quramiz. Markazda — miya, yaʼni model. Hozircha u faqat matn oladi va matn qaytaradi. **[KLIK]**
 
@@ -261,7 +265,7 @@ Endi vazifa beramiz: «Oktabrda Toshkentdagi AI tadbirlarini top, ob-havoni teks
 
 ### 15. Jonli agent
 
-⏱ 3:20 · boshlanishi 24:10 · kliklar: 0
+⏱ 3:20 · boshlanishi 24:30 · kliklar: 0
 
 Endi eng qiziq joyi: hozir yigʻgan agentimiz jonli ishlaydi. Bu animatsiya emas — Claude tool’larni haqiqatan oʻzi tanlaydi va chaqiradi. **[JONLI]**
 
@@ -279,7 +283,7 @@ Internet boʻlmasa, xuddi shu tugma yozib olingan namoyishni koʻrsatadi — ma�
 
 ### 16. MCP — AI uchun USB-C
 
-⏱ 1:30 · boshlanishi 27:30 · kliklar: 3
+⏱ 1:30 · boshlanishi 27:50 · kliklar: 3
 
 Endi ulash muammosi. Bir necha yil oldin har telefonning oʻz zaryadlovchisi bor edi-ku. Sunʼiy intellektda ham shunday edi. Deylik, uchta AI ilova va beshta servis bor: GitHub, Slack, baza, Drive va CRM. **[KLIK]**
 
@@ -291,7 +295,7 @@ Foydasi: yangi servis bir marta ulanadi — hamma AI ilovalar uni ishlata oladi.
 
 ### 17. Agent qayerda adashadi
 
-⏱ 1:50 · boshlanishi 29:00 · kliklar: 2
+⏱ 1:50 · boshlanishi 29:20 · kliklar: 2
 
 Oxirgi mavzu — xavfsizlik. Agent kuchli, lekin u ham adashadi. Ekranda toʻrtta xavf. Har birining himoyasi bor. **[KLIK]**
 
@@ -305,7 +309,7 @@ Toʻrtinchi — **agent nima qilganini bilmaysiz**. Himoya: har bir qadam yozib 
 
 ### 18. Bonus: 8 ta skill
 
-⏱ 1:10 · boshlanishi 30:50 · kliklar: 0
+⏱ 1:10 · boshlanishi 31:10 · kliklar: 0
 
 Va endi — sovgʻa. **Sakkizta skill**.
 
@@ -319,7 +323,7 @@ QR orqali yuklab olasiz.
 
 ### 19. Bu taqdimotni kim yigʻdi?
 
-⏱ 1:30 · boshlanishi 32:00 · kliklar: 3
+⏱ 1:30 · boshlanishi 32:20 · kliklar: 3
 
 Va oxirgi misol. **[PAUZA]** Bir savol: bu taqdimotni kim yigʻdi? **[KLIK]**
 
@@ -331,7 +335,7 @@ Bugun gapirgan hamma narsa — vazifa logikasi, tool’lar, sikl — shu taqdimo
 
 ### 20. Yakun va savollar
 
-⏱ 1:00 · boshlanishi 33:30 · kliklar: 0
+⏱ 1:00 · boshlanishi 33:50 · kliklar: 0
 
 Uchta gapni olib keting.
 

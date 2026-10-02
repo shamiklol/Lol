@@ -184,6 +184,10 @@
 .mk-text { margin: 0; font-size: 21px; color: var(--text); line-height: 1.45; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .mk-word { position: absolute; left: 128px; top: 262px; display: flex; flex-direction: column; gap: 0; font-family: var(--f-display); font-weight: 800; font-size: 74px; line-height: 1.395; letter-spacing: -0.02em; }
 .mk-word span { color: var(--c); text-shadow: 0 0 30px color-mix(in srgb, var(--c) 50%, transparent); }
+.mk-result { position: absolute; left: 330px; right: 128px; top: 330px; z-index: 3; padding: 34px 40px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start; background: var(--panel-solid); }
+.mk-result .chip { font-size: 18px; }
+.mk-answer { margin: 0; font-size: 32px; line-height: 1.45; color: var(--text); padding: 22px 28px; border-radius: 22px 22px 22px 6px; background: color-mix(in srgb, var(--data) 9%, transparent); border: 1px solid color-mix(in srgb, var(--data) 40%, var(--line)); text-wrap: pretty; }
+.mk-checks { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* ---------- agar ---------- */
 .ag-grid { display: grid; grid-template-columns: 780px 1fr; gap: 40px; margin-top: 50px; align-items: start; }

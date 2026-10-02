@@ -35,14 +35,16 @@ export const NOTES = {
 
   maktab: `
 <p>Endi kuchli vazifani qanday yozamiz? Tikuvchiga koʻylak buyurtma qilganingizni eslang. Nimalarni aytasiz? Qayerga kiyishingizni, oʻlchamni, «mato yetmasa qoʻngʻiroq qiling» deysiz, rasm koʻrsatasiz, oxirida kiyib koʻrasiz. Yaxshi prompt ham xuddi shunday.</p>
-<p>Ekranda oddiy vazifa: internet-doʻkonning yordam xizmati mijoz shikoyatiga javob yozadi. ${KLIK}</p>
+<p>Ekranda oddiy vazifa: internet-doʻkonning yordam xizmati mijozga javob yozadi. Mijozning buyurtmasi 3 kun kechikdi, u xafa. ${KLIK}</p>
 <p>Uni boʻlaklarga ajratsak, olti qism chiqadi. Eslab qolish oson boʻlsin deb, men ularni bitta soʻzga yigʻdim: <b>MAKTAB</b>. ${KLIK}</p>
-<p><b>M — Maqsad</b>: nima kerak va nima uchun. «Shikoyatga javob yoz, mijoz bizdan ketmasin».</p>
-<p><b>A — Agar</b>: shartlar. «Buyurtma raqami boʻlmasa — avval soʻra. Chegirma 10 foizdan oshmasin». Bu boʻlmasa, model mijozni xursand qilaman deb 50 foiz chegirma vaʼda qilib yuboradi.</p>
-<p><b>K — Kontekst</b>: kim, kim bilan, qanday vaziyatda. «Sen — yordam xizmati xodimisan, mijoz bizdan 2 yildan beri xarid qiladi».</p>
-<p><b>T — Tartib</b>: javob qanday koʻrinishda. «Avval uzr, keyin yechim, keyin keyingi qadam. 80 soʻzdan oshmasin».</p>
+<p><b>M — Maqsad</b>: nima kerak va nima uchun. «Mijozga javob yoz — u bizdan ketmasin».</p>
+<p><b>A — Agar</b>: nima mumkin, nima mumkin emas. «Buyurtma raqami boʻlmasa — avval soʻra. Chegirma 10 foizdan oshmasin». Bu qator boʻlmasa, model mijozni xursand qilaman deb 50 foiz chegirma vaʼda qilib yuboradi.</p>
+<p><b>K — Kontekst</b>: kim yozyapti, kimga, qanday vaziyatda. «Sen — yordam xizmati xodimisan. Mijoz 2 yildan beri xaridor. Buyurtma ertaga keladi».</p>
+<p><b>T — Tartib</b>: javob qanday koʻrinishda. «Avval uzr, keyin yechim, oxirida keyingi qadam. 80 soʻzdan oshmasin».</p>
 <p><b>A — Aniq misol</b>: tayyor javob namunasi. Tikuvchiga rasm koʻrsatgandek.</p>
 <p><b>B — Baholash</b>: yuborishdan oldin oʻzini tekshirish. Koʻylakni kiyib koʻrgandek.</p>
+<p>Endi natijaga qaraymiz. ${KLIK}</p>
+<p>Mana Claude javobi. Uzr bor, yechim bor, keyingi qadam bor. Chegirma — 10 foiz, oshmadi. Ikki yillik mijoz ekani ham esga olindi. Ohang samimiy. Bunday javobni oʻqib, darhol mijozga yuborsa boʻladi.</p>
 <p>${SAVOL} Oxirgi yozgan vazifangizni eslang. Undan qaysi harflar tushib qolgan edi? ${PAUZA} Koʻpincha — A va B.</p>`,
 
   agar: `

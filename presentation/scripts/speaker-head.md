@@ -1,6 +1,6 @@
 # Maʼruza skripti · Prompt Logic & AI Agent Tool Chaining
 
-**Shamsiddin · Shams.labs** — 45 daqiqa, auditoriya: AI agentlar bilan ishlaydigan mutaxassislar.
+**Shamsiddin · Shams.labs** — 45 daqiqa. Matn oddiy tilda va hayotiy misollar bilan yozilgan: mavzuni endi oʻrganayotganlar ham tushunadi.
 
 Har bir slayd uchun toʻliq matn: nima deyish va qachon bosish. Xuddi shu matn maʼruzachi oynasida (**P**) va eslatmalarda (**N**) chiqadi.
 

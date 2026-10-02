@@ -247,7 +247,7 @@ const patterns = {
   act: 2,
   station: 4,
   title: 'Chaining: 6 ta pattern',
-  time: 180,
+  time: 170,
   html: `
   <header class="head pt-head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--model)">Anthropic · Building Effective Agents</div>
@@ -466,7 +466,7 @@ const failures = {
   act: 2,
   station: 4,
   title: 'Agent qayerda sinadi',
-  time: 80,
+  time: 90,
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--danger)">Ishonchlilik</div>

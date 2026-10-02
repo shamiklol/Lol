@@ -69,9 +69,19 @@ Oʻn uchinchi slayd — prompt laboratoriyasi. Bu jonli namoyish. Boshida prompt
 Oʻn toʻrtinchi slayd — cheyn. Birinchi qismning oxirgi gʻoyasi. Hamma narsani bitta ulkan promptga tiqish — xato: model hammasini yarim-yorti qiladi. Toʻgʻri yoʻl — cheyn: yigʻish, tahlil, yozish, tekshirish. Har bir qadam bitta ish qiladi, qadamlar orasida aniq format, oʻrtada esa tekshiruv. Xato qayerda ekani darhol koʻrinadi. Oxirgi jumla — keyingi qismga oʻtish: «Endi bu cheynga qoʻl qoʻshamiz».
 
 
-=== 6-QISM. IKKINCHI QISM: 15–18-SLAYDLAR ===
+=== 6-QISM. IKKINCHI QISM: TUL CHEYNING. 15–18-SLAYDLAR ===
 
-Oʻn beshinchi slayd — ikkinchi qism, Tul Cheyning. Bitta jumla: birinchi qismda modelga fikrlashni oʻrgatdik, endi unga qoʻl beramiz.
+Endi ikkinchi qism — Tul Cheyning. Avval uning oʻzini oddiy qilib tushuntiraman.
+
+Tul cheyning nima? Agent vazifani bajarish uchun bir nechta tulni ketma-ket chaqiradi, va har bir tulning natijasi keyingi qadamga kirish boʻladi.
+
+Misol. Agentdan soʻraymiz: «Oktabrdagi ey ay tadbirlarini top, ob-havoni tekshir va jamoaga xabar yubor». Agent avval tadbirlar tulini chaqiradi va uchta sanani oladi. Keyin shu uchta sana bilan ob-havo tulini chaqiradi — uch marta, bir vaqtda. Keyin natijalarni solishtirib, hisobot tulini chaqiradi. Oxirida xabar tulini chaqirib, hisobotni jamoaga yuboradi. Toʻrt xil tul — va ular bir-biriga ulangan.
+
+Eng muhimi: bu tartibni hech kim oldindan yozmagan. Qaysi tulni, qaysi tartibda va qaysilarini bir vaqtda chaqirishni model oʻzi hal qiladi. Mana shu — tul cheyning.
+
+Ikkinchi qismda aynan shuni bosqichma-bosqich ochamiz: avval tul nima, keyin bitta tul qanday chaqiriladi, keyin sikl agentni qanday harakatga keltiradi, keyin tayyor sxemalar va oxirida jonli agent.
+
+Oʻn beshinchi slayd — ikkinchi qism boshlanishi. Bitta jumla: birinchi qismda modelga fikrlashni oʻrgatdik, endi unga qoʻl beramiz.
 
 Oʻn oltinchi slayd — modelning qoʻli yoʻq. Uchta zaif joy: bilimi muzlatilgan — yangi voqealarni bilmaydi; hisobda adashadi; va eng muhimi — harakat qila olmaydi: xat yubora olmaydi, bazaga yoza olmaydi. Yechim — tul. Tulning uch qismi bor: nomi, tavsifi va parametrlar sxemasi. Asosiy fikr: tavsif ham prompt, chunki model aynan shu matnni oʻqib, qaysi tulni chaqirishni hal qiladi.
 

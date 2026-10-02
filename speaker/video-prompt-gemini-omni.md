@@ -1,86 +1,163 @@
 # Промпт для Gemini Omni Flash 1.1: «Как ИИ работает внутри»
 
-Видео 40 секунд из 4 клипов по 10 секунд. Клип 1 — генерация с нуля (text-to-video). Клипы 2–4 — продолжение предыдущего (Extend): модель видит последние 10 секунд и продолжает без склейки.
+Видео 40 секунд из 4 клипов по 10 секунд. **Каждый промпт полностью самостоятельный**: модель не помнит прошлую генерацию, поэтому в каждом заново описаны стиль, палитра, предметы, первый кадр, действие и последний кадр. Последний кадр клипа N совпадает с первым кадром клипа N+1, поэтому клипы склеиваются в одно видео.
 
-Настройки: 16:9, 1080p (или 720p для черновика, потом апскейл).
+Настройки для всех 4 клипов одинаковые: 16:9, 10 секунд, 1080p (или 720p для черновика, потом апскейл).
 
 ---
 
-## Клип 1 · 0–10 с · Вопрос → токены
+## Клип 1 · Вопрос превращается в токены
 
 ```
-A cinematic, technically accurate 3D visualization of how a large language model processes text, shown as abstract glowing data — no people, no robots, no brains.
+SUBJECT AND CONTEXT
+A cinematic, technically accurate 3D visualization of how a large language model reads a question. This is the first part of an explainer about the inside of an AI model. Everything is abstract glowing data floating in a dark void: glowing text, rounded glass tiles and light. There are no people, no hands, no robots, no brains, no computers and no screens in the scene.
 
-[0-3s] Total darkness with faint floating dust particles. A single line of crisp white text fades in at screen center: "Ertaga Samarqandda yomgʻir yogʻadimi?" Slow push-in.
-[3-7s] The sentence cracks apart with a soft glassy click into eleven small rounded glass tiles, each holding one word-piece: "Ert" "aga" "Samar" "qand" "da" "yom" "gʻir" "yogʻ" "adi" "mi" "?". The tiles spread into a neat horizontal row with even gaps.
-[7-10s] One by one, left to right, each tile flips 180° and reveals a cyan glowing number on its back: 9132, 2210, 48715, 6603, 1588, 30142, 7720, 21904, 5517, 912, 30. The camera settles into a steady, centered medium-wide shot of the row and holds still.
+STYLE (keep exactly)
+"Neural noir" premium tech-keynote look. Deep navy-black background, hex #0b0d17, with faint floating dust particles and soft volumetric haze. Light comes only from the glowing objects themselves. Accent colors: neon cyan #3fe0ff, violet #a07dff, amber #ffb547, mint green #6dffb8. Objects are made of clear rounded glass with a thin glowing cyan edge. Shallow depth of field, soft bloom, ultra clean, photoreal 3D render, smooth and calm motion, no film grain, no glitch effects.
 
-Camera: one continuous shot, slow dolly-in, no cuts, no shake. Ends locked and centered.
-Look: "neural noir" — deep navy-black background (#0b0d17), neon cyan (#3fe0ff), violet (#a07dff), amber (#ffb547) and mint (#6dffb8) light, volumetric haze, shallow depth of field, premium tech-keynote style, ultra clean.
-On-screen text: only the exact text in quotes above, white clean sans-serif, perfectly spelled, nothing else.
-Audio: deep low ambient drone; soft glass click when the sentence breaks; light digital tick on each tile flip; no voice, no music beat yet.
-Constraints: no subtitles, no logos, no watermark, no extra words or letters, no human figures, no brain imagery, no glitch noise.
+FIRST FRAME
+Pure dark navy-black void with a few slowly drifting dust particles. Nothing else is visible.
+
+ACTION AND TIMING
+[0-3s] A single line of crisp white text fades in at the exact center of the screen: "Ertaga Samarqandda yomgʻir yogʻadimi?" The camera makes a slow, smooth push-in toward the text.
+[3-7s] With a soft glassy click, the sentence cracks apart into eleven small rounded glass tiles of equal height, each holding one piece of the sentence in white letters, in this order from left to right: "Ert" "aga" "Samar" "qand" "da" "yom" "gʻir" "yogʻ" "adi" "mi" "?". The tiles drift apart and settle into one perfectly straight horizontal row with even gaps, centered on screen.
+[7-10s] One by one, from left to right, each tile flips 180 degrees around its vertical axis and shows a glowing cyan number on its back instead of the word, in this order: 9132, 2210, 48715, 6603, 1588, 30142, 7720, 21904, 5517, 912, 30. The camera slows down and stops.
+
+LAST FRAME (hold for the final 2 seconds)
+A steady, centered, eye-level medium-wide shot: one straight horizontal row of eleven rounded glass tiles floating in the dark navy-black void, each showing a glowing cyan number, the row filling about 80 percent of the frame width. Nothing moves except slow dust particles.
+
+CAMERA
+One continuous shot. Slow dolly-in, then a smooth stop. Eye level, centered, no cuts, no shake, no rotation.
+
+ON-SCREEN TEXT
+Only the exact text written in quotes above: the question, the eleven word pieces and the eleven numbers. Clean white sans-serif letters, cyan for the numbers, perfectly spelled, sharp and readable. No other text anywhere.
+
+AUDIO
+A deep, low ambient drone throughout. One soft glass click when the sentence breaks apart. A light digital tick on each tile flip. No voice, no narration, no music beat.
+
+CONSTRAINTS
+No subtitles, no captions, no logos, no watermarks, no extra words or letters, no misspelled text, no people, no faces, no hands, no robots, no brain imagery, no computer screens, no glitch effects, no camera shake, no cuts.
 ```
 
-## Клип 2 · 10–20 с · Числа → смысл (embeddings)
+---
+
+## Клип 2 · Числа превращаются в смысл (embedding)
 
 ```
-Continue the previous shot seamlessly — no cut, same camera position at start, same style, same lighting, same row of numbered glass tiles.
+SUBJECT AND CONTEXT
+A cinematic, technically accurate 3D visualization of how a large language model turns words into meaning. This is the second part of an explainer about the inside of an AI model. The token numbers of a question become vectors of numbers and find their place in a space of meanings, where related words sit close together. Everything is abstract glowing data floating in a dark void. There are no people, no hands, no robots, no brains, no computers and no screens in the scene.
 
-[0-3s] Each numbered tile melts upward into a tall thin vertical column of tiny glowing cubes — a long vector of numbers. The cubes inside each column pulse at different brightness levels like data.
-[3-7s] The eleven columns lift off and fly forward into a vast dark 3D space full of thousands of faint points of light. Camera pulls back and slightly up to reveal the space. Each column shrinks into a bright point and finds its place among the others.
-[7-10s] Points with related meaning drift together into soft glowing clusters: a mint cluster labeled "yomgʻir · ob-havo · soyabon" and a separate violet cluster labeled "Samarqand · Toshkent · shahar". The camera slowly orbits a few degrees and comes to rest on a wide view of both clusters. A single small label fades in at top left: "Embedding".
+STYLE (keep exactly)
+"Neural noir" premium tech-keynote look. Deep navy-black background, hex #0b0d17, with faint floating dust particles and soft volumetric haze. Light comes only from the glowing objects themselves. Accent colors: neon cyan #3fe0ff, violet #a07dff, amber #ffb547, mint green #6dffb8. Objects are made of clear rounded glass with a thin glowing cyan edge. Shallow depth of field, soft bloom, ultra clean, photoreal 3D render, smooth and calm motion, no film grain, no glitch effects.
 
-Camera: one continuous move — pull-back, gentle orbit, then hold. No cuts.
-Look: identical to the previous clip — navy-black, neon cyan/violet/amber/mint, volumetric haze.
-On-screen text: only the exact quoted labels above, small white sans-serif, perfectly spelled.
-Audio: continue the same low drone; soft whooshes as columns fly; a warm shimmering tone as clusters form.
-Never change: color palette, background, camera smoothness.
-Constraints: no subtitles, no logos, no watermark, no extra text, no people, no brain imagery.
+FIRST FRAME
+A steady, centered, eye-level medium-wide shot: one straight horizontal row of eleven small rounded glass tiles floating in the dark navy-black void. Each tile shows a glowing cyan number, from left to right: 9132, 2210, 48715, 6603, 1588, 30142, 7720, 21904, 5517, 912, 30. The row fills about 80 percent of the frame width. Slow dust particles drift.
+
+ACTION AND TIMING
+[0-3s] Each glass tile melts upward and stretches into a tall, thin vertical column made of many tiny glowing cubes stacked on top of each other, like a long list of numbers. The cubes inside each column pulse at different brightness levels in cyan and violet. The numbers disappear.
+[3-7s] The eleven columns lift off and fly forward, away from the camera, into a vast dark 3D space filled with thousands of faint, tiny points of light. The camera pulls back and rises slightly to reveal how big this space is. Each column shrinks into a single bright point and takes its place among the others.
+[7-10s] Points with related meaning drift toward each other and form two soft glowing clusters. On the left, a mint green cluster with a small white label floating above it: "yomgʻir · ob-havo · soyabon". On the right, a violet cluster with a small white label floating above it: "Samarqand · Toshkent · shahar". The camera makes a slow orbit of a few degrees and stops. A small white label fades in at the top left corner of the frame: "Embedding".
+
+LAST FRAME (hold for the final 2 seconds)
+A steady wide shot of a dark navy-black 3D space filled with thousands of faint points of light. Two bright clusters stand out: a mint green cluster on the left and a violet cluster on the right, each with its small white label above it, and the small label "Embedding" at the top left corner. Nothing moves except slow dust particles and a gentle shimmer of the points.
+
+CAMERA
+One continuous move: slow pull-back and slight rise, a gentle orbit of a few degrees, then a smooth stop. No cuts, no shake.
+
+ON-SCREEN TEXT
+Only the exact text written in quotes above: the two cluster labels and the word "Embedding". Small clean white sans-serif letters, perfectly spelled, sharp and readable. No other text anywhere.
+
+AUDIO
+A deep, low ambient drone throughout. Soft airy whooshes as the columns fly away. A warm, shimmering tone when the clusters form. No voice, no narration, no music beat.
+
+CONSTRAINTS
+No subtitles, no captions, no logos, no watermarks, no extra words or letters, no misspelled text, no people, no faces, no hands, no robots, no brain imagery, no planets, no galaxies, no computer screens, no glitch effects, no camera shake, no cuts.
 ```
 
-## Клип 3 · 20–30 с · Слои трансформера и attention
+---
+
+## Клип 3 · Слои модели и attention
 
 ```
-Continue the previous shot seamlessly — no cut, same style, same lighting.
+SUBJECT AND CONTEXT
+A cinematic, technically accurate 3D visualization of the transformer layers inside a large language model and the attention mechanism. This is the third part of an explainer about the inside of an AI model. Eleven glowing columns of data, one for each piece of the question "Ertaga Samarqandda yomgʻir yogʻadimi?", travel up through a tall stack of glass layers. On every layer, threads of light show which words matter to which. Everything is abstract glowing data in a dark void. There are no people, no hands, no robots, no brains, no computers and no screens in the scene.
 
-[0-3s] The glowing points rise out of the space and line up into a row of eleven bright columns, which glide into the base of a tall stack of horizontal translucent glass layers, like the floors of a skyscraper in cross-section.
-[3-7s] On the first glass layer, thin threads of light connect the columns to each other — attention. The column for "yom·gʻir" sends thick bright violet threads to "Samar·qand" and "Ert·aga", and only faint thin threads to the rest; thread brightness shows importance. After the threads, the columns pass through a dense block of tiny amber neurons that flicker briefly.
-[7-10s] The camera rises vertically through dozens of layers, the same threads-then-neurons pattern repeating faster on each floor; the columns glow richer and brighter as they climb. The camera slows and stops just below the top layer, looking at the glowing columns. A small label fades in at top left: "Attention".
+STYLE (keep exactly)
+"Neural noir" premium tech-keynote look. Deep navy-black background, hex #0b0d17, with faint floating dust particles and soft volumetric haze. Light comes only from the glowing objects themselves. Accent colors: neon cyan #3fe0ff, violet #a07dff, amber #ffb547, mint green #6dffb8. Objects are made of clear rounded glass with a thin glowing cyan edge. Shallow depth of field, soft bloom, ultra clean, photoreal 3D render, smooth and calm motion, no film grain, no glitch effects.
 
-Camera: one continuous vertical crane-up, accelerating then decelerating to a stop. No cuts.
-Look: identical to previous clips — navy-black, neon cyan/violet/amber/mint, volumetric haze, glass reflections.
-On-screen text: only "Attention", small white sans-serif, perfectly spelled.
-Audio: same drone rising slowly in pitch; delicate electric hum on each layer; a soft rhythmic pulse building tension.
-Never change: color palette, background, glass-layer design.
-Constraints: no subtitles, no logos, no watermark, no extra text, no people, no brain imagery.
+FIRST FRAME
+A steady wide shot of a dark navy-black 3D space filled with thousands of faint points of light. Two bright clusters stand out: a mint green cluster on the left and a violet cluster on the right. There is no text in the frame.
+
+ACTION AND TIMING
+[0-3s] Eleven bright points rise out of the space and line up in one straight horizontal row. Each point grows into a tall, thin vertical column of tiny glowing cubes in cyan and violet. The row of columns glides forward into the base of a tall stack of horizontal, translucent glass layers stacked one above the other with even spacing, like the floors of a glass skyscraper seen in cross-section.
+[3-7s] On the first glass layer, thin threads of light appear between the columns. The fifth and sixth columns send thick, bright violet threads to the third and fourth columns and to the first and second columns, and only faint, thin threads to the rest; brighter threads mean more important connections. Right after the threads, the columns pass through a dense block of tiny amber neurons that flicker briefly, then continue upward.
+[7-10s] The camera rises vertically through dozens of glass layers. On every layer the same pattern repeats faster and faster: violet threads, then flickering amber neurons. With each layer the columns glow brighter and richer. The camera slows down and stops just below the top layer, looking straight at the row of eleven brightly glowing columns. A small white label fades in at the top left corner of the frame: "Attention".
+
+LAST FRAME (hold for the final 2 seconds)
+A steady shot near the top of a tall stack of horizontal translucent glass layers in a dark navy-black void. A row of eleven tall, brightly glowing columns of cyan and violet cubes stands on the top layer, connected by a few soft violet threads. The small label "Attention" is at the top left corner. Nothing moves except slow dust particles and a gentle pulse in the columns.
+
+CAMERA
+One continuous vertical crane-up: starts slowly, speeds up through the middle layers, then decelerates to a smooth stop near the top. No cuts, no shake, no rotation.
+
+ON-SCREEN TEXT
+Only the word "Attention", small clean white sans-serif letters, perfectly spelled, sharp and readable. No other text anywhere, no words on the columns.
+
+AUDIO
+A deep, low ambient drone that slowly rises in pitch. A delicate electric hum each time the columns pass a layer. A soft rhythmic pulse that builds tension toward the end. No voice, no narration.
+
+CONSTRAINTS
+No subtitles, no captions, no logos, no watermarks, no extra words or letters, no misspelled text, no people, no faces, no hands, no robots, no brain imagery, no real buildings or city, no computer screens, no glitch effects, no camera shake, no cuts.
 ```
 
-## Клип 4 · 30–40 с · Вероятности → ответ по одному токену
+---
+
+## Клип 4 · Вероятности и ответ по одному токену
 
 ```
-Continue the previous shot seamlessly — no cut, same style, same lighting.
+SUBJECT AND CONTEXT
+A cinematic, technically accurate 3D visualization of how a large language model chooses the next word and writes its answer one token at a time. This is the fourth and final part of an explainer about the inside of an AI model. The model was asked "Ertaga Samarqandda yomgʻir yogʻadimi?" and now writes its answer: it shows the probabilities of possible next words, picks one, adds it to the text, and repeats. Everything is abstract glowing data in a dark void. There are no people, no hands, no robots, no brains, no computers and no screens in the scene.
 
-[0-3s] At the top of the stack, the last column projects a wide horizontal bar chart of next-word candidates rising like a city skyline: a tall mint bar labeled "Ha" with "62%", a shorter bar "Yoʻq" with "21%", a small bar "Balki" with "12%", and many tiny unlabeled bars fading into the distance.
-[3-7s] A small bright spark lands on the "Ha" bar; it detaches as a glass tile, flies down and attaches to the end of the input row. The whole row rushes up through the layer stack again in a quick streak of light, and a new tile appears: ",". This repeats faster and faster, appending tiles one at a time: "70%", "—", "soyabon", "oling".
-[7-10s] The camera pulls back and settles on a calm, centered final frame: the complete answer glowing in one line, "Ha, 70% — soyabon oling.", with a small caption beneath it: "Bitta-bitta token". Everything holds still for the last two seconds.
+STYLE (keep exactly)
+"Neural noir" premium tech-keynote look. Deep navy-black background, hex #0b0d17, with faint floating dust particles and soft volumetric haze. Light comes only from the glowing objects themselves. Accent colors: neon cyan #3fe0ff, violet #a07dff, amber #ffb547, mint green #6dffb8. Objects are made of clear rounded glass with a thin glowing cyan edge. Shallow depth of field, soft bloom, ultra clean, photoreal 3D render, smooth and calm motion, no film grain, no glitch effects.
 
-Camera: one continuous move — tilt down with the tile, fast follow, then a slow pull-back to a locked final frame. No cuts.
-Look: identical to previous clips — navy-black, neon cyan/violet/amber/mint, volumetric haze.
-On-screen text: only the exact quoted text above, white clean sans-serif, perfectly spelled.
-Audio: rising pulse peaks as tiles append, each new tile with a soft chime; the drone resolves into a warm, calm final chord; silence on the last second.
-Never change: color palette, background, tile design.
-Constraints: no subtitles, no logos, no watermark, no extra text, no people, no brain imagery.
+FIRST FRAME
+A steady shot near the top of a tall stack of horizontal translucent glass layers in a dark navy-black void. A row of eleven tall, brightly glowing columns of cyan and violet cubes stands on the top layer, connected by a few soft violet threads. There is no text in the frame.
+
+ACTION AND TIMING
+[0-3s] The last column on the right shines a beam of light upward, which spreads into a wide horizontal bar chart floating above the stack, with bars rising like a city skyline. The tallest bar is mint green with the white label "Ha" and "62%" above it. Next to it, a shorter cyan bar with "Yoʻq" and "21%". Then a small violet bar with "Balki" and "12%". After them, many tiny unlabeled bars fade into the distance.
+[3-7s] A small bright spark lands on the "Ha" bar. The word "Ha" detaches as a small rounded glass tile and flies to the bottom of the frame, where a new line of glass tiles begins. A quick streak of light runs up through the stack, and the next tile appears and joins the line: ",". This repeats faster and faster, adding one tile at a time: "70%", "—", "soyabon", "oling", ".".
+[7-10s] The glass layers and the chart fade into darkness. The camera pulls back slowly and settles on a calm, centered final composition: the complete answer glowing in one line at the center of the frame, "Ha, 70% — soyabon oling.", and a smaller caption below it, "Bitta-bitta token".
+
+LAST FRAME (hold for the final 2 seconds)
+A calm, centered shot of a dark navy-black void with faint dust particles. In the center, one line of glowing white text: "Ha, 70% — soyabon oling." Below it, smaller and softer: "Bitta-bitta token". Nothing moves.
+
+CAMERA
+One continuous move: a slight tilt up to the bar chart, a fast follow of the flying tile down to the answer line, then a slow pull-back to a locked, centered final frame. No cuts, no shake.
+
+ON-SCREEN TEXT
+Only the exact text written in quotes above: the three bar labels with their percentages, the answer tiles, the final answer line and the caption. Clean white sans-serif letters, perfectly spelled, sharp and readable. No other text anywhere.
+
+AUDIO
+A deep, low ambient drone with a rising pulse while tiles are added; a soft chime for each new tile. At the end, the drone resolves into one warm, calm chord, then silence in the last second. No voice, no narration.
+
+CONSTRAINTS
+No subtitles, no captions, no logos, no watermarks, no extra words or letters, no misspelled text, no people, no faces, no hands, no robots, no brain imagery, no computer screens, no chat interface, no glitch effects, no camera shake, no cuts.
 ```
 
 ---
 
 ## Как пользоваться
 
-1. Клип 1: обычная генерация, вставить промпт целиком.
-2. Клипы 2, 3, 4: кнопка **Extend** (продлить) на последнем клипе, вставить следующий промпт. Так модель видит предыдущие 10 секунд и не делает склейку.
-3. Если узбекские буквы (ʻ) выходят криво — замените в кавычках на английские варианты: вопрос «Will it rain in Samarkand tomorrow?», ответ «Yes, 70% — take an umbrella.», подписи «One token at a time». Или уберите подписи и добавьте их потом в монтаже.
-4. Если клип не понравился — правьте одну вещь за раз («сделай нити attention ярче»), а не переписывайте весь промпт: модель сохраняет то, что уже получилось.
+1. Генерируйте каждый клип отдельно своим промптом. Настройки одинаковые: 16:9, 10 секунд.
+2. Для идеальной склейки: сохраните последний кадр готового клипа и загрузите его как первый кадр (first frame / image-to-video) для следующего клипа. Промпт оставьте как есть: он описывает этот же кадр словами.
+3. Если буква ʻ выходит криво, замените текст в кавычках во всех клипах сразу. Английские варианты:
+   - вопрос: «Will it rain in Samarkand tomorrow?»
+   - кусочки: "Will" "it" "rain" "in" "Sam" "ark" "and" "tomorrow" "?" (тогда 9 плиток и 9 чисел)
+   - метки кластеров: «rain · weather · umbrella», «Samarkand · Tashkent · city»
+   - варианты ответа: «Yes / No / Maybe»
+   - ответ: «Yes, 70% — take an umbrella.»
+   - подпись: «One token at a time»
+4. Если клип почти хороший — правьте одну вещь за раз («make the violet threads brighter»), не переписывайте весь промпт.
 
 ## Что сказать под это видео (узб.)
 

@@ -2,16 +2,16 @@
 // from git and the QA artifacts, so every number here is measured, not estimated.
 export const BUILD = {
   phases: [
-    ['Tadqiqot', 'WebSearch', 'MCP, Agent Skills, 2026-yil freymvorklari tekshirildi'],
-    ['Reja', 'plan', '45 daqiqalik sahna rejasi va MAKTAB freymvorki'],
-    ['Kod', 'Write · Edit', 'dvigatel, 3D qatlam, slaydlar'],
-    ['Tekshiruv', 'Playwright', 'har bir slayd skrinshot orqali koʻrib chiqildi'],
-    ['Video', 'ffmpeg', 'agent animatsiyasi kadrma-kadr MP4 ga render qilindi'],
-    ['Nashr', 'git · Artifact', 'repozitoriy va maxfiy havola'],
+    ['Tadqiqot', 'internetda qidiruv', 'mavzu boʻyicha eng yangi maʼlumotlar tekshirildi'],
+    ['Reja', 'reja', '45 daqiqalik maʼruza rejasi va MAKTAB formulasi'],
+    ['Kod', 'kod yozish', 'slaydlar, animatsiya va 3D'],
+    ['Tekshiruv', 'skrinshot', 'har bir slaydni rasmga olib, oʻzi koʻrib chiqdi'],
+    ['Video', 'video', 'agent animatsiyasi kadrma-kadr videoga aylantirildi'],
+    ['Nashr', 'havola', 'tayyor fayl va havola'],
   ],
   stats: [
-    ['29', 'slayd'],
-    ['7 495', 'qator kod'],
+    ['21', 'slayd'],
+    ['6 967', 'qator kod'],
     ['396', 'skrinshot tekshiruvi'],
     ['4 261', 'video kadr'],
   ],

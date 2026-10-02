@@ -11,7 +11,7 @@ Belgilar: **[KLIK]** — keyingi klik, **[PAUZA]** — 2–3 soniya jimlik, **[S
 1. Taqdimotni oʻz noutbukingizda oching: `Prompt-Logic-Shams-labs.html` faylini ikki marta bosing (internet shart emas).
 2. **F** — toʻliq ekran. Ikkinchi ekran boʻlsa, **P** — maʼruzachi oynasi: eslatmalar, taymer, keyingi slayd va rejadan qancha oldinda yoki orqada ekaningiz.
 3. Proyektor xira koʻrsatsa — **T** (yorugʻ rejim). Noutbuk kuchsiz boʻlsa — **M** (yengil rejim, 3D soddalashadi).
-4. Jonli laboratoriyalar (2, 13, 21-slaydlar) uchun ikki yoʻl bor:
+4. Jonli laboratoriyalar (2, 8, 16-slaydlar) uchun ikki yoʻl bor:
    - claude.ai’dagi havoladan oching — taqdimot sizning Claude hisobingiz orqali ishlaydi, birinchi chaqiruvda ruxsat soʻraladi;
    - yoki oflayn faylda **vergul (,)** tugmasi → Anthropic API kalitini kiriting.
 5. Jonli qismni bir marta oldindan sinab koʻring. Internet boʻlmasa ham tugmalar ishlaydi — yozib olingan namoyish koʻrsatiladi.
@@ -41,7 +41,7 @@ Belgilar: **[KLIK]** — keyingi klik, **[PAUZA]** — 2–3 soniya jimlik, **[S
 
 ## Slaydma-slayd skript
 
-Jami reja: **43:35** (qolgan vaqt — savol-javob va pauzalar uchun).
+Jami reja: **36:00** (qolgan vaqt — savol-javob va pauzalar uchun).
 
 ### 1. Titul
 
@@ -79,7 +79,7 @@ Natija — har hafta uchun aniq ish, xarajat byudjet ichida. Ertagayoq boshlasa 
 
 Bugungi yoʻlimiz besh bekat — xuddi metro kabi.
 
-**Prompt** — model qanday oʻqiydi. **Logika** — vazifani qanday toʻgʻri yozish. **Chain** — katta ishni kichik qadamlarga boʻlish. **Tool’lar** — modelga qoʻl berish. **Agent** — ishni oʻzi bajaradigan yordamchi.
+**Prompt** — stajyorga vazifani qanday berish. **Logika** — «agar … aks holda» bilan yozish. **Chain** — katta ishni kichik qadamlarga boʻlish. **Tool’lar** — modelga qoʻl berish. **Agent** — ishni oʻzi bajaradigan yordamchi.
 
 Pastdagi chiziq qayerda ekanimizni koʻrsatib turadi. Oxirida esa sovgʻa bor — 8 ta tayyor skill. **[KLIK]**
 
@@ -87,43 +87,11 @@ Pastdagi chiziq qayerda ekanimizni koʻrsatib turadi. Oxirida esa sovgʻa bor �
 
 ⏱ 0:20 · boshlanishi 3:40 · kliklar: 0
 
-Birinchi qism — **Prompt Logic**, yaʼni stajyorga vazifani qanday berish. Avval u qanday oʻqishini koʻramiz. **[KLIK]**
+Birinchi qism — **Prompt Logic**, yaʼni stajyorga vazifani qanday berish. Buning oddiy formulasi bor. **[KLIK]**
 
-### 5. Model tokenlarni oʻqiydi
+### 5. MAKTAB formulasi
 
-⏱ 1:35 · boshlanishi 4:00 · kliklar: 2
-
-Telefoningizda yozayotganda keyingi soʻzni taklif qiladigan funksiya bor-ku. Model — xuddi shuning juda katta va juda aqlli versiyasi. U shu tarzda butun javobni yozadi.
-
-Lekin model soʻzlarni emas, mayda boʻlaklarni oʻqiydi. Bu boʻlaklar **token** deyiladi — uy qurilgan gʻishtlar kabi. Ekranda haqiqiy hisoblagich: maʼnosi bir xil gap — inglizchasi 7 ta gʻisht, oʻzbekchasi 19 ta. **[KLIK]**
-
-Bu nimani anglatadi? Oʻzbekcha yozsangiz, gʻisht koʻp ketadi: soʻrov qimmatroq turadi va modelning xotirasi tezroq toʻladi. **[KLIK]**
-
-Yana bir muhim gap: model har safar keyingi boʻlakni taxmin qilib tanlaydi. Sizning vazifangiz shu taxminni boshqaradi. Shuning uchun vazifadagi har bir soʻz muhim.
-
-**[JONLI]** Zaldan bitta gap soʻrang va shu yerda yozib koʻrsating — gʻishtlar darhol qayta sanaladi.
-
-### 6. Prompt — tabiiy tildagi dastur
-
-⏱ 1:45 · boshlanishi 5:35 · kliklar: 6
-
-Endi asosiy gap: **prompt — bu dastur**. Qoʻrqmang, dasturchi boʻlish shart emas. Dastur — kompyuter uchun retsept, xolos. Chapda — kod, oʻngda — xuddi shu narsa oddiy tilda. **[KLIK]**
-
-Birinchi qator — **boʻsh joy**. Xuddi blankadagi «Ism: ____» kabi. Bitta shablon yozasiz, unga ming xil ism qoʻyasiz. **[KLIK]**
-
-Ikkinchisi — **shart**: «Agar mijoz ruscha yozsa, ruscha javob ber». **[KLIK]**
-
-Uchinchisi — **takrorlash**: «Har bir sharh uchun shuni qil». **[KLIK]**
-
-Toʻrtinchisi — **qadamlar**: avval muammo, keyin sabab, keyin yechim. **[KLIK]**
-
-Beshinchisi — **natija**: javob qanday koʻrinishda boʻlsin. **[KLIK]**
-
-Xulosa: **model — bajaruvchi, siz esa — dasturchisiz**. Retseptda bitta qadam tushib qolsa, taom buziladi. Vazifada bitta gap noaniq boʻlsa, javob buziladi.
-
-### 7. MAKTAB freymvorki
-
-⏱ 2:30 · boshlanishi 7:20 · kliklar: 2
+⏱ 3:00 · boshlanishi 4:00 · kliklar: 2
 
 Endi kuchli vazifani qanday yozamiz? Tikuvchiga koʻylak buyurtma qilganingizni eslang. Nimalarni aytasiz? Qayerga kiyishingizni, oʻlchamni, «mato yetmasa qoʻngʻiroq qiling» deysiz, rasm koʻrsatasiz, oxirida kiyib koʻrasiz. Yaxshi prompt ham xuddi shunday.
 
@@ -145,9 +113,9 @@ Uni boʻlaklarga ajratsak, olti qism chiqadi. Eslab qolish oson boʻlsin deb, me
 
 **[SAVOL]** Oxirgi yozgan vazifangizni eslang. Undan qaysi harflar tushib qolgan edi? **[PAUZA]** Koʻpincha — A va B.
 
-### 8. «Agar» — promptdagi logika
+### 6. «Agar» — promptdagi logika
 
-⏱ 1:35 · boshlanishi 9:50 · kliklar: 5
+⏱ 2:00 · boshlanishi 7:00 · kliklar: 5
 
 MAKTAB’dagi eng muhim harf — **«Agar»**. Navigatorni eslang: yoʻl yopiq boʻlsa, boshqa yoʻl topadi. Nima qilishni oldindan biladi. Vazifada ham shunday boʻlishi kerak. Chapda — vazifa, oʻngda — xuddi shu vazifa yoʻllar xaritasi sifatida. **[KLIK]**
 
@@ -161,23 +129,9 @@ Va eng muhimi — **«aks holda»**: hech biriga toʻgʻri kelmasa, operatorga u
 
 Qoida oddiy: **har bir «agar»ning oʻz «aks holda»si boʻlsin**. Yoʻl koʻrsatilmagan joyda model yoʻlni oʻzi oʻylab topadi. Buni gallyutsinatsiya deyishadi — yaʼni ishonch bilan aytilgan yolgʻon.
 
-### 9. Tartib: teg va sxema
+### 7. Aniq misol kuchi
 
-⏱ 1:30 · boshlanishi 11:25 · kliklar: 3
-
-**T — Tartib**. Ikki tomoni bor: biz beradigan matn va model qaytaradigan javob.
-
-Biz beradigan matnda hujjat, qoidalar va savolni alohida-alohida ajratamiz — xuddi nomi yozilgan papkalarga solgandek. Shunda model nima maʼlumot, nima buyruq ekanini adashtirmaydi. Maslahat: uzun hujjat tepada, savol eng oxirida. **[KLIK]**
-
-Javobni esa **anketa shaklida** soʻraymiz. Erkin matn emas — aniq kataklar: javob — «ha», «yoʻq» yoki «shartli»; manba — hujjatdan aniq parcha; ishonch — 0 dan 1 gacha. **[KLIK]**
-
-Mana model javobi: hamma katak toʻldirilgan. Bunday javobni boshqa dastur ham oʻqiy oladi. Bu — ikkinchi qismga koʻprik: tool’lar ham aynan shunday anketalar bilan ishlaydi. **[KLIK]**
-
-Claude’da buning uchun maxsus rejim bor — **structured outputs**: javob har doim anketaga aniq mos keladi.
-
-### 10. Aniq misol kuchi
-
-⏱ 1:15 · boshlanishi 12:55 · kliklar: 1
+⏱ 1:30 · boshlanishi 9:00 · kliklar: 1
 
 **A — Aniq misol**. Sartaroshga «chiroyli qilib oling» desangiz, nima chiqishini bilmaysiz. Telefondan rasm koʻrsatsangiz — darhol tushunadi. Model ham shunday: **bitta yaxshi misol oʻnta qoidadan kuchli**.
 
@@ -187,49 +141,21 @@ Uchta har xil misol qoʻshdik — javoblar markazga yigʻildi.
 
 Lekin ehtiyot boʻling: **model misoldagi hamma narsani koʻchiradi**. Misol uch qator boʻlsa, javob ham uch qator. Misolda xato boʻlsa, xato ham koʻchadi. Shuning uchun misolni ehtiyot boʻlib tanlang.
 
-### 11. Reasoning modellar
+### 8. Prompt laboratoriyasi
 
-⏱ 1:30 · boshlanishi 14:10 · kliklar: 1
+⏱ 2:30 · boshlanishi 10:30 · kliklar: 6
 
-Soʻnggi ikki yildagi eng katta oʻzgarish — **oʻylaydigan modellar**. Ular javob berishdan oldin oʻzi oʻylab oladi. **[PAUZA]**
-
-Taksiga oʻtirganingizni eslang. Haydovchiga har bir burilishni aytmaysiz — manzilni aytasiz, xolos. Ilgari modelga har qadamni yozib berardik: avval oʻqi, keyin yoz, keyin tartibla. Chapda — shunday eski vazifa.
-
-Endi esa **manzilni aytamiz**: nima kerak, natija qanday boʻlishi kerak, nimani qilmaslik kerak. Oʻngda — shunday vazifa. Yoʻlni model oʻzi topadi. **[KLIK]**
-
-Qancha oʻylashini **effort** degan sozlama bilan boshqaramiz. Oddiy ishga — kam: tez va arzon. Murakkab tahlilga — koʻp: chuqurroq, lekin sekinroq va qimmatroq. Hamma narsaga maksimum qoʻyish — pulni bekorga sarflash.
-
-### 12. Baholash: sinab koʻramiz
-
-⏱ 1:30 · boshlanishi 15:40 · kliklar: 3
-
-**B — Baholash**. Oshpaz yangi taomni bitta mehmonga tatib koʻrib, menyuga qoʻymaydi-ku. Koʻp odamga beradi va nechtasiga yoqqanini sanaydi. Prompt bilan ham xuddi shunday.
-
-Chapda — bizning prompt: yordam xizmati mijoz xatlariga javob yozadi. Oʻngda — haqiqiy mijozlardan kelgan 10 ta xat. Endi promptni hammasida sinab koʻramiz. **[KLIK]**
-
-Natija: 10 tadan 6 tasi yaxshi. 4 tasi yomon: uchtasida ohang qoʻpol, bittasida model narxni oʻzidan toʻqib chiqardi. Ikki marta sinab «ishlayapti» desak, buni hech qachon bilmas edik. **[KLIK]**
-
-Xatolarga qaraymiz va promptga ikki qator qoʻshamiz. «Ohang samimiy boʻlsin» — bu K harfi, kontekst. «Narxni faqat roʻyxatdan ol, oʻylab topma» — bu A harfi, agar. **[KLIK]**
-
-Qayta sinaymiz — endi 10 tadan 9 tasi yaxshi. Bittasi hali uzun, uni ham keyin tuzatamiz. Haqiqiy ishda 30–50 ta misol olinadi, lekin gʻoya shu.
-
-Xulosa: **testsiz prompt — taxmin. Test qilsangiz — aniq bilasiz**: yaxshilandimi yoki yoʻqmi.
-
-### 13. Prompt laboratoriyasi
-
-⏱ 1:35 · boshlanishi 17:10 · kliklar: 6
-
-Endi hammasini jonli koʻramiz. Chapda — vazifa, tepada — MAKTAB harflari va ball, oʻngda — natija. Boshida vazifa bitta qator: «Termos haqida tavsif yoz». Ball — 12. Javob esa zerikarli, umumiy gap. **[KLIK]**
+Endi hammasini jonli koʻramiz. Chapda — vazifa va MAKTAB harflari, oʻngda — natija. Boshida vazifa bitta qator: «Termos haqida tavsif yoz». Javob esa zerikarli, umumiy gap. **[KLIK]**
 
 Har klikda bitta harf qoʻshamiz. **Maqsad**: marketpleysda sotadigan tavsif. **[KLIK]** **Agar**: berilmagan xususiyatni oʻylab topma. **[KLIK]** **Kontekst**: yarim litr, 12 soat issiq saqlaydi, xaridorlar — talabalar va haydovchilar. **[KLIK]** **Tartib**: sarlavha, 3 ta afzallik va bitta chaqiriq. **[KLIK]** **Aniq misol**: «Ertalabki choy — kechgacha issiq». **[KLIK]** Va **baholash**: yuborishdan oldin raqamlarni tekshir.
 
-Ball 12 dan 96 ga chiqdi. Javob esa tayyor sotuv matniga aylandi.
+Javobga qarang: zerikarli gapdan tayyor sotuv matniga aylandi. Model oʻsha-oʻsha — faqat vazifa yaxshilandi.
 
 **[JONLI]** «Claude’da ishga tushirish» tugmasi vazifani hozir modelga yuboradi. Zaldan biror mahsulot nomini soʻrang, termos oʻrniga yozing va natijani birga koʻring.
 
-### 14. Bitta ulkan prompt oʻrniga — chain
+### 9. Bitta ulkan prompt oʻrniga — chain
 
-⏱ 1:15 · boshlanishi 18:45 · kliklar: 3
+⏱ 1:30 · boshlanishi 13:00 · kliklar: 3
 
 Birinchi qismning oxirgi gapi. Osh damlashni eslang. Hamma narsani bir vaqtda qozonga tashlamaysiz-ku: avval goʻsht, keyin piyoz va sabzi, keyin guruch. Har bosqichning oʻz vaqti bor.
 
@@ -241,15 +167,15 @@ Foydasi: xato qayerda ekani darhol koʻrinadi, har qadamni alohida yaxshilaysiz.
 
 Endi eng qiziq joyi: bu chain’ga **qoʻl** qoʻshamiz.
 
-### 15. II qism · AI Agent Tool Chaining
+### 10. II qism · AI Agent Tool Chaining
 
-⏱ 0:20 · boshlanishi 20:00 · kliklar: 0
+⏱ 0:20 · boshlanishi 14:30 · kliklar: 0
 
 Ikkinchi qism — **Tool Chaining**. Birinchi qismda stajyorga vazifa berishni oʻrgandik. Endi unga qoʻl beramiz. **[KLIK]**
 
-### 16. Modelning qoʻli yoʻq
+### 11. Modelning qoʻli yoʻq
 
-⏱ 1:30 · boshlanishi 20:20 · kliklar: 4
+⏱ 1:50 · boshlanishi 14:50 · kliklar: 4
 
 Eng aqlli model ham uchta narsani qila olmaydi. **[PAUZA]**
 
@@ -257,23 +183,23 @@ Birinchisi — **yangiliklarni bilmaydi**. Uning bilimi oʻqitilgan kunda toʻxt
 
 Ikkinchisi — **hisobda adashadi**. Katta sonlarni xato hisoblashi mumkin.
 
-Uchinchisi, eng muhimi — **hech narsa qila olmaydi**. Xat yubora olmaydi, bazaga yoza olmaydi, buyurtma bera olmaydi. Miyasi bor, qoʻli yoʻq. **[KLIK]**
+Uchinchisi, eng muhimi — **hech narsa qila olmaydi**. Xat yubora olmaydi, buyurtma bera olmaydi. Miyasi bor, qoʻli yoʻq. **[KLIK]**
 
 Yechim — **tool**. Tool — bu modelning qoʻli: u chaqira oladigan kichik dastur. Ob-havo, kalkulyator, qidiruv, xat yuborish — hammasi tool boʻla oladi. Har bir tool’ning uch qismi bor. **[KLIK]**
 
-Birinchisi — **nomi**: nima qilishi. Masalan, get_weather — ob-havoni olish. **[KLIK]**
+Birinchisi — **nomi**: «Ob-havo». **[KLIK]**
 
-Ikkinchisi — **tavsifi**: qachon va qanday ishlatish kerakligi. Eʼtibor bering: **tavsif ham prompt**! Model aynan shu matnni oʻqib, qaysi tool’ni olishni hal qiladi. **[KLIK]**
+Ikkinchisi — **nima qiladi**: «Shahar boʻyicha ob-havoni aytadi». Eʼtibor bering: **bu ham prompt**! Model aynan shu gapni oʻqib, qaysi tool’ni olishni hal qiladi. Xuddi dori qutisidagi yoʻriqnoma kabi. **[KLIK]**
 
-Uchinchisi — **parametrlar**, yaʼni nimalarni toʻldirish kerak: bu yerda shahar — majburiy, sana — ixtiyoriy.
+Uchinchisi — **nima kerak**: shahar nomi — albatta, sana — xohlasa.
 
-### 17. Tool calling qanday ishlaydi
+### 12. Tool calling qanday ishlaydi
 
-⏱ 1:55 · boshlanishi 21:50 · kliklar: 8
+⏱ 2:10 · boshlanishi 16:40 · kliklar: 8
 
 Endi tool qanday chaqirilishini qadam-baqadam koʻramiz. Oddiy oʻxshatish: model — **boshliq**, sizning dasturingiz — **yordamchi**. Boshliq oʻzi hech narsa qilmaydi, faqat xatcha yozadi. **[KLIK]**
 
-Foydalanuvchi soʻraydi: «Ertaga Samarqandda yomgʻir yogʻadimi?» **[KLIK]**
+Odam soʻraydi: «Ertaga Samarqandda yomgʻir yogʻadimi?» **[KLIK]**
 
 Dastur savolni Claude’ga beradi va aytadi: «Sening ixtiyoringda ob-havo tool’i bor». **[KLIK]**
 
@@ -289,11 +215,11 @@ Va faqat shundan keyin Claude odamga javob beradi: «Ha, ehtimoli 70 foiz. Soyab
 
 Eng muhim gap: **model tool’ni oʻzi ishga tushirmaydi**. U faqat soʻraydi — bajaradigan sizning dasturingiz. Demak, boshqaruv sizning qoʻlingizda: nimaga ruxsat berish, nimani tekshirish — hammasini siz hal qilasiz.
 
-### 18. Agent = model + tool’lar + sikl
+### 13. Agent = model + tool’lar + sikl
 
-⏱ 1:20 · boshlanishi 23:45 · kliklar: 4
+⏱ 1:40 · boshlanishi 18:50 · kliklar: 4
 
-Endi asosiy savol: agent nima? Formula oddiy: **agent = model + tool’lar + sikl**. Model — miya, tool’lar — qoʻl, sikl — ularni ishlatib turadigan motor. Chapdagi yetti qator kod — har qanday agentning yuragi.
+Endi asosiy savol: agent nima? Formula oddiy: **agent = model + tool’lar + sikl**. Model — miya, tool’lar — qoʻl, sikl — ularni ishlatib turadigan motor. Chapda — shu uch qism.
 
 Oshpazni eslang: tatib koʻradi, tuz qoʻshadi, yana tatib koʻradi — toki mazasi kelguncha. Agent ham xuddi shunday ishlaydi. **[KLIK]**
 
@@ -305,29 +231,29 @@ Kerak boʻlsa — **harakat qil**: tool’ni chaqiramiz. Keyin — **kuzat**: na
 
 Muhim: **agentda toʻxtash qoidasi boʻlishi shart**. Vazifa bajarildi; qadamlar soni tugadi, masalan 8 ta; yoki odamning ruxsati kerak, masalan pul oʻtkazishdan oldin. Toʻxtash qoidasi boʻlmasa, agent toʻxtamay aylanib, pulingizni sarflaydi.
 
-### 19. Chaining: 6 ta pattern
+### 14. Chain’ning 6 turi
 
-⏱ 2:50 · boshlanishi 25:05 · kliklar: 7
+⏱ 3:00 · boshlanishi 20:30 · kliklar: 7
 
-Agentlar qanchalik murakkab koʻrinmasin, ular oltita tayyor sxemadan yigʻiladi. Bu roʻyxat Anthropic’ning «Building Effective Agents» maqolasidan olingan. Har birini hayotiy misol bilan koʻramiz. **[KLIK]**
+Agentlar qanchalik murakkab koʻrinmasin, ular oltita tayyor sxemadan yigʻiladi. Bu roʻyxatni Claude’ni yaratgan Anthropic kompaniyasi tavsiya qiladi. Har birini hayotiy misol bilan koʻramiz. **[KLIK]**
 
 Birinchisi — **ketma-ket chain**. Zavoddagi konveyer kabi: bir qadamning natijasi keyingisiga oʻtadi, oʻrtada tekshiruv. Misol: reja, keyin matn, keyin tarjima. **[KLIK]**
 
 Ikkinchisi — **routing**, yaʼni saralash. Kasalxonadagi registraturani eslang: bemorga qarab, uni kerakli shifokorga yuboradi. Bu yerda ham: savolmi, shikoyatmi, qaytarishmi — har biri oʻz yoʻliga. **[KLIK]**
 
-Uchinchisi — **parallel ishlash**. Bir nechta oshpaz bir vaqtda turli taom tayyorlagandek: bir nechta model birdaniga ishlaydi. Misol: kodni uch tomondan birdaniga tekshirish. **[KLIK]**
+Uchinchisi — **parallel ishlash**. Bir nechta oshpaz bir vaqtda turli taom tayyorlagandek: bir nechta model birdaniga ishlaydi. Misol: uchta doʻkondan narxni birdaniga solishtirish. **[KLIK]**
 
-Toʻrtinchisi — **bosh model va ishchilar**. Qurilishdagi prorab kabi: ishni boʻlib, ishchilarga tarqatadi, keyin natijani yigʻadi. **[KLIK]**
+Toʻrtinchisi — **bosh model va ishchilar**. Qurilishdagi prorab kabi: ishni boʻlib, ishchilarga tarqatadi, keyin natijani yigʻadi. Misol: katta hisobotning har boʻlimini alohida ishchi yozadi. **[KLIK]**
 
 Beshinchisi — **yozuvchi va tekshiruvchi**. Talaba yozadi, ustoz tekshiradi — yaxshi boʻlguncha qayta-qayta. Misol: badiiy tarjima. **[KLIK]**
 
-Oltinchisi — **avtonom agent**. Tajribali xodim kabi: rejani ham, tool’larni ham, qachon toʻxtashni ham oʻzi hal qiladi. Misol: kod yozadigan agentlar. **[KLIK]**
+Oltinchisi — **avtonom agent**. Tajribali xodim kabi: rejani ham, tool’larni ham, qachon toʻxtashni ham oʻzi hal qiladi. Misol: safarni boshidan oxirigacha oʻzi rejalaydigan yordamchi. **[KLIK]**
 
-Farqi: birinchi beshtasida yoʻlni biz chizamiz — bu **workflow**. Oltinchisida yoʻlni model tanlaydi — bu **agent**. Maslahat: doim oddiydan boshlang. Agent — birinchi emas, oxirgi chora: kuchli, lekin qimmatroq va nazorat qilish qiyinroq.
+Farqi: birinchi beshtasida yoʻlni biz chizamiz — bu **workflow**. Oltinchisida yoʻlni model tanlaydi — bu **agent**. Maslahat: doim oddiydan boshlang. Agent — birinchi emas, oxirgi chora: kuchli, lekin qimmatroq va boshqarish qiyinroq.
 
-### 20. Agentni yigʻamiz
+### 15. Agentni yigʻamiz
 
-⏱ 2:10 · boshlanishi 27:55 · kliklar: 6
+⏱ 2:10 · boshlanishi 23:30 · kliklar: 6
 
 Endi koʻrganlarimizni bitta joyga yigʻamiz va agentni koʻz oldimizda quramiz. Markazda — miya, yaʼni model. Hozircha u faqat matn oladi va matn qaytaradi. **[KLIK]**
 
@@ -345,9 +271,9 @@ Endi vazifa beramiz: «Oktabrda Toshkentdagi AI tadbirlarini top, ob-havoni teks
 
 **[JONLI]** «Toʻliq koʻrish» tugmasi butun sahnani 70 soniyada uzluksiz koʻrsatadi.
 
-### 21. Jonli agent
+### 16. Jonli agent
 
-⏱ 2:50 · boshlanishi 30:05 · kliklar: 0
+⏱ 3:20 · boshlanishi 25:40 · kliklar: 0
 
 Endi eng qiziq joyi: hozir yigʻgan agentimiz jonli ishlaydi. Bu animatsiya emas — Claude tool’larni haqiqatan oʻzi tanlaydi va chaqiradi. **[JONLI]**
 
@@ -363,27 +289,9 @@ Tool’lardagi maʼlumotlar demo uchun, lekin qarorlar haqiqiy — ularni model 
 
 Internet boʻlmasa, xuddi shu tugma yozib olingan namoyishni koʻrsatadi — maʼruza toʻxtab qolmaydi.
 
-### 22. Tool tavsifi — bu ham prompt
+### 17. MCP — AI uchun USB-C
 
-⏱ 1:30 · boshlanishi 32:55 · kliklar: 5
-
-Agentning sifati tool’lar tavsifiga bogʻliq. Model tool’ning ichini koʻrmaydi — faqat nomi va tavsifini oʻqiydi. Xuddi dori qutisidagi yoʻriqnoma kabi: yoʻriqnoma yomon boʻlsa, dori notoʻgʻri ichiladi.
-
-Chapda — yomon misol: nomi «search», tavsifi «qidiradi». Nimani? Qayerdan? Qachon? Model bilmaydi va taxmin qiladi. Oʻngda — yaxshi misol. Uni beshta qoida bilan koʻramiz. **[KLIK]**
-
-Birinchi — **nom aniq boʻlsin**, oldida tizim nomi bilan: crm_search, crm_update. Darhol qayerga tegishli ekani koʻrinadi. **[KLIK]**
-
-Ikkinchi — **tavsifni yangi xodimga tushuntirgandek yozing**: nima qiladi, qachon ishlatiladi va qachon ishlatilmaydi. **[KLIK]**
-
-Uchinchi — **xato xabari ham nima qilishni aytsin**. Shunchaki «xato» emas, balki «sana yil-oy-kun koʻrinishida boʻlsin». Shunda model oʻzi tuzatadi. **[KLIK]**
-
-Toʻrtinchi — **kam, lekin aniq**. 40 ta mayda tool emas, 8 ta kuchli tool. Tool koʻp boʻlsa, model adashadi. **[KLIK]**
-
-Beshinchi — **natija qisqa boʻlsin**, faqat kerakli maʼlumot. Ortiqcha soʻz modelning stolida joy egallaydi.
-
-### 23. MCP — AI uchun USB-C
-
-⏱ 1:25 · boshlanishi 34:25 · kliklar: 3
+⏱ 1:30 · boshlanishi 29:00 · kliklar: 3
 
 Endi ulash muammosi. Bir necha yil oldin har telefonning oʻz zaryadlovchisi bor edi-ku. Sunʼiy intellektda ham shunday edi. Deylik, uchta AI ilova va beshta servis bor: GitHub, Slack, baza, Drive va CRM. **[KLIK]**
 
@@ -391,67 +299,39 @@ Har birini alohida ulasangiz — 3 karra 5, yaʼni 15 ta ulanish. Yangi servis q
 
 **MCP** buni hal qiladi — u sunʼiy intellekt uchun **USB-C**. Har bir servis bir marta MCP’ga moslanadi, har bir ilova ham bir marta. 15 emas — 8. Bitta ulagich — istalgan qurilma. **[KLIK]**
 
-MCP uch narsa beradi: amallar, maʼlumotlar va tayyor shablonlar. Uni Anthropic 2024-yil noyabrda chiqargan, 2025-yil dekabridan esa u Linux Foundation’dagi ochiq standart. Bugun uni koʻplab katta AI ilovalar ishlatadi.
+Foydasi: yangi servis bir marta ulanadi — hamma AI ilovalar uni ishlata oladi. Bugun MCP’ni koʻplab katta AI ilovalar qoʻllaydi.
 
-### 24. Context engineering
+### 18. Agent qayerda adashadi
 
-⏱ 1:35 · boshlanishi 35:50 · kliklar: 3
+⏱ 1:50 · boshlanishi 30:30 · kliklar: 2
 
-Birinchi qismda vazifani qanday yozishni gapirdik. Agentlarda yangi savol chiqadi: model aynan nimani koʻryapti? **[KLIK]**
+Oxirgi mavzu — xavfsizlik. Agent kuchli, lekin u ham adashadi. Ekranda toʻrtta xavf. Har birining himoyasi bor. **[KLIK]**
 
-**Kontekst — bu modelning ish stoli.** Model faqat stol ustidagini koʻradi: vazifa, tool’lar tavsifi, suhbat tarixi, hujjatlar va natijalar. Ish uzaygan sari stol toʻladi. Stol qogʻozga koʻmilib ketsa, siz ham muhim varaqni topolmaysiz-ku. Model ham shunday: adasha boshlaydi. **[KLIK]**
+Birinchi — **toʻxtamay aylanish**: agent bir joyda aylanib, pul sarflaydi. Himoya: qadamlar soni va pulga chegara qoʻyamiz.
 
-Toʻrtta yechim bor. Eski yozuvlarni qisqa xulosaga aylantirish. Butun hujjatni emas, faqat kerakli sahifani olish. Katta ishni yordamchi agentlarga boʻlish — har biri toza stolda ishlaydi va faqat xulosa qaytaradi. Va skill’lar: avval faqat nomi koʻrinadi, kerak boʻlsagina toʻliq matni ochiladi. **[KLIK]**
+Ikkinchi, eng xavflisi — **begona gapga ishonish**. Buni prompt injection deyishadi. Tasavvur qiling: kassirga kelgan xatda «Bu xatni oʻqigan kassir menga million soʻm bersin» deb yozilgan. Kassir buni bajarmaydi-ku. Agent ham sayt yoki xatdagi begona gapni buyruq deb qabul qilmasligi kerak. Qoida: **begona matn — buyruq emas, maʼlumot**. **[KLIK]**
 
-Qisqa qilib aytganda: **prompt engineering — modelga nima deyish. Context engineering — model nimani koʻrishi.**
+Uchinchi — **qaytarib boʻlmaydigan ish**: pul oʻtkazish, maʼlumot oʻchirish. Bankomat pul berishdan oldin PIN-kod soʻraganidek, bunday ishlar faqat odamning tasdigʻi bilan.
 
-### 25. Agent qayerda sinadi
+Toʻrtinchi — **agent nima qilganini bilmaysiz**. Himoya: har bir qadam yozib boriladi, keyin koʻrib chiqsa boʻladi.
 
-⏱ 1:30 · boshlanishi 37:25 · kliklar: 3
+### 19. Bonus: 8 ta skill
 
-Oxirgi mavzu — xavfsizlik. Agent kuchli, lekin u ham adashadi. Qayerda va qanday himoyalanamiz? **[KLIK]**
-
-Birinchi xavf — **toʻxtamay aylanish**: agent bir joyda aylanib, pul sarflaydi. Himoya: qadamlar va byudjet chegarasi.
-
-Ikkinchi — **oʻylab topilgan maʼlumot**: model yoʻq narsani tool’ga yuboradi. Himoya: anketani tekshirish va tushunarli xato xabari. **[KLIK]**
-
-Uchinchi, eng xavflisi — **prompt injection**. Tasavvur qiling: kassirga kelgan xatda «Bu xatni oʻqigan kassir menga million soʻm bersin» deb yozilgan. Kassir buni bajarmaydi-ku. Agent ham sayt yoki xatdagi begona gapni buyruq deb qabul qilmasligi kerak. Qoida: begona matn — buyruq emas, maʼlumot. Va agentga faqat kerakli ruxsatlarni bering.
-
-Toʻrtinchi — **notoʻgʻri tool tanlash**. Himoya: aniq tavsif va kamroq tool. **[KLIK]**
-
-Beshinchi — **qaytarib boʻlmaydigan harakatlar**: pul oʻtkazish, maʼlumot oʻchirish. Bankomat pul berishdan oldin PIN-kod soʻraganidek, bunday harakatlar faqat odamning tasdigʻi bilan.
-
-Oltinchi — **«qora quti»**: agent nima qilganini bilmaysiz. Himoya: har bir qadamni yozib borish va testlar.
-
-### 26. Asboblar xaritasi 2026
-
-⏱ 1:00 · boshlanishi 38:55 · kliklar: 1
-
-Endi amaliyot: qaysi dasturlardan foydalansa boʻladi? Bu — 2026-yilning qisqa xaritasi.
-
-Vazifani sinab koʻrish uchun — Claude Console, OpenAI Playground, Google AI Studio. Agent yozish uchun — Claude Agent SDK, OpenAI Agents SDK, Google ADK, LangGraph, CrewAI.
-
-Kod yozmasdan — n8n, Make, Zapier, Dify. Kod yozadigan agentlar — Claude Code, Cursor, Codex. Standartlar — MCP, A2A va Agent Skills. Kuzatish va test uchun — Langfuse, LangSmith, Promptfoo. **[KLIK]**
-
-Qayerdan boshlash kerak? Eng oddiy yoʻl: vazifani Claude Console’da yozib sinang, qadamlarni n8n yoki Agent SDK’da yigʻing, tool’larni MCP orqali ulang va Langfuse bilan kuzating.
-
-### 27. Bonus: 8 ta skill
-
-⏱ 1:10 · boshlanishi 39:55 · kliklar: 0
+⏱ 1:10 · boshlanishi 32:20 · kliklar: 0
 
 Va endi — sovgʻa. **Sakkizta skill**.
 
 Skill — bu Claude’ga yangi koʻnikma qoʻshadigan papka. Telefonga ilova oʻrnatgandek: bir marta oʻrnatasiz, Claude kerak boʻlganda uni oʻzi ishlatadi.
 
-Masalan: **maktab-prompt** — oddiy soʻrovingizni MAKTAB boʻyicha kuchli vazifaga aylantiradi. **prompt-doctor** — ishlamayotgan vazifaning sababini topadi. **prompt-evals** — test tuzadi. **tool-contract-writer** — tool’lar uchun tavsif yozadi. **agent-system-prompt** — agent uchun yoʻriqnoma yozadi. Bugungi deyarli har bir mavzu uchun bittadan skill.
+Masalan: **maktab-prompt** — oddiy soʻrovingizni MAKTAB boʻyicha kuchli vazifaga aylantiradi. **prompt-doctor** — ishlamayotgan vazifaning sababini topadi. **prompt-evals** — promptni koʻp misolda sinab koʻradi. **tool-contract-writer** — tool’lar uchun yoʻriqnoma yozadi. **agent-system-prompt** — agent uchun yoʻriqnoma yozadi. Bugungi deyarli har bir mavzu uchun bittadan skill.
 
-QR orqali yuklab olasiz. Bu skill’larni boshqa agentlar ham tushunadi — bu ochiq standart.
+QR orqali yuklab olasiz.
 
 **[PAUZA]** QR hali tayyor boʻlmasa: «havolani kanalda qoldiraman» deng.
 
-### 28. Bu taqdimotni kim yigʻdi?
+### 20. Bu taqdimotni kim yigʻdi?
 
-⏱ 1:30 · boshlanishi 41:05 · kliklar: 3
+⏱ 1:30 · boshlanishi 33:30 · kliklar: 3
 
 Va oxirgi misol. **[PAUZA]** Bir savol: bu taqdimotni kim yigʻdi? **[KLIK]**
 
@@ -461,16 +341,16 @@ Mana qanday ishladi: avval maʼlumotlarni internetdan tekshirdi, reja tuzdi, kod
 
 Bugun gapirgan hamma narsa — vazifa logikasi, tool’lar, sikl — shu taqdimotning oʻzida ishladi. Mening vazifam esa aynan bugun aytganlarimizni qilish edi: aniq vazifa berish, yoʻnaltirish va tekshirish.
 
-### 29. Yakun va savollar
+### 21. Yakun va savollar
 
-⏱ 1:00 · boshlanishi 42:35 · kliklar: 0
+⏱ 1:00 · boshlanishi 35:00 · kliklar: 0
 
 Uchta gapni olib keting.
 
-Birinchi: **prompt — bu dastur**. Uni MAKTAB bilan yozing va test bilan tekshiring. Tikuvchiga buyurtma berganingizni eslang.
+Birinchi: **prompt — bu stajyorga beriladigan vazifa**. Uni MAKTAB bilan yozing. Tikuvchiga buyurtma berganingizni eslang.
 
-Ikkinchi: **tool — modelning qoʻli**. Uning tavsifi ham prompt.
+Ikkinchi: **tool — modelning qoʻli**. Agent — shu qoʻllarni oʻzi ishlatadigan yordamchi.
 
-Uchinchi: **oddiydan boshlang**. Avval bitta vazifa, keyin chain, keyin workflow, va faqat haqiqatan kerak boʻlsa — agent.
+Uchinchi: **oddiydan boshlang**. Avval bitta yaxshi prompt, keyin chain, va faqat haqiqatan kerak boʻlsa — agent.
 
 Rahmat! Savollaringizni kutaman.

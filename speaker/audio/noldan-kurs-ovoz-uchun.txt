@@ -16,26 +16,20 @@ Butun maʼruza ikkita savolga javob beradi. Birinchi qism — Prompt Lojik: staj
 Maʼruzaning asosiy jumlasi: «Model bir xil edi. Logika boshqa edi».
 
 
-=== 2-QISM. MODEL VA PROMPT ===
-
-Model nima? Model — bu ulkan avtomatik davom ettirish. Telefoningiz keyingi soʻzni taklif qilgani kabi, faqat u butun sahifalarni yozadi.
-
-Model matnni soʻzlar bilan emas, mayda boʻlaklar — tokenlar bilan oʻqiydi. Oʻzbekcha matn inglizchadan maydaroq boʻlaklarga boʻlinadi: ikki-ikki yarim baravar koʻp token. Shuning uchun oʻzbekcha soʻrov qimmatroq, modelning xotirasi esa tezroq toʻladi.
-
-Model har bir keyingi boʻlakni ehtimollik boʻyicha tanlaydi. Sizning vazifa matningiz, yaʼni promptingiz aynan shu ehtimollarni boshqaradi. Shuning uchun vazifadagi har bir soʻz javobga taʼsir qiladi.
+=== 2-QISM. PROMPT NIMA ===
 
 Prompt nima? Prompt — modelga beradigan vazifangiz, unga yozadigan matningiz.
 
 Maʼruzadagi misol. Yomon prompt: «Kofexona uchun marketing strategiya yozib ber». Javob — suv: «ijtimoiy tarmoqlarda faol boʻling, aksiya oʻtkazing». Bu istalgan kofexonaga mos keladi.
 
-Yaxshi promptda toʻrt narsa bor: maqsad — toʻrt haftalik Instagram reja; kontekst — besh million soʻm byudjet, talabalar, yaqinida uchta universitet; shart — agar gʻoya byudjetdan qimmat boʻlsa, arzonroq variant taklif qil; format — jadval. Javob — ertagayoq bajarsa boʻladigan aniq reja. Model bir xil — faqat vazifa boshqa.
+Yaxshi promptda toʻrt narsa bor: maqsad — toʻrt haftalik Instagram reja; vaziyat — besh million soʻm byudjet, talabalar, yaqinida uchta universitet; shart — agar gʻoya byudjetdan qimmat boʻlsa, arzonroq variant taklif qil; javob koʻrinishi — jadval. Javob — ertagayoq boshlasa boʻladigan aniq reja.
 
-Prompt — bu dastur. Dasturlashda oʻzgaruvchi, «agar» sharti, «har biri uchun» sikli va natija bor. Yaxshi promptda ham bularning hammasi bor, faqat oddiy soʻzlar bilan: «Mijoz ismi» — oʻzgaruvchi; «Agar ruscha yozsa, ruscha javob ber» — shart; «Har bir sharh uchun kayfiyatni aniqla» — sikl; «Faqat jadval qaytar» — natija. Xulosa: model — bajaruvchi, siz — dasturchi.
+Model bir xil — faqat vazifa boshqacha.
 
 
 === 3-QISM. MAKTAB VA «AGAR» ===
 
-Maktab — yaxshi vazifaning oltita qatlami. Maktab soʻzining oʻzi kabi, eslab qolish oson. Misol — onlayn doʻkon yordam xizmati.
+Maktab — yaxshi vazifaning olti qismi. Tikuvchini eslang: koʻylak buyurtma qilganda qayerga kiyishingizni, oʻlchamni aytasiz, «mato yetmasa qoʻngʻiroq qiling» deysiz, rasm koʻrsatasiz, oxirida kiyib koʻrasiz. Yaxshi prompt ham xuddi shunday. Misol — onlayn doʻkon yordam xizmati.
 
 M — Maqsad: nima kerak va nima uchun? «Shikoyatga javob yoz, toki mijoz bizda qolsin».
 A — Agar: qanday shartlar va taqiqlar bor? «Buyurtma raqami boʻlmasa — avval soʻra. Chegirma oʻn foizdan oshmasin».
@@ -44,68 +38,58 @@ T — Tartib: javob qanday koʻrinishda boʻlishi kerak? «Uzr, yechim, keyingi 
 A — Aniq misol: yaxshi javob qanday koʻrinadi? Tayyor javob namunasi.
 B — Baholash: oʻzini qanday tekshiradi? «Yuborishdan oldin tekshir: yechim tushunarlimi, ohang samimiymi?»
 
-Bu xuddi dizaynerga vazifa berishga oʻxshaydi: maqsad, cheklovlar, kim uchun, format, namuna va «tayyor» degan mezon.
-
-Endi eng muhim harf — «Agar». Nima qilishni bilmagan stajyor oʻylab topadi. Sunʼiy intellektda buni gallyutsinatsiya deyishadi. Shuning uchun vazifada yoʻllarni yozamiz. Maʼlumot yetmasa — taxmin qilma, soʻra. Qaytarish oʻn toʻrt kungacha boʻlsa — qaytarish tartibini yubor, undan keyin — boshqa variant taklif qil. Texnik muammo boʻlsa — avval ikkita savol ber. Aks holda — operatorga oʻtkaz. Qoida: har bir «agar»ning oʻz «aks holda»si boʻlsin. Yoʻl boʻlmagan joyda model yoʻlni oʻzi oʻylab topadi.
+Endi eng muhim harf — «Agar». Navigatorni eslang: yoʻl yopiq boʻlsa, qayerga burilishni oldindan biladi. Nima qilishni bilmagan stajyor esa oʻylab topadi. Sunʼiy intellektda buni gallyutsinatsiya deyishadi. Shuning uchun vazifada yoʻllarni yozamiz. Maʼlumot yetmasa — taxmin qilma, soʻra. Mahsulotni qaytarmoqchi boʻlsa va oʻn toʻrt kun oʻtmagan — qaytarish tartibini yubor, oʻtgan boʻlsa — boshqa variant taklif qil. Texnik muammo boʻlsa — avval ikkita savol ber. Aks holda — operatorga ulab qoʻy. Qoida: har bir «agar»ning oʻz «aks holda»si boʻlsin.
 
 
-=== 4-QISM. TARTIB, MISOL, OʻYLAYDIGAN MODELLAR, TEST, CHEYN ===
+=== 4-QISM. MISOL VA CHEYN ===
 
-Tartib. Model hujjatni, qoidalarni va savolni aralashtirib yubormasligi uchun ularni teglar bilan ajratamiz — xuddi nomi yozilgan papkalar kabi. Uzun hujjat tepada, savol oxirida. Javobni esa qatʼiy formatda soʻraymiz — jeyson, yaʼni dasturlar uchun jadval. Shunda javobni boshqa dastur oʻqiy oladi. Bu ikkinchi qismga koʻprik.
+Misol qoidalardan kuchli. Sartaroshga «chiroyli qilib oling» desangiz, nima chiqishini bilmaysiz. Rasm koʻrsatsangiz — darhol tushunadi. Misolsiz javoblar tarqoq, uchta har xil misol bilan — nishon markazida. Ehtiyot boʻling: model misoldagi hamma narsani koʻchiradi, xatosini ham.
 
-Misol qoidalardan kuchli. «Qisqa va samimiy yoz» deyish — noaniq. Bitta namunani koʻrsatish — darhol tushunarli. Misolsiz javoblar tarqoq, uchta har xil misol bilan — nishon markazida. Ehtiyot boʻling: model misoldagi hamma narsani koʻchiradi, uzunligini ham, xatosini ham.
+Maʼruzada jonli laboratoriya ham bor: «Termos haqida tavsif yoz» degan bitta qatorga har klikda bitta Maktab harfi qoʻshiladi, va javob zerikarli gapdan tayyor sotuv matniga aylanadi.
 
-Oʻylaydigan modellar. Ilgari har bir qadamni yozib berardik: «avval oʻqi, keyin yoz». Yangi modellar javobdan oldin oʻzi oʻylaydi. Ularga qadamni emas — maqsad, talab va cheklovni beramiz. Effort sozlamasi — «qancha oʻylash kerak»: lou — tez va arzon, xay va maks — chuqurroq, lekin qimmatroq.
-
-Test. Promptni ikki marta sinab, «ishlayapti» deyish — taxmin. Oshpaz yangi taomni koʻp mehmonga tatib koʻradi-ku, prompt ham shunday. Misol: yordam xizmatining promptini mijozlardan kelgan oʻnta xatda sinaymiz. Oʻntadan oltitasi yaxshi chiqdi: uchtasida ohang qoʻpol, bittasida model narxni oʻzidan toʻqidi. Promptga ikki qator qoʻshamiz: «ohang samimiy boʻlsin» va «narxni faqat roʻyxatdan ol». Qayta sinaymiz — endi oʻntadan toʻqqiztasi yaxshi. Haqiqiy ishda oʻttiz-ellikta misol olinadi, lekin gʻoya shu.
-
-Cheyn. Hammasini birdaniga topshirsangiz — «yigʻ, tahlil qil, yoz, tarjima qil, tekshir» — model hammasini yarim-yorti qiladi. Yaxshisi — konveyer kabi: yigʻish, tahlil, matn, tekshiruv. Har bir qadam bitta ish qiladi, bir qadamning natijasi keyingisiga oʻtadi. Buni cheyn deyishadi.
+Cheyn. Osh damlashni eslang: hamma narsani bir vaqtda qozonga tashlamaysiz — avval goʻsht, keyin sabzi, keyin guruch. Hammasini birdaniga topshirsangiz — «yigʻ, tahlil qil, yoz, tarjima qil, tekshir» — model hammasini chala qiladi. Yaxshisi — qadamlarga boʻlish: yigʻish, tahlil, matn, tekshiruv. Bir qadamning natijasi keyingisiga oʻtadi. Buni cheyn deyishadi.
 
 
 === 5-QISM. IKKINCHI QISM: TUL VA TUL KOLLING ===
 
 Endi ikkinchi qism — modelga qanday qilib qoʻl berish.
 
-Modelning uchta zaif joyi bor. Birinchi: bilimi oʻqitilgan sanada muzlab qolgan — bugungi ob-havoni ham, kursni ham bilmaydi. Ikkinchi: aniq hisobda adashadi. Uchinchi: harakat qila olmaydi — xat yubora olmaydi, bazaga yoza olmaydi.
+Modelning uchta zaif joyi bor. Birinchi: yangiliklarni bilmaydi — bugungi ob-havoni ham, kursni ham. Ikkinchi: aniq hisobda adashadi. Uchinchi: hech narsa qila olmaydi — xat yubora olmaydi, buyurtma bera olmaydi.
 
-Tul nima? Tul — model ishga tushirishni soʻray oladigan funksiya: ob-havo, kalkulyator, qidiruv, xabar yuborish. Tulning uch qismi bor: nomi, tavsifi va parametrlari, masalan «shahar». Tavsif ham prompt: model aynan shuni oʻqib, qaysi tulni olishni hal qiladi.
+Tul nima? Tul — modelning qoʻli: ob-havo, kalkulyator, qidiruv, xabar yuborish. Maʼruzada tulning kartasi bor. Nomi — «Ob-havo». Nima qiladi — «Shahar boʻyicha ob-havoni aytadi». Nima kerak — shahar nomi. «Nima qiladi» degan qator ham prompt: model aynan shuni oʻqib, qaysi tulni olishni hal qiladi.
 
-Model tulni qanday chaqiradi? Oʻxshatish: boshliq va yordamchi. Model — boshliq: oʻzi hech narsa qilmaydi, faqat yozuvcha yozadi. Sizning dasturingiz — yordamchi, u bajaradi.
+Model tulni qanday chaqiradi? Oʻxshatish: boshliq va yordamchi. Model — boshliq: oʻzi hech narsa qilmaydi, faqat xatcha yozadi. Sizning dasturingiz — yordamchi, u bajaradi.
 
-Misol: «Ertaga Samarqandda yomgʻir yogʻadimi?» Dastur savolni modelga beradi va unga «ob-havo» degan tul borligini aytadi. Model darhol javob bermaydi, yozuvcha yozadi: «Samarqand uchun ob-havoni chaqir». Dastur haqiqiy ob-havo xizmatini chaqiradi. Natija — yetmish foiz — modelga qaytadi. Model odamga javob beradi: «Ha, yetmish foiz, soyabon oling».
+Misol: «Ertaga Samarqandda yomgʻir yogʻadimi?» Dastur savolni modelga beradi va unga «ob-havo» degan tul borligini aytadi. Model darhol javob bermaydi, xatcha yozadi: «Samarqand ob-havosini chaqir». Dastur haqiqiy ob-havo xizmatiga murojaat qiladi. Natija — yomgʻir yetmish foiz — modelga qaytadi. Model odamga javob beradi: «Ha, yetmish foiz, soyabon oling».
 
-Eng muhimi: model faqat soʻraydi, bajaradigan — sizning kodingiz. Demak, nazorat sizda.
+Eng muhimi: model faqat soʻraydi, bajaradigan — sizning dasturingiz. Demak, boshqaruv sizda.
 
 
 === 6-QISM. AGENT VA TUL CHEYNING ===
 
-Agent — bu model, tullar va sikl. Agent aylana boʻylab ishlaydi: oʻyladi, qildi — yaʼni tulni chaqirdi, natijani koʻrdi va yana oʻyladi. Vazifa bajarilguncha shunday davom etadi. Toʻxtash sharti albatta kerak: vazifa bajarildi, qadamlar limiti tugadi yoki inson tasdigʻi kerak. Aks holda agent cheksiz aylanib, pul sarflashi mumkin.
+Agent — bu model, tullar va sikl. Model — miya, tullar — qoʻl, sikl — motor. Oshpazni eslang: tatib koʻradi, tuz qoʻshadi, yana tatib koʻradi — toki mazasi kelguncha. Agent ham shunday: oʻyladi, qildi, natijani koʻrdi va yana oʻyladi. Toʻxtash qoidasi albatta kerak: vazifa bajarildi, qadamlar soni tugadi yoki odamning ruxsati kerak. Aks holda agent toʻxtamay aylanib, pul sarflaydi.
 
-Endi ikkinchi qismning mohiyati — tul cheyning. Agent bir nechta tulni ketma-ket chaqiradi, va bir tulning natijasi keyingisiga kirish boʻladi.
+Endi ikkinchi qismning asosiy gapi — tul cheyning. Agent bir nechta tulni ketma-ket chaqiradi, va bir tulning natijasi keyingisiga oʻtadi.
 
 Maʼruzadagi misol. Vazifa: «Oktabrda Toshkentdagi ey ay tadbirlarini top, ob-havoni tekshir, eng yaxshisini tanla va jamoaga yubor». Birinchi: «tadbirlar» tuli uchta sanani topadi. Ikkinchi: shu sanalar bilan «ob-havo» tuli uch marta, bir vaqtda chaqiriladi. Uchinchi: «hisobot» tuli natijani yigʻadi. Toʻrtinchi: «xabar» tuli uni jamoaga yuboradi.
 
-Bu tartibni hech kim yozmagan. Nimani chaqirish, qaysi tartibda va nimani parallel qilish mumkinligini model oʻzi hal qildi. Mana shu — tul cheyning.
+Bu tartibni hech kim yozmagan. Nimani chaqirish, qaysi tartibda va nimani birdaniga qilish mumkinligini model oʻzi hal qildi. Mana shu — tul cheyning.
 
-Oltita tayyor sxema bor, ular Entropikning maqolasidan olingan. Birinchi — konveyer: qadamlar ketma-ket. Ikkinchi — saralash, yaʼni ruting: soʻrov turini aniqlab, kerakli yoʻlga yuborish. Uchinchi — parallel: bir nechta model bir vaqtda ishlaydi. Toʻrtinchi — boshliq va ijrochilar: bosh model vazifani boʻlib tarqatadi. Beshinchi — muallif va muharrir: biri yozadi, ikkinchisi tekshiradi. Oltinchi — avtonom agent: rejani ham, toʻxtashni ham model oʻzi tanlaydi. Birinchi beshtasi — vorkflou, yoʻlni biz chizamiz. Oltinchisi — agent, yoʻlni model tanlaydi. Maslahat: oddiydan boshlang, agent — oxirgi chora.
+Cheynning olti turi bor. Konveyer — qadamlar ketma-ket. Saralash, yaʼni ruting — registratura kabi, soʻrovni kerakli joyga yuboradi. Parallel — bir nechta oshpaz bir vaqtda. Prorab va ishchilar — ishni boʻlib tarqatadi. Talaba va ustoz — biri yozadi, biri tekshiradi. Va tajribali xodim — avtonom agent, hammasini oʻzi hal qiladi. Maslahat: oddiydan boshlang — avval prompt, keyin cheyn, va faqat kerak boʻlsa — agent.
 
 
-=== 7-QISM. TUL TAVSIFI, EM SI PI, KONTEKST, XAVFLAR ===
+=== 7-QISM. EM SI PI VA XAVFLAR ===
 
-Tul tavsifi — yangi xodimga yozilgan yoʻriqnoma kabi. Yomon tavsif: «serch — qidiradi». Yaxshi tavsif: aniq nom; qachon ishlatish va qachon ishlatmaslik; tushunarli xato matni, masalan «sana yil, oy, kun formatida boʻlsin»; tullar kam, lekin aniq; natija qisqa.
+Em si pi — sunʼiy intellekt uchun yu es bi si. Bir necha yil oldin har telefonning oʻz zaryadlovchisi bor edi-ku. Ilgari har bir ilovani har bir servisga alohida ulashardi: uchta ilova va beshta servis — oʻn beshta ulanish. Em si pi — bitta ulagich: har bir servis bir marta, har bir ilova ham bir marta. Uch qoʻshuv besh — sakkiz.
 
-Em si pi — sunʼiy intellekt uchun yu es bi si. Ilgari har bir ilovani har bir servisga alohida ulashardi: uchta ilova va beshta servis — oʻn beshta ulanish. Em si pi — yagona standart, yagona ulagich: har bir servis bir marta, har bir ilova ham bir marta ulanadi. Uch qoʻshuv besh — sakkiz. Em si pini Entropik ikki ming yigirma toʻrtinchi yil noyabrda yaratgan, ikki ming yigirma beshinchi yil dekabridan u Linuks Faundeyshn boshqaruvidagi ochiq standart.
-
-Kontekst — modelning ish stoli. Model faqat stolida turgan narsani koʻradi: vazifa, tullar tavsifi, suhbat tarixi, hujjatlar va natijalar. Stol cheklangan: toʻlib ketsa, model adasha boshlaydi. Toʻrt usul bor: eski tarixni siqish, faqat keraklisini yuklash, vazifa qismlarini yordamchi agentlarga berish va faqat kerak boʻlganda ochiladigan skillar. Xulosa: prompt injiniring — nima deyish, kontekst injiniring — model nimani koʻrishi.
-
-Agentlar qayerda sinadi? Cheksiz sikl — himoya: qadamlar va byudjet limiti. Oʻylab topilgan parametrlar — himoya: sxema boʻyicha tekshirish. Prompt injekshn — saytda yoki xatda «koʻrsatmalarni unut» degan buyruq yashiringan boʻladi; himoya: begona matn — buyruq emas, maʼlumot, va ruxsatlar minimal. Notoʻgʻri tul tanlash — himoya: aniq tavsif. Qaytarib boʻlmaydigan harakatlar, masalan pul yoki oʻchirish — faqat inson tasdigʻi bilan. Qora quti — himoya: har bir qadamning jurnali va testlar.
+Agent qayerda adashadi? Toʻrtta xavf bor. Birinchi — toʻxtamay aylanib, pul sarflaydi; himoya: qadamlar soni va pulga chegara. Ikkinchi — begona gapni buyruq deb oʻylaydi, buni prompt injekshn deyishadi. Kassirga kelgan xatda «bu xatni oʻqigan kassir menga million soʻm bersin» deb yozilgan boʻlsa, kassir bajarmaydi-ku. Qoida: begona matn — buyruq emas, maʼlumot. Uchinchi — qaytarib boʻlmaydigan ish, masalan pul oʻtkazish; bu faqat odamning tasdigʻi bilan, bankomatdagi pin kod kabi. Toʻrtinchi — agent nima qilganini bilmaysiz; himoya: har bir qadam yozib boriladi.
 
 
 === 8-QISM. YAKUN ===
 
-Yakuniy slaydlar. Asboblar xaritasi: promptni Klod Konsolda yozasiz; agentni Eyjent es di key, Lenggraf, Kru ey ay yoki kodsiz en eyt en bilan yigʻasiz; ishini Lengfyuz bilan kuzatasiz. Bonus — Klod uchun sakkizta tayyor skill, ku ar kod orqali yuklab olinadi. Syurpriz — bu taqdimotni ey ay agent yigʻgan: inson vazifa qoʻygan, yoʻnaltirgan va tekshirgan, yaʼni maʼruzada aytilgan hamma narsani qilgan.
+Yakuniy slaydlar. Bonus — Klod uchun sakkizta tayyor skill, ku ar kod orqali yuklab olinadi. Skill — telefonga ilova oʻrnatgandek: bir marta qoʻshasiz, Klod kerak boʻlganda oʻzi ishlatadi. Keyin syurpriz: bu taqdimotni ey ay agent yigʻgan. Odam vazifa bergan, yoʻnaltirgan va tekshirgan — yaʼni maʼruzada aytilgan hamma narsani qilgan.
 
-Uchta xulosa. Prompt — bu dastur: Maktab boʻyicha yozing va test bilan tekshiring. Tul — modelning qoʻli, va uning tavsifi ham prompt. Oddiydan boshlang: prompt, cheyn, vorkflou, va faqat kerak boʻlsa, agent.
+Uchta xulosa. Prompt — stajyorga beriladigan vazifa: Maktab boʻyicha yozing. Tul — modelning qoʻli, agent esa ularni oʻzi ishlatadigan yordamchi. Oddiydan boshlang: prompt, cheyn, va faqat kerak boʻlsa, agent.
 
 
 === 9-QISM. QANDAY TEZ ESLAB QOLISH MUMKIN ===
@@ -116,7 +100,7 @@ Birinchi qadam — karkasni yod oling. Maʼruzaning beshta bekati: Prompt, Logik
 
 Ikkinchi qadam — Feynman usuli. Har bir mavzuni ovoz chiqarib, oʻz soʻzlaringiz bilan, xuddi oʻn ikki yoshli bolaga tushuntirgandek aytib bering. Qayerda toʻxtab qolsangiz — oʻsha joyni qayta oʻqing va yana tushuntiring.
 
-Uchinchi qadam — qayta oʻqimang, eslang. Matnni yoping va oʻzingizdan soʻrang: «Oʻn yettinchi slaydda nima bor? Asosiy fikr nima?» Eslash xotirani qayta oʻqishdan bir necha baravar kuchliroq mashq qildiradi.
+Uchinchi qadam — qayta oʻqimang, eslang. Matnni yoping va oʻzingizdan soʻrang: «Oʻn ikkinchi slaydda nima bor? Asosiy fikr nima?» Eslash xotirani qayta oʻqishdan bir necha baravar kuchliroq mashq qildiradi.
 
 Toʻrtinchi qadam — eshitish va koʻrish birga. Audio darsni tinglang va bir vaqtda slaydlarni varaqlang. Slaydlar — sizning asosiy shpargalkangiz: har birida sxema bor, siz faqat shu sxemani tushuntirasiz.
 

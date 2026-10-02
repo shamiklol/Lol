@@ -414,7 +414,7 @@ const live = {
   act: 2,
   station: 4,
   title: 'Jonli agent',
-  time: 170,
+  time: 200,
   gl: 'agentLeft',
   html: `
   <div class="lv-labels ag-layer" aria-hidden="true"></div>

@@ -21,71 +21,16 @@ function qrBlock(label) {
   return `<div class="qr"><svg viewBox="-2 -2 ${n + 4} ${n + 4}" class="qr-svg" role="img" aria-label="QR: ${url}"><rect x="-2" y="-2" width="${n + 4}" height="${n + 4}" fill="#fff"/>${rects}</svg><p class="small">${label}</p></div>`;
 }
 
-// ---------------------------------------------------------------- Ecosystem
-const ECO = [
-  ['Promptni sinash', 'prompt', ['Claude Console', 'OpenAI Playground', 'Google AI Studio']],
-  ['Agent SDK va freymvorklar', 'model', ['Claude Agent SDK', 'OpenAI Agents SDK', 'Google ADK', 'LangGraph', 'CrewAI', 'Microsoft Agent Framework', 'Mastra']],
-  ['No-code avtomatlashtirish', 'tool', ['n8n', 'Make', 'Zapier', 'Dify', 'Flowise', 'Langflow']],
-  ['Kodlash agentlari', 'data', ['Claude Code', 'Cursor', 'OpenAI Codex', 'GitHub Copilot']],
-  ['Protokol va standartlar', 'tool', ['MCP', 'A2A', 'Agent Skills (SKILL.md)', 'AGENTS.md']],
-  ['Monitoring va test', 'prompt', ['Langfuse', 'LangSmith', 'Braintrust', 'Promptfoo', 'Arize Phoenix']],
-];
-const ecosystem = {
-  id: 'ecosystem',
-  act: 3,
-  station: 4,
-  title: 'Asboblar xaritasi 2026',
-  time: 60,
-  gl: 'calm',
-  html: `
-  <header class="head">
-    <div class="eyebrow" data-in="0" data-decode style="--accent:var(--data)">Amaliyot</div>
-    <h2 class="h1 kinetic">Asboblar xaritasi <span class="ink">2026</span></h2>
-  </header>
-  <div class="eco">
-    <svg class="eco-lines" viewBox="0 0 1664 620" aria-hidden="true">
-      ${[
-        [270, 150],
-        [832, 90],
-        [1394, 150],
-        [270, 470],
-        [832, 530],
-        [1394, 470],
-      ]
-        .map(([x, y]) => `<path d="M832 310 L${x} ${y}"/>`)
-        .join('')}
-    </svg>
-    <div class="eco-hub"><b>agent</b><span class="mono">sizning tizimingiz</span></div>
-    ${ECO.map(
-      ([t, c, items], i) => `
-      <div class="eco-card panel eco-${i}" style="--c:var(--${c})" data-in="${2 + i * 0.4}" data-anim="scale">
-        <h3>${t}</h3>
-        <div class="eco-items">${items.map((x) => `<span>${x}</span>`).join('')}</div>
-      </div>`,
-    ).join('')}
-  </div>
-  <div class="eco-start panel" data-step="1" data-anim="up">
-    <b>Boshlash uchun:</b> Claude Console’da prompt → n8n yoki Agent SDK’da chain → MCP bilan tool’lar → Langfuse bilan monitoring
-  </div>`,
-  enter(el) {
-    const tl = gsap.timeline();
-    tl.fromTo(el.querySelectorAll('.eco-lines path'), { drawSVG: '0%' }, { drawSVG: '100%', duration: 1.2, stagger: 0.1, ease: 'power2.inOut' }, 0.4);
-    tl.fromTo(el.querySelector('.eco-hub'), { scale: 0, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.9, ease: 'back.out(2)' }, 0.2);
-    return tl;
-  },
-  notes: NOTES.ecosystem,
-};
-
 // ---------------------------------------------------------------- Bonus skills
 const SKILLS = [
-  ['maktab-prompt', 'Oddiy soʻrovni MAKTAB boʻyicha kuchli promptga aylantiradi'],
-  ['prompt-doctor', 'Promptdagi xatolarni topadi, sababini aytadi va tuzatadi'],
-  ['prompt-evals', 'Test toʻplami, baholash jadvali va LLM-hakam promptini yozadi'],
-  ['few-shot-studio', 'Xilma-xil va nostandart misollar toʻplamini tuzadi'],
-  ['structured-output', 'JSON sxema va unga qatʼiy mos javob beruvchi prompt'],
-  ['prompt-chain-architect', 'Vazifani qadamlarga boʻladi va har qadamga tekshiruv qoʻyadi'],
-  ['tool-contract-writer', 'Agent tool’lari uchun nom, tavsif va sxema yozadi'],
-  ['agent-system-prompt', 'Agent tizim prompti: rol, qoidalar, toʻxtash shartlari'],
+  ['maktab-prompt', 'Oddiy soʻrovingizni MAKTAB boʻyicha kuchli promptga aylantiradi'],
+  ['prompt-doctor', 'Ishlamayotgan promptning sababini topadi va tuzatadi'],
+  ['prompt-evals', 'Promptni koʻp misolda sinab, qayerda adashishini koʻrsatadi'],
+  ['few-shot-studio', 'Prompt uchun yaxshi va har xil misollar tayyorlaydi'],
+  ['structured-output', 'Javobni aniq shaklda — jadval yoki roʻyxat qilib oladi'],
+  ['prompt-chain-architect', 'Katta ishni qadamlarga boʻlib beradi'],
+  ['tool-contract-writer', 'Agent tool’lari uchun tushunarli yoʻriqnoma yozadi'],
+  ['agent-system-prompt', 'Agentga yoʻriqnoma yozadi: roli, qoidalari, qachon toʻxtashi'],
 ];
 const bonus = {
   id: 'bonus',
@@ -97,7 +42,7 @@ const bonus = {
   html: `
   <header class="head">
     <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Bonus · sizga sovgʻa</div>
-    <h2 class="h1 kinetic"><span class="ink-warm">8 ta skill</span> — prompt engineering uchun</h2>
+    <h2 class="h1 kinetic"><span class="ink-warm">8 ta skill</span> — prompt yozish uchun</h2>
   </header>
   <div class="bn-wrap">
     <div class="bn-grid">
@@ -112,7 +57,7 @@ const bonus = {
     </div>
     <aside class="bn-side" data-in="5" data-anim="right">
       <div class="bn-qr" data-qr></div>
-      <p class="small bn-where">Claude.ai, Claude Code va Agent SDK’da ishlaydi. SKILL.md — ochiq standart: boshqa agentlar ham tushunadi.</p>
+      <p class="small bn-where">Claude’ga bir marta qoʻshasiz — kerak boʻlganda oʻzi ishlatadi. Telefonga ilova oʻrnatgandek.</p>
       <div class="bn-repos" data-repos></div>
     </aside>
   </div>`,
@@ -202,9 +147,9 @@ const final = {
     <div class="fn-left">
       <div class="eyebrow" data-in="0" data-decode style="--accent:var(--tool)">Yakun · 3 ta asosiy fikr</div>
       <ol class="fn-list">
-        <li data-in="1"><b>Prompt — dastur.</b> MAKTAB bilan yozing, test bilan oʻlchang.</li>
-        <li data-in="2"><b>Tool — modelning qoʻli.</b> Tavsif ham prompt.</li>
-        <li data-in="3"><b>Oddiydan boshlang:</b> prompt → chain → workflow → agent.</li>
+        <li data-in="1"><b>Prompt — stajyorga vazifa.</b> MAKTAB bilan yozing.</li>
+        <li data-in="2"><b>Tool — modelning qoʻli.</b> Agent — ularni oʻzi ishlatadigan yordamchi.</li>
+        <li data-in="3"><b>Oddiydan boshlang:</b> prompt → chain → agent.</li>
       </ol>
       <h2 class="fn-q swarm-src ink">Savollar?</h2>
     </div>
@@ -248,4 +193,4 @@ const final = {
   notes: NOTES.final,
 };
 
-export default [ecosystem, bonus, meta, final];
+export default [bonus, meta, final];

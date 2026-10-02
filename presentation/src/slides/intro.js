@@ -63,11 +63,11 @@ const title = {
 
 // ---------------------------------------------------------------- 2 · Hook
 const PROMPT_A = 'Kofexona uchun marketing strategiya yozib ber.';
-const PROMPT_B = `<maqsad>Toshkentdagi yangi kofexona uchun 4 haftalik Instagram reja.</maqsad>
-<kontekst>Byudjet: 5 mln soʻm. Auditoriya: 18–25 yoshli talabalar.
-Yaqinida 3 ta universitet bor.</kontekst>
-<shartlar>Agar gʻoya byudjetdan oshsa — arzonroq variant taklif qil.</shartlar>
-<format>Jadval: hafta | gʻoya | format | KPI. Oxirida umumiy xarajat.</format>`;
+const PROMPT_B = `Maqsad: Toshkentdagi yangi kofexona uchun 4 haftalik Instagram reja.
+Vaziyat: byudjet 5 mln soʻm. Mijozlar — 18–25 yoshli talabalar.
+Yaqinida 3 ta universitet bor.
+Shart: agar gʻoya byudjetdan oshsa — arzonroq variant taklif qil.
+Javob: jadval — hafta, gʻoya, format, kutilgan natija. Oxirida umumiy xarajat.`;
 
 const ANSWER_A = `Kofexona uchun marketing strategiyasi:
 1. Maqsadli auditoriyani aniqlang.
@@ -111,7 +111,7 @@ const hook = {
       <div class="hook-arrow" aria-hidden="true"></div>
       <div class="hook-out" data-out="b">
         <table class="hook-table" data-table>
-          <thead><tr><th>Hafta</th><th>Gʻoya</th><th>Format</th><th>KPI</th></tr></thead>
+          <thead><tr><th>Hafta</th><th>Gʻoya</th><th>Format</th><th>Natija</th></tr></thead>
           <tbody>${ANSWER_B_ROWS.map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody>
         </table>
         <div class="hook-total mono" data-total>Umumiy xarajat: 4,6 mln soʻm ✓ byudjet ichida</div>
@@ -208,11 +208,11 @@ const hook = {
 
 // ---------------------------------------------------------------- 3 · Route
 const STOPS = [
-  ['Prompt', 'Model matnni qanday oʻqiydi', 'prompt'],
-  ['Logika', 'Promptni dastur kabi yozamiz', 'prompt'],
-  ['Chain', 'Katta vazifani qadamlarga boʻlamiz', 'model'],
-  ['Tool’lar', 'Modelga qoʻl beramiz: tool calling', 'tool'],
-  ['Agent', 'Oʻzi reja tuzib, oʻzi bajaradigan tizim', 'data'],
+  ['Prompt', 'Stajyorga vazifani qanday berish', 'prompt'],
+  ['Logika', '«Agar … aks holda» bilan yozish', 'prompt'],
+  ['Chain', 'Katta ishni qadamlarga boʻlish', 'model'],
+  ['Tool’lar', 'Modelga qoʻl berish', 'tool'],
+  ['Agent', 'Ishni oʻzi bajaradigan yordamchi', 'data'],
 ];
 
 const route = {
@@ -243,8 +243,8 @@ const route = {
   </div>
   <div class="takeaway" data-in="8">
     <span class="takeaway-label mono">Oʻzingiz bilan olib ketasiz</span>
-    <span class="chip" data-c="prompt">MAKTAB freymvorki</span>
-    <span class="chip" data-c="model">6 ta chaining patterni</span>
+    <span class="chip" data-c="prompt">MAKTAB formulasi</span>
+    <span class="chip" data-c="model">chain’ning 6 turi</span>
     <span class="chip" data-c="tool">jonli agent</span>
     <span class="chip" data-c="data">8 ta bonus skill</span>
   </div>`,

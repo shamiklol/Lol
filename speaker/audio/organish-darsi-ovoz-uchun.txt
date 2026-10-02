@@ -2,132 +2,99 @@
 
 Assalomu alaykum! Bu — maʼruzangizni tez oʻrganish uchun audio dars. Uni bir necha marta tinglang: avval shunchaki tinglang, keyin slaydlarni varaqlab turib tinglang.
 
-Darsning tartibi oddiy. Avval maʼruza nima haqida ekanini qisqacha aytaman. Keyin har bir slaydni birma-bir koʻrib chiqamiz: ekranda nima bor, asosiy fikr nima va zalga nima deysiz. Oxirida eslab qolish kerak boʻlgan beshta asosiy jumlani takrorlaymiz.
+Darsning tartibi oddiy. Avval maʼruza nima haqida ekanini qisqacha aytaman. Keyin har bir slaydni birma-bir koʻrib chiqamiz: ekranda nima bor va zalga nima deysiz. Oxirida eslab qolish kerak boʻlgan beshta asosiy gapni takrorlaymiz.
 
-Maʼruza nima haqida? Bitta gap bilan: sunʼiy intellektni yaxshi ishlatish haqida. Unda ikki qism bor.
+Maʼruza nima haqida? Sunʼiy intellektni ishga yangi kelgan stajyor deb tasavvur qiling. Juda aqlli, lekin sizning ishingizni bilmaydi, aytganingizni soʻzma-soʻz tushunadi, qoʻli yoʻq, bilmagan narsasini esa oʻylab topadi.
 
-Birinchi qism — Prompt Lojik, yaʼni promptning logikasi. Bu — modelga vazifani toʻgʻri qoʻyish. Prompt — «menga biror narsa yozib ber» degan iltimos emas. Prompt — oddiy tilda yozilgan dastur: unda maqsad, shartlar, javob formati, misol va oʻzini tekshirish bor.
+Maʼruzada ikki qism bor. Birinchi qism — Prompt Lojik: bu stajyorga vazifani qanday toʻgʻri berish. Ikkinchi qism — Tul Cheyning: unga qanday qilib qoʻl berish, toki ishni oʻzi qilsin. Qoʻli bor stajyorni agent deymiz.
 
-Ikkinchi qism — Tul Cheyning. Bu — modelga qoʻl berish, yaʼni tullar. Tul — model chaqira oladigan funksiya: ob-havo, qidiruv, kalkulyator, xabar yuborish. Tullari bor model vazifani oʻzi, qadamma-qadam bajaradi. Bunday modelni agent deymiz.
+Asosiy fikr: model bir xil, natijani esa siz bergan vazifa va siz bergan tullar hal qiladi.
 
-Maʼruzaning asosiy fikri: model bir xil, natijani esa promptning logikasi va siz bergan tullar hal qiladi.
+Zal — mavzuni endi oʻrganayotgan odamlar. Shuning uchun slaydlarda kod yoʻq, hammasi hayotiy misollar bilan. Slaydlar yigirma bitta, reja boʻyicha oʻttiz olti daqiqa, qolgan vaqt — savollarga.
 
-Auditoriya — sunʼiy intellekt bilan ishlaydigan, agentlar haqida eshitgan odamlar. Ular maʼruzadan uchta narsa olib ketadi: yaxshi prompt uchun Maktab sxemasi, agent qanday ishlashini tushunish va sakkizta tayyor skill.
+Endi asosiy soʻzlar. Prompt — modelga yozadigan vazifangiz. Tul — modelning qoʻli: ob-havo, qidiruv, kalkulyator, xabar yuborish. Cheyn — qadamlar ketma-ketligi: bir qadamning natijasi keyingisiga oʻtadi. Agent — tullarni oʻzi ishlatib, ishni oxirigacha qiladigan yordamchi.
 
-Maʼruza qirq besh daqiqa. Kirish — taxminan uch yarim daqiqa, birinchi qism — oʻn olti daqiqa, ikkinchi qism — oʻn toʻqqiz daqiqa, yakun — besh daqiqa.
+Va eng muhim formula — Maktab. Oltita harf. M — Maqsad: nima kerak va nima uchun. A — Agar: shartlar va «aks holda». K — Kontekst: kim, kim uchun, qanday vaziyatda. T — Tartib: javob qanday koʻrinishda. A — Aniq misol: tayyor javob namunasi. B — Baholash: yuborishdan oldin oʻzini tekshirish. Maktab soʻzining oʻzi, shuning uchun eslab qolish oson.
 
-Endi asosiy soʻzlar. Cheyn — qadamlar ketma-ketligi: bir qadamning natijasi keyingisiga oʻtadi. Tul — model chaqira oladigan funksiya. Agent — oʻzi reja tuzib, oʻzi tullarni chaqiradigan model. Sikl — oʻyla, harakat qil, natijani koʻr va yana boshidan. Kontekst — model hozir koʻrib turgan hamma narsa.
 
-Va eng muhim sxema — Maktab. Oltita harf. M — Maqsad: nima kerak va nima uchun. A — Agar: shartlar va «aks holda». K — Kontekst: kim, kim uchun, qanday vaziyatda. T — Tartib: javobning koʻrinishi va hajmi. A — Aniq misol: qanday javob kerakligini misolda koʻrsatish. B — Baholash: javobdan oldin oʻzini tekshirish. Maktab — xuddi maktab soʻzining oʻzi, shuning uchun eslab qolish oson.
+=== 2-QISM. KIRISH: 1–3-SLAYDLAR ===
 
+Birinchi slayd — titul. Salomlashasiz, oʻzingizni tanishtirasiz va stajyor haqidagi gapni aytasiz. Keyin ikki qismni aytasiz: stajyorga vazifa berish va unga qoʻl berish.
 
-=== 2-QISM. KIRISH SLAYDLARI: 1–3 ===
+Ikkinchi slayd — tajriba. Ekranda ikkita vazifa, ikkalasi ham bitta modelga beriladi. Chapdagisi — bitta gap: «Kofexona uchun marketing strategiya yozib ber». Javob umumiy: «ijtimoiy tarmoqlarda faol boʻling, aksiya oʻtkazing». Toʻgʻri gap, lekin foydasi yoʻq.
 
-Birinchi slayd — titul. Ekranda maʼruza nomi mayda zarrachalardan yigʻiladi. Siz salomlashasiz, oʻzingizni tanishtirasiz va ikki qismni aytasiz: prompt logikasi va tul cheyning. Keyin sarlavhaga ishora qilasiz: «Sarlavha zarrachalardan yigʻildi. Model ham matnni xuddi shunday — mayda boʻlaklar bilan koʻradi». Bu keyingi mavzuga koʻprik.
+Oʻngdagisida toʻrt narsa bor: maqsad — toʻrt haftalik Instagram reja; vaziyat — besh million soʻm byudjet va talabalar; shart — agar gʻoya qimmat boʻlsa, arzonrogʻini taklif qil; javob — jadval. Natija — har hafta uchun aniq ish.
 
-Ikkinchi slayd — tajriba. Bu maʼruzaning eng kuchli boshlanishi. Ekranda ikkita prompt, ikkalasi ham bitta modelga yuboriladi. Chapdagi prompt — bitta gap: «Kofexona uchun marketing strategiya yozib ber». Javob umumiy: «ijtimoiy tarmoqlarda faol boʻling, aksiya oʻtkazing». Uni istalgan kofexonaga qoʻysa boʻladi, foydasi yoʻq.
+Zaldan soʻraysiz: «Nima oʻzgardi?» Kichik pauza. Va javob: «Model bir xil edi. Logika boshqa edi». Bu gapni yod oling — butun maʼruzaning asosiy gʻoyasi shu.
 
-Oʻngdagi promptda toʻrt narsa bor: maqsad — toʻrt haftalik Instagram reja; kontekst — besh million soʻm byudjet va talabalar; shart — agar gʻoya qimmat boʻlsa, arzonroq variant taklif qil; format — jadval. Javob — aniq reja: har hafta uchun gʻoya, natija va byudjet ichidagi xarajat.
+Uchinchi slayd — bugungi yoʻl. Besh bekat, xuddi metro kabi: Prompt, Logika, Cheyn, Tullar, Agent. Pastdagi chiziq qayerda ekanimizni koʻrsatib turadi. Oxirida sovgʻa — sakkizta skill borligini ham aytib qoʻying.
 
-Zaldan soʻraysiz: «Nima oʻzgardi?» Kichik pauza qilasiz. Va javob berasiz: «Model bir xil edi. Logika boshqa edi». Bu jumlani yod oling — u butun maʼruzaning asosiy gʻoyasi. Internet boʻlsa, «Jonli sinash» tugmasi ikkala promptni shu zahoti Klodga yuboradi.
 
-Uchinchi slayd — bugungi yoʻl. Ekranda besh bekat, xuddi metro xaritasi kabi: Prompt, Logika, Cheyn, Tullar, Agent. Har birini bitta jumla bilan aytasiz. Pastdagi chiziq butun maʼruza davomida qayerda ekaningizni koʻrsatib turadi. Oxirida sovgʻa — sakkizta skill borligini ham aytib qoʻying: bu zalni oxirigacha ushlab turadi.
+=== 3-QISM. BIRINCHI QISM: 4–6-SLAYDLAR ===
 
+Toʻrtinchi slayd — birinchi qism boshlanishi. Bitta gap: stajyorga vazifani qanday berish kerak, buning oddiy formulasi bor.
 
-=== 3-QISM. BIRINCHI QISM: 4–7-SLAYDLAR ===
+Beshinchi slayd — Maktab. Tikuvchini eslang: koʻylak buyurtma qilganda qayerga kiyishingizni, oʻlchamni aytasiz, «mato yetmasa qoʻngʻiroq qiling» deysiz, rasm koʻrsatasiz, oxirida kiyib koʻrasiz. Yaxshi prompt ham shunday.
 
-Toʻrtinchi slayd — birinchi qism boshlanishi, Prompt Lojik. Bitta jumla yetarli: avval model qanday oʻqishini koʻramiz, keyin qanday yozish kerakligini.
+Ekranda internet-doʻkon yordam xizmati uchun vazifa. Birinchi klikda u olti qismga ajraladi, ikkinchi klikda harflar chiqadi. Har bir harfni misol bilan aytasiz. Maqsad — mijoz bizdan ketmasin. Agar — buyurtma raqami boʻlmasa, avval soʻra, chegirma oʻn foizdan oshmasin; bu qator boʻlmasa, model ellik foiz chegirma vaʼda qilib yuborishi mumkin. Kontekst — mijoz ikki yildan beri xarid qiladi. Tartib — avval uzr, keyin yechim, keyin keyingi qadam. Aniq misol — tayyor javob namunasi. Baholash — yuborishdan oldin oʻzini tekshirish.
 
-Beshinchi slayd — tokenlar. Asosiy fikr: model soʻzlarni emas, tokenlarni, yaʼni mayda boʻlaklarni oʻqiydi. Ekranda haqiqiy tokenizator ishlaydi: gap yozasiz, u boʻlaklarga boʻlinadi. Maʼnosi bir xil ikki gap: oʻzbekchasi oʻn toʻqqiz token, inglizchasi yetti token. Demak, oʻzbekcha matn ikki-ikki yarim baravar koʻp token oladi: kontekst tezroq toʻladi va narx oshadi. Ikkinchi fikr: model har safar keyingi tokenni ehtimollik boʻyicha tanlaydi, prompt esa shu ehtimollarni boshqaradi. Zaldan bitta gap soʻrab, uni jonli yozib koʻrsatish mumkin — bu juda taʼsirli.
+Oxirida zalga savol: «Oxirgi vazifangizdan qaysi harflar tushib qolgan edi?» Koʻpincha — A va B.
 
-Oltinchi slayd — prompt bu dastur. Chapda kod, oʻngda xuddi shu ish oddiy tilda. Har klikda bitta juftlik chiqadi: oʻzgaruvchi — «Mijoz ismi»; shart — «Agar»; sikl — «Har bir sharh uchun»; funksiya — aniq qadamlar; natija — javob formati. Oxirgi jumla: «Model — interpretator, siz — dasturchi». Yaʼni koddagi xato kabi, promptdagi noaniqlik ham natijani buzadi.
+Oltinchi slayd — Agar. Navigatorni eslang: yoʻl yopiq boʻlsa, qayerga burilishni oldindan biladi. Chapda vazifa, oʻngda xuddi shu vazifa yoʻllar xaritasi sifatida. Har klikda bitta yoʻl chiqadi. Maʼlumot yetmasa — taxmin qilma, soʻra. Mahsulotni qaytarmoqchi boʻlsa va oʻn toʻrt kun oʻtmagan — qaytarish tartibini yubor, oʻtgan boʻlsa — boshqa variant taklif qil. Texnik muammo — avval ikkita savol. Va eng muhimi — «aks holda»: hech biriga toʻgʻri kelmasa, operatorga ulab qoʻy. Asosiy gap: har bir agarning oʻz aks holdasi boʻlsin. Yoʻl koʻrsatilmagan joyda model oʻzi toʻqib chiqaradi.
 
-Yettinchi slayd — Maktab. Bu birinchi qismning markazi. Ekranda onlayn doʻkon yordam xizmati uchun prompt. Birinchi klikda u oltita qatlamga ajraladi, ikkinchi klikda katta harflar chiqadi: M, A, K, T, A, B.
 
-Har bir harfni misol bilan aytasiz. Maqsad — mijoz bizda qolsin. Agar — buyurtma raqami boʻlmasa, avval soʻra, chegirma oʻn foizdan oshmasin; bu qator boʻlmasa, model saxiylik qilib ellik foiz vaʼda qilishi mumkin. Kontekst — doimiy mijoz. Tartib — avval uzr, keyin yechim, keyin keyingi qadam, sakson soʻzgacha. Aniq misol — tayyor javob namunasi. Baholash — yuborishdan oldin oʻzini tekshirish.
+=== 4-QISM. 7–9-SLAYDLAR ===
 
-Oxirida zalga savol: «Oxirgi promptingizdan qaysi harflar tushib qolgan edi?» Koʻpincha — A va B.
+Yettinchi slayd — Aniq misol. Sartaroshga «chiroyli qilib oling» desangiz, nima chiqishini bilmaysiz. Rasm koʻrsatsangiz — darhol tushunadi. Asosiy gap: bitta yaxshi misol oʻnta qoidadan kuchli. Ekranda nishon: misolsiz javoblar tarqoq, uchta har xil misol bilan — markazda. Ehtiyot boʻling: model misoldagi hamma narsani koʻchiradi, xatosini ham.
 
+Sakkizinchi slayd — prompt laboratoriyasi. Bu jonli namoyish. Boshida vazifa bitta qator: «Termos haqida tavsif yoz». Javob zerikarli. Har klikda bitta Maktab harfi qoʻshiladi, va javob tayyor sotuv matniga aylanadi. Tugma vazifani Klodga yuboradi. Zaldan biror mahsulot nomini soʻrab, termos oʻrniga yozsangiz, odamlar natijani oʻz koʻzi bilan koʻradi.
 
-=== 4-QISM. 8–11-SLAYDLAR ===
+Toʻqqizinchi slayd — cheyn. Osh damlashni eslang: hamma narsani bir vaqtda qozonga tashlamaysiz — avval goʻsht, keyin sabzi, keyin guruch. Hamma ishni bitta katta vazifaga tiqsangiz, model hammasini chala qiladi. Toʻgʻri yoʻl — qadamlarga boʻlish: yigʻish, tahlil, yozish, tekshirish. Har qadamning natijasi keyingisiga oʻtadi. Oxirgi gap: «Endi bu cheynga qoʻl qoʻshamiz».
 
-Sakkizinchi slayd — Agar. Bu Maktabdagi eng muhim harf, prompt logikasining yuragi. Chapda prompt, oʻngda xuddi shu prompt blok-sxema koʻrinishida. Klikma-klik shoxlar chiqadi. Birinchi qoida: maʼlumot yetmasa — taxmin qilma, soʻra. Keyin soʻrov turi: qaytarish oʻn toʻrt kungacha boʻlsa — qaytarish tartibi, undan keyin — boshqa variant. Texnik muammo — avval ikkita savol. Va eng muhimi — «aks holda»: hech biriga tushmasa, operatorga. Asosiy jumla: «Har bir agarning oʻz aks holdasi boʻlsin». Ochiq qolgan yoʻl — oʻylab topilgan javobga eshik.
 
-Toʻqqizinchi slayd — Tartib. Ikki tomon bor: kirish va chiqish. Kirishda teglar: hujjat alohida, qoidalar alohida, savol alohida. Uzun hujjat tepada, savol oxirida. Chiqishda jeyson sxema: modeldan aniq maydonlar soʻraymiz — javob, manba va ishonch. Bunday javobni dastur oʻqiy oladi. Bu ikkinchi qismga koʻprik: tullar ham aynan shunday aniq formatda ishlaydi.
+=== 5-QISM. IKKINCHI QISM: 10–13-SLAYDLAR ===
 
-Oʻninchi slayd — Aniq misol. Asosiy jumla: bitta yaxshi misol oʻnta qoidadan kuchli. Ekranda nishon: misolsiz javoblar tarqoq, uchta har xil misol bilan — markazda. Ogohlantirish: model misoldagi hamma narsani koʻchiradi — uzunligini ham, xatosini ham. Shuning uchun misolni ehtiyot boʻlib tanlang.
+Endi ikkinchi qism — Tul Cheyning. Avval uning oʻzini oddiy qilib tushuntiraman. Agent vazifani bajarish uchun bir nechta tulni ketma-ket chaqiradi, va har bir tulning natijasi keyingi qadamga oʻtadi. Bu tartibni hech kim oldindan yozmaydi — model oʻzi hal qiladi.
 
-Oʻn birinchi slayd — rizoning modellar, yaʼni javobdan oldin oʻylaydigan modellar. Ilgari «qadam-baqadam oʻyla» deb, har qadamni yozib berardik. Endi qadamni emas, maqsadni beramiz: nima kerak, natija qanday boʻlishi kerak, qanday cheklov bor. Rejani model oʻzi tuzadi. Pastda effort sozlamasi: lou — tez va arzon, xay yoki maks — chuqurroq, lekin sekinroq va qimmatroq. Hamma narsaga maks qoʻyish — pulni behuda sarflash.
+Oʻninchi slayd — ikkinchi qism boshlanishi. Bitta gap: birinchi qismda stajyorga vazifa berishni oʻrgandik, endi unga qoʻl beramiz.
 
+Oʻn birinchi slayd — modelning qoʻli yoʻq. Uchta zaif joy: yangiliklarni bilmaydi, hisobda adashadi va hech narsa qila olmaydi — xat yubora olmaydi, buyurtma bera olmaydi. Yechim — tul, yaʼni modelning qoʻli. Ekranda tulning kartasi. Nomi — «Ob-havo». Nima qiladi — «Shahar boʻyicha ob-havoni aytadi». Nima kerak — shahar nomi albatta, sana xohlasa. Asosiy gap: «nima qiladi» degan qator ham prompt, chunki model shu gapni oʻqib, qaysi tulni olishni hal qiladi. Xuddi dori qutisidagi yoʻriqnoma kabi.
 
-=== 5-QISM. 12–14-SLAYDLAR ===
+Oʻn ikkinchi slayd — tul kolling qanday ishlaydi. Oʻxshatish: model — boshliq, sizning dasturingiz — yordamchi. Boshliq oʻzi hech narsa qilmaydi, faqat xatcha yozadi. Misol: «Ertaga Samarqandda yomgʻir yogʻadimi?» Dastur savolni Klodga beradi va ob-havo tuli borligini aytadi. Klod darhol javob bermaydi, xatcha yozadi: «Samarqand ob-havosini chaqir». Dastur ob-havo xizmatiga murojaat qiladi. Javob: yomgʻir yetmish foiz. Natija Klodga qaytadi. Va Klod odamga javob beradi: «Ha, yetmish foiz, soyabon oling». Eng muhim gap: model tulni oʻzi ishga tushirmaydi, faqat soʻraydi — bajaradigan sizning dasturingiz. Demak, boshqaruv sizning qoʻlingizda.
 
-Oʻn ikkinchi slayd — Baholash. Asosiy jumla: testsiz prompt — bu taxmin. Oshpazni eslang: yangi taomni bitta emas, koʻp mehmonga tatib koʻradi. Slaydda chapda — yordam xizmatining prompti, oʻngda — mijozlardan kelgan oʻnta xat. Birinchi klik: promptni hamma xatda sinaymiz. Oʻntadan oltitasi yaxshi. Uchtasida ohang qoʻpol, bittasida model narxni oʻzidan toʻqib chiqardi. Ikkinchi klik: promptga ikki qator qoʻshamiz. «Ohang samimiy boʻlsin» — bu K harfi. «Narxni faqat roʻyxatdan ol» — bu A harfi. Uchinchi klik: qayta sinaymiz, endi oʻntadan toʻqqiztasi yaxshi. Xato turi qaysi harfni tuzatishni aytib beradi.
+Oʻn uchinchi slayd — agent formulasi: agent — bu model, tullar va sikl. Model — miya, tullar — qoʻl, sikl — motor. Oshpazni eslang: tatib koʻradi, tuz qoʻshadi, yana tatib koʻradi — toki mazasi kelguncha. Agent ham shunday: oʻyla, qil, koʻr va yana boshidan. Muhim: toʻxtash qoidasi boʻlishi shart — vazifa bajarildi, qadamlar soni tugadi yoki odamning ruxsati kerak. Aks holda agent toʻxtamay aylanib, pulingizni sarflaydi.
 
-Oʻn uchinchi slayd — prompt laboratoriyasi. Bu jonli namoyish. Boshida prompt bitta qator: «Termos haqida tavsif yoz», ball — oʻn ikki. Har klikda bitta Maktab qatlami qoʻshiladi va ball oshadi, oxirida — toʻqson olti. Tugma promptni Klodga yuboradi. Zaldan biror mahsulot nomini soʻrab, promptdagi termosni almashtirsangiz, odamlar natijani oʻz koʻzi bilan koʻradi.
 
-Oʻn toʻrtinchi slayd — cheyn. Birinchi qismning oxirgi gʻoyasi. Hamma narsani bitta ulkan promptga tiqish — xato: model hammasini yarim-yorti qiladi. Toʻgʻri yoʻl — cheyn: yigʻish, tahlil, yozish, tekshirish. Har bir qadam bitta ish qiladi, qadamlar orasida aniq format, oʻrtada esa tekshiruv. Xato qayerda ekani darhol koʻrinadi. Oxirgi jumla — keyingi qismga oʻtish: «Endi bu cheynga qoʻl qoʻshamiz».
+=== 6-QISM. 14–16-SLAYDLAR ===
 
+Oʻn toʻrtinchi slayd — cheynning olti turi. Har birini hayotiy misol bilan aytasiz. Birinchi — ketma-ket cheyn, zavoddagi konveyer kabi. Ikkinchi — saralash, yaʼni ruting: kasalxona registraturasi kabi, soʻrovni kerakli joyga yuboradi. Uchinchi — parallel ishlash: bir nechta oshpaz bir vaqtda ishlagandek, masalan uchta doʻkondan narxni birdaniga solishtirish. Toʻrtinchi — bosh model va ishchilar: qurilishdagi prorab kabi. Beshinchi — yozuvchi va tekshiruvchi: talaba yozadi, ustoz tekshiradi. Oltinchi — avtonom agent: tajribali xodim kabi, rejani ham, qachon toʻxtashni ham oʻzi hal qiladi. Maslahat: oddiydan boshlang — avval bitta prompt, keyin cheyn, va faqat haqiqatan kerak boʻlsa — agent.
 
-=== 6-QISM. IKKINCHI QISM: TUL CHEYNING. 15–18-SLAYDLAR ===
+Oʻn beshinchi slayd — agentni yigʻamiz. Bu animatsiya, alohida video ham bor. Agent qismma-qism yigʻiladi: markazda miya — model; keyin yoʻriqnoma, yaʼni roli va qoidalari — Maktab aynan shu yerda ishlaydi; keyin oltita tul: tadbirlar, ob-havo, kalkulyator, valyuta, hisobot va xabar; keyin xotira; keyin sikl. Oxirida vazifa: «Oktabrda Toshkentdagi ey ay tadbirlarini top, ob-havoni tekshir va jamoaga yubor». Agent rejani oʻzi tuzadi, tadbirlarni topadi, uchta sana uchun ob-havoni birdaniga soʻraydi, hisobot tuzadi va yuboradi. Asosiy gap: bir tulning natijasi keyingisiga oʻtyapti — mana shu tul cheyning.
 
-Endi ikkinchi qism — Tul Cheyning. Avval uning oʻzini oddiy qilib tushuntiraman.
+Oʻn oltinchi slayd — jonli agent. Xuddi shu agent haqiqatan ishlaydi: Klod tullarni oʻzi tanlaydi. Oʻngda ish daftari — har bir chaqiruv va natijasi. Asosiy fikr: bu tartibni hech kim yozmagan, biz faqat vazifa va tullarni berdik. Zaldan vazifa olish mumkin: boshqa shahar yoki boshqa oy. Internet boʻlmasa, yozib olingan namoyish koʻrsatiladi.
 
-Tul cheyning nima? Agent vazifani bajarish uchun bir nechta tulni ketma-ket chaqiradi, va har bir tulning natijasi keyingi qadamga kirish boʻladi.
 
-Misol. Agentdan soʻraymiz: «Oktabrdagi ey ay tadbirlarini top, ob-havoni tekshir va jamoaga xabar yubor». Agent avval tadbirlar tulini chaqiradi va uchta sanani oladi. Keyin shu uchta sana bilan ob-havo tulini chaqiradi — uch marta, bir vaqtda. Keyin natijalarni solishtirib, hisobot tulini chaqiradi. Oxirida xabar tulini chaqirib, hisobotni jamoaga yuboradi. Toʻrt xil tul — va ular bir-biriga ulangan.
+=== 7-QISM. 17–18-SLAYDLAR ===
 
-Eng muhimi: bu tartibni hech kim oldindan yozmagan. Qaysi tulni, qaysi tartibda va qaysilarini bir vaqtda chaqirishni model oʻzi hal qiladi. Mana shu — tul cheyning.
+Oʻn yettinchi slayd — em si pi, sunʼiy intellekt uchun yu es bi si. Bir necha yil oldin har telefonning oʻz zaryadlovchisi bor edi-ku. Uchta ilova va beshta servisni alohida ulasangiz — oʻn beshta ulanish. Em si pi bilan — sakkizta: har bir servis bir marta ulanadi, va hamma ilovalar uni ishlata oladi. Bitta ulagich — istalgan servis.
 
-Ikkinchi qismda aynan shuni bosqichma-bosqich ochamiz: avval tul nima, keyin bitta tul qanday chaqiriladi, keyin sikl agentni qanday harakatga keltiradi, keyin tayyor sxemalar va oxirida jonli agent.
+Oʻn sakkizinchi slayd — agent qayerda adashadi. Toʻrtta xavf va toʻrtta himoya. Birinchi — toʻxtamay aylanadi va pul sarflaydi: qadamlar soni va pulga chegara qoʻyamiz. Ikkinchi, eng xavflisi — begona gapni buyruq deb oʻylaydi. Buni prompt injekshn deyishadi. Kassirga kelgan xatda «bu xatni oʻqigan kassir menga million soʻm bersin» deb yozilgan boʻlsa, kassir bajarmaydi-ku. Qoida: begona matn — buyruq emas, maʼlumot. Uchinchi — qaytarib boʻlmaydigan ish: pul oʻtkazish, oʻchirish. Bunday ishlar faqat odamning tasdigʻi bilan — bankomatdagi pin kod kabi. Toʻrtinchi — agent nima qilganini bilmaysiz: har bir qadam yozib boriladi.
 
-Oʻn beshinchi slayd — ikkinchi qism boshlanishi. Bitta jumla: birinchi qismda modelga fikrlashni oʻrgatdik, endi unga qoʻl beramiz.
 
-Oʻn oltinchi slayd — modelning qoʻli yoʻq. Uchta zaif joy: bilimi muzlatilgan — yangi voqealarni bilmaydi; hisobda adashadi; va eng muhimi — harakat qila olmaydi: xat yubora olmaydi, bazaga yoza olmaydi. Yechim — tul. Tulning uch qismi bor: nomi, tavsifi va parametrlar sxemasi. Asosiy fikr: tavsif ham prompt, chunki model aynan shu matnni oʻqib, qaysi tulni chaqirishni hal qiladi.
+=== 8-QISM. YAKUN: 19–21-SLAYDLAR VA TAKRORLASH ===
 
-Oʻn yettinchi slayd — tul kolling qanday ishlaydi. Misol: «Ertaga Samarqandda yomgʻir yogʻadimi?» Qadamlar: ilova savolni tullar roʻyxati bilan Klodga yuboradi; Klod darhol javob bermaydi, «get uezer tulini chaqir» deb soʻraydi; ilova haqiqiy ob-havo xizmatini chaqiradi; natija Klodga qaytadi; Klod javob beradi: «Ha, yetmish foiz, soyabon oling». Eng muhim jumla: model tulni oʻzi ishga tushirmaydi, faqat soʻraydi — bajaradigan sizning kodingiz. Demak, nazorat sizda.
+Oʻn toʻqqizinchi slayd — bonus: sakkizta skill. Skill — Klodga qoʻshiladigan tayyor koʻnikma, telefonga ilova oʻrnatgandek. Masalan, Maktab prompt — oddiy soʻrovni Maktab boʻyicha kuchli promptga aylantiradi. Ku ar kod orqali yuklab olinadi. Ku ar hali tayyor boʻlmasa, «havolani kanalda qoldiraman» deysiz.
 
-Oʻn sakkizinchi slayd — agent formulasi: agent — bu model, tullar va sikl. Ekranda yetti qator kod — har qanday agentning yuragi. Sikl: oʻyla, harakat qil, kuzat va yana boshidan. Tul kerak boʻlmasa — javob tayyor, sikldan chiqamiz. Muhim: toʻxtash sharti boʻlishi shart — vazifa bajarildi, qadamlar limiti tugadi yoki inson tasdigʻi kerak.
+Yigirmanchi slayd — bu taqdimotni kim yigʻdi? Javob: ey ay agent. Siz vazifa berdingiz, yoʻnaltirdingiz va tekshirdingiz. Ekranda bosqichlar va raqamlar. Asosiy fikr: bugun gaplashgan hamma narsa shu taqdimotning oʻzida ishladi.
 
+Yigirma birinchi slayd — yakun. Uchta fikr: prompt — stajyorga vazifa, uni Maktab bilan yozing; tul — modelning qoʻli, agent esa ularni oʻzi ishlatadigan yordamchi; oddiydan boshlang — prompt, cheyn, agent. Keyin savollar.
 
-=== 7-QISM. 19–21-SLAYDLAR ===
-
-Oʻn toʻqqizinchi slayd — oltita pattern, yaʼni agent tizimlarining oltita tayyor sxemasi. Ular Entropikning maqolasidan olingan. Birinchi — ketma-ket cheyn: natija keyingi qadamga oʻtadi. Ikkinchi — ruting: soʻrov turini aniqlab, kerakli yoʻlga yuborish. Uchinchi — parallel ishlash: bir vaqtda bir nechta model. Toʻrtinchi — bosh model va ishchilar: bosh model vazifani boʻlib tarqatadi. Beshinchi — yozuvchi va tekshiruvchi: biri yozadi, ikkinchisi tekshiradi. Oltinchi — avtonom agent: rejani ham, qachon toʻxtashni ham model oʻzi tanlaydi. Asosiy farq: birinchi beshtasi — vorkflou, yoʻlni biz chizamiz; oltinchisi — agent, yoʻlni model tanlaydi. Maslahat: oddiydan boshlang, agent — oxirgi chora.
-
-Yigirmanchi slayd — agentni yigʻamiz. Bu animatsiya, xuddi shu sahna alohida video ham bor. Agent qismma-qism yigʻiladi: markazda miya — el el em; atrofida tizim prompti, yaʼni rol, maqsad va qoidalar; keyin oltita tul: tadbirlar, ob-havo, kalkulyator, valyuta, hisobot va xabar; keyin xotira; keyin sikl.
-
-Oxirida vazifa keladi: oktabrdagi tadbirlarni top, ob-havoni tekshir va jamoaga xabar yubor. Agent rejani oʻzi tuzadi, tadbirlarni topadi, shu natija bilan ob-havoni uchta sana uchun bir vaqtda soʻraydi, hisobot tuzadi va yuboradi. Asosiy jumla: bir tulning natijasi keyingisiga kirish boʻladi — mana shu tul cheyning. Va final: «Bu — agent».
-
-Yigirma birinchi slayd — jonli agent. Xuddi shu agent haqiqatan ishlaydi: Klod tullarni oʻzi tanlaydi. Oʻngda ish jurnali — har bir chaqiruv va uning natijasi. Asosiy fikr: bu tartibni hech kim yozmagan, biz faqat vazifa va tullarni berdik. Zaldan vazifa olish mumkin: boshqa shahar yoki boshqa byudjet. Internet boʻlmasa, yozib olingan namoyish koʻrsatiladi.
-
-
-=== 8-QISM. 22–25-SLAYDLAR ===
-
-Yigirma ikkinchi slayd — tul tavsifi ham prompt. Yomon misol: nomi «serch», tavsifi «qidiradi». Yaxshi misol uchun beshta qoida: nom aniq va prefiks bilan; tavsif yangi xodimga tushuntirgandek — qachon ishlatish va qachon ishlatmaslik; xato matni nima qilishni aytsin; tullar kam, lekin aniq; natija qisqa.
-
-Yigirma uchinchi slayd — em si pi, sunʼiy intellekt uchun yu es bi si. Uchta ilova va beshta servisni alohida ulasangiz — oʻn beshta integratsiya. Em si pi bilan — sakkizta: har bir servis bir marta yoziladi, har bir ilova bir marta ulanadi. Em si pi uch narsa beradi: amallar, maʼlumotlar va tayyor shablonlar. Uni Entropik ikki ming yigirma toʻrtinchi yil noyabrda chiqargan, ikki ming yigirma beshinchi yil dekabridan esa u Linuks Faundeyshn tarkibidagi ochiq standart.
-
-Yigirma toʻrtinchi slayd — kontekst, yaʼni modelning ish stoli. Model faqat stol ustidagini koʻradi: tizim prompti, tullar tavsifi, suhbat tarixi, hujjatlar va natijalar. Stol toʻlsa, sifat tushadi. Toʻrtta yechim bor: eski tarixni siqish, kerakli qismni kerak boʻlganda yuklash, vazifani subagentlarga boʻlish va skillar. Asosiy jumla: prompt injiniring — modelga nima deyish, kontekst injiniring — model nimani koʻrishi.
-
-Yigirma beshinchi slayd — agent qayerda sinadi. Oltita xavf va ularning himoyasi. Cheksiz sikl — qadamlar limiti. Oʻylab topilgan parametr — sxema boʻyicha tekshirish. Prompt injekshn — tashqi matn buyruq emas, maʼlumot; ruxsatlar esa minimal. Notoʻgʻri tul — aniq tavsif. Qaytarib boʻlmaydigan harakat — faqat inson tasdigʻi bilan. Qora quti — jurnal va testlar.
-
-
-=== 9-QISM. YAKUN: 26–29-SLAYDLAR VA TAKRORLASH ===
-
-Yigirma oltinchi slayd — asboblar xaritasi. Promptni sinash uchun — Klod Konsol va shunga oʻxshashlar. Agent yozish uchun — Klod Eyjent es di key, Lenggraf, Kru ey ay va boshqalar. Kodsiz — en eyt en, Meyk, Difay. Kod yozadigan agentlar — Klod Kod, Kursor. Standartlar — em si pi, ey tu ey va skillar. Monitoring — Lengfyuz va boshqalar. Qayerdan boshlash kerak: Konsolda prompt, en eyt en yoki es di keyda cheyn, em si pi bilan tullar, Lengfyuz bilan monitoring.
-
-Yigirma yettinchi slayd — bonus: sakkizta skill. Skill — Klodga yangi koʻnikma qoʻshadigan papka. Masalan: Maktab boʻyicha prompt yozadi, promptdagi xatoni topadi, test tuzadi, tul tavsifini yozadi. Ku ar kod orqali yuklab olinadi. Ku ar hali tayyor boʻlmasa, «havolani kanalda qoldiraman» deysiz.
-
-Yigirma sakkizinchi slayd — bu taqdimotni kim yigʻdi? Javob: ey ay agent. Siz vazifa qoʻydingiz, yoʻnaltirdingiz va tekshirdingiz. Ekranda haqiqiy bosqichlar va raqamlar. Asosiy fikr: bugun gaplashgan hamma narsa shu taqdimotning oʻzida ishladi.
-
-Yigirma toʻqqizinchi slayd — yakun. Uchta fikr: prompt — dastur, uni Maktab bilan yozing va test bilan oʻlchang; tul — modelning qoʻli, uning tavsifi ham prompt; oddiydan boshlang — prompt, cheyn, vorkflou va faqat kerak boʻlsa, agent. Keyin savollar.
-
-Endi takrorlaymiz. Beshta jumlani yod oling.
+Endi takrorlaymiz. Beshta gapni yod oling.
 Birinchi: «Model bir xil edi. Logika boshqa edi».
-Ikkinchi: «Prompt — oddiy tilda yozilgan dastur».
+Ikkinchi: «Prompt — stajyorga beriladigan vazifa. Maktab bilan yozing».
 Uchinchi: «Har bir agarning oʻz aks holdasi boʻlsin».
-Toʻrtinchi: «Tul — modelning qoʻli. Model faqat soʻraydi, bajaradigan — sizning kodingiz».
-Beshinchi: «Oddiydan boshlang: prompt, cheyn, vorkflou, agent».
+Toʻrtinchi: «Tul — modelning qoʻli. Model faqat soʻraydi, bajaradigan — sizning dasturingiz».
+Beshinchi: «Oddiydan boshlang: prompt, cheyn, agent».
 Va Maktab: maqsad, agar, kontekst, tartib, aniq misol, baholash.
 
 Agar biror narsa ishlamasa: internet boʻlmasa — tugmalar yozib olingan namoyishni koʻrsatadi; slayd qotib qolsa — Ge tugmasini bosib, slayd raqamini yozasiz; javobini bilmagan savol boʻlsa — «Yaxshi savol, tekshirib, kanalda yozaman» deysiz.

@@ -1,61 +1,57 @@
 # Savol-javobga tayyorgarlik
 
-Mutaxassislar auditoriyasi beradigan ehtimoliy savollar va qisqa, aniq javoblar. Har bir javob 30–40 soniyaga moʻljallangan.
+Zaldan kelishi mumkin boʻlgan savollar va qisqa javoblar. Zal mavzuni endi oʻrganayotgan odamlar, shuning uchun javoblar oddiy tilda. Har bir javob 20–30 soniyaga moʻljallangan.
 
 ---
 
-**1. MAKTAB CO-STAR yoki RISEN kabi freymvorklardan nimasi bilan farq qiladi?**
+**1. Prompt nima, oddiy qilib aytganda?**
 
-Koʻpchilik freymvorklar rol va formatga eʼtibor beradi. MAKTAB’da ikkita qatlam alohida turadi: **Agar** — promptdagi logika, yaʼni shartlar va «aks holda» yoʻllari, hamda **Baholash** — model javobni yuborishdan oldin oʻzini tekshirishi. Bu shablon emas, nazorat roʻyxati: har bir harf model taxmin qilishi kerak boʻlgan bitta boʻshliqni yopadi.
+Prompt — sunʼiy intellektga yozadigan vazifangiz. Stajyorga topshiriq berganday. Qancha aniq yozsangiz, javob shuncha yaxshi chiqadi.
 
-**2. Reasoning modellarda «qadam-baqadam oʻyla» endi umuman kerak emasmi?**
+**2. MAKTAB’ni har safar toʻliq yozish shartmi?**
 
-Kichik yoki tez modellarda, shuningdek fikrlash jarayonini koʻrish kerak boʻlganda hali ham foydali. Reasoning modellarda esa maqsad, kutilgan natija va cheklovni bergan maʼqul: rejani model oʻzi yaxshiroq tuzadi. Qancha oʻylashini effort parametri bilan boshqaramiz.
+Yoʻq. Oddiy savolga bitta qator yetadi. MAKTAB muhim ish uchun kerak: javobni mijozga yuborsangiz yoki koʻp marta ishlatsangiz. Hech boʻlmasa maqsad va «agar»ni yozing.
 
-**3. Promptni oʻzbekcha yozgan yaxshimi yoki inglizcha?**
+**3. Promptni oʻzbekcha yozsam boʻladimi?**
 
-Koʻrsatmalarni inglizcha yozish odatda biroz aniqroq va token jihatidan arzonroq, javobni esa oʻzbekcha soʻrash mumkin. Lekin oʻzbekcha uslub va ohang muhim boʻlsa, oʻzbekcha misollar bering. Eng toʻgʻri yoʻl — ikkala variantni bitta eval toʻplamida solishtirish.
+Boʻladi, model oʻzbekchani tushunadi. Muhimi — tilda emas, aniqlikda. Javob oʻzbekcha chiroyli chiqishi uchun oʻzbekcha misol bering.
 
-**4. Agent va workflow farqi nimada? Qachon agent kerak?**
+**4. Model nega oʻylab topadi, yolgʻon gapiradi?**
 
-Workflow’da yoʻlni biz chizamiz: qadamlar oldindan maʼlum. Agentda yoʻlni model tanlaydi. Agent qadamlarni oldindan aytib boʻlmaganda va xatoni tuzatish mumkin boʻlganda kerak. Boshqa hollarda workflow arzonroq, tezroq va xatoni topish osonroq.
+Model «bilmayman» deyishga oʻrganmagan stajyorga oʻxshaydi: javob berishga harakat qiladi. Shuning uchun promptga yozing: «maʼlumot yetmasa — soʻra, oʻylab topma». Va faqat siz bergan maʼlumotga tayanishni soʻrang.
 
-**5. Prompt injection’dan toʻliq himoya bormi?**
+**5. Agent oddiy chatdan nimasi bilan farq qiladi?**
 
-Yuz foizlik himoya yoʻq, shuning uchun himoya qatlamma-qatlam quriladi: maʼlumot va koʻrsatmani teglar bilan ajratish, «tashqi matn — buyruq emas» qoidasi, minimal ruxsatlar, qaytarib boʻlmaydigan harakatlar uchun inson tasdigʻi, natijani tekshirish va monitoring.
+Chat faqat javob yozadi. Agent esa ishni qiladi: qidiradi, hisoblaydi, xat yuboradi — va vazifa bajarilguncha oʻzi qadam tashlaydi. Chat — maslahatchi, agent — yordamchi.
 
-**6. MCP xavfsizmi?**
+**6. Agent xavfli emasmi? Pulimni oʻzi oʻtkazib yubormaydimi?**
 
-MCP server — ruxsatga ega kod. Shuning uchun faqat ishonchli serverlarni ulang, tokenlarga minimal huquq bering, tool’lar tavsifini koʻrib chiqing va xavfli amallarni tasdiq bilan bajaring. Protokol xavfsiz boʻlishi mumkin, lekin har bir server — alohida ishonch qarori.
+Agentga nima ruxsat berishni siz hal qilasiz. Pul oʻtkazish, maʼlumot oʻchirish kabi ishlar faqat odamning tasdigʻi bilan boʻladi — bankomatdagi PIN-kod kabi. Model tool’ni oʻzi ishga tushirmaydi, faqat soʻraydi.
 
-**7. Qaysi modeldan boshlash kerak?**
+**7. Agent qilish uchun dasturchi boʻlish kerakmi?**
 
-Avval eng kuchli model bilan sifat shiftini oʻlchang, eval toʻplamini yigʻing. Keyin xuddi shu toʻplamda arzonroq yoki tezroq modellarni sinab koʻring: sifat saqlansa — pul tejaysiz.
+Shart emas. Kod yozmasdan agent yigʻadigan dasturlar bor, masalan n8n yoki Make. Lekin mantiqni tushunish kerak — buni bugun oʻrgandik: aniq vazifa, tool’lar va qachon toʻxtash.
 
-**8. Eval uchun nechta test yetarli?**
+**8. Qaysi sunʼiy intellektdan boshlash kerak?**
 
-20–50 ta real holatdan boshlang, eng qiyinlarini ham qoʻshing. Vaqt boʻlmasa 15 tadan boshlab, har bir yangi xatoni toʻplamga qoʻshib boring. 20 ta testda 5 foizlik farq tasodif boʻlishi mumkin — buni hisobga oling.
+Qaysi biri qulay boʻlsa — Claude, ChatGPT yoki boshqasi. Bugungi qoidalar hammasida ishlaydi. Muhim ishni ikki-uchta modelda sinab, natijani solishtiring.
 
-**9. n8n yoki kod — nimani tanlash kerak?**
+**9. MCP menga, oddiy foydalanuvchiga, nima beradi?**
 
-n8n tez integratsiya, prototip va dasturchi boʻlmagan jamoalar uchun zoʻr. Murakkab logika, test, versiyalash va katta hajm kerak boʻlsa — kod va SDK. Koʻp jamoalar ikkalasini birga ishlatadi.
+Sunʼiy intellekt sizning dasturlaringizga ulana oladi: pochta, kalendar, fayllar. Har bir dastur uchun alohida sozlash shart emas — USB-C kabi bitta ulagich.
 
-**10. Kontekst oynasi 1 million token boʻlsa, hamma narsani joylash mumkinmi?**
+**10. Skill nima va uni qanday oʻrnataman?**
 
-Mumkin, lekin sifat va narx yomonlashadi. Koʻproq kontekst emas, toʻgʻri kontekst yutadi: kerakli qismni yuklash, eski tarixni siqish, katta vazifani subagentlarga boʻlish.
+Skill — Claude’ga qoʻshiladigan tayyor koʻnikma, telefonga ilova oʻrnatgandek. QR orqali yuklab olasiz va Claude sozlamalarida qoʻshasiz. Keyin Claude kerak boʻlganda uni oʻzi ishlatadi.
 
-**11. Skill va MCP farqi nima?**
+**11. Bu narsalar pullikmi?**
 
-MCP — ulanish: modelga tool’lar va maʼlumotlarga yoʻl beradi. Skill — bilim va tartib: qanday ishlashni oʻrgatadigan koʻrsatmalar va skriptlar. Qoʻl va koʻnikma. Odatda ikkalasi birga ishlaydi.
+Koʻp AI ilovalarning bepul varianti bor, oddiy promptlar uchun yetadi. Agent koʻp qadam tashlasa, pul ham koʻproq ketadi — shuning uchun qadamlar soniga chegara qoʻyamiz.
 
-**12. Gallyutsinatsiyani qanday kamaytirish mumkin?**
+**12. Taqdimotni agent yigʻgan boʻlsa, sizning ishingiz nima edi?**
 
-Javobni berilgan maʼlumotga bogʻlash, «bilmayman» yoʻlini aniq yozish, manbadan aniq parcha keltirishni talab qilish, structured outputs’da `evidence` maydoni va eng muhimi — eval bilan oʻlchab borish.
+Bugun gapirgan narsalar: aniq vazifa berish, yoʻnaltirish va natijani tekshirish. Agent — bajaruvchi, maqsad va javobgarlik — odamda.
 
-**13. Narxni qanday nazorat qilaman?**
+---
 
-Prompt caching, oddiy qadamlar uchun kichik modellar, effort darajasi, agent uchun qadamlar limiti. Va bitta soʻrov narxini emas, bitta bajarilgan vazifa narxini oʻlchang.
-
-**14. Taqdimotni agent yigʻgan boʻlsa, sizning rolingiz nima edi?**
-
-Aynan bugun gapirgan narsalar: vazifani aniq qoʻyish, yoʻnaltirish, sifat talablarini belgilash va natijani tekshirish. Agent — bajaruvchi, maqsad va javobgarlik — insonda.
+**Javobini bilmasangiz:** «Yaxshi savol. Aniq javob berish uchun tekshirib, kanalda yozaman.»

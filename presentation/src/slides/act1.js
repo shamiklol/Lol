@@ -193,20 +193,20 @@ const agar = {
 
 // ---------------------------------------------------------------- Prompt lab
 const LEVELS = [
-  ['', 'Termos haqida tavsif yoz.'],
-  ['M', 'Maqsad: marketpleysdagi termos sahifasi uchun sotadigan tavsif yoz.'],
-  ['A', 'Agar biror xususiyat berilmagan boʻlsa — oʻylab topma.'],
-  ['K', 'Kontekst: 0,5 l, 12 soat issiq saqlaydi, zanglamas poʻlat. Xaridor — talabalar va haydovchilar.'],
-  ['T', 'Tartib: sarlavha (60 belgigacha) + 3 ta afzallik + 1 ta chaqiriq.'],
-  ['A', 'Misol: sarlavha «Ertalabki choy — kechgacha issiq».'],
-  ['B', 'Yuborishdan oldin tekshir: raqamlar kontekstdagiga mosmi?'],
+  ['', 'Haftalik hisobot yoz.'],
+  ['M', 'Maqsad: rahbarim 1 daqiqada oʻqib, nima boʻlganini va mendan nima kerakligini bilsin.'],
+  ['A', 'Agar biror narsa yozuvlarimda boʻlmasa — oʻylab topma. Raqamlarni oʻzgartirma.'],
+  ['K', 'Kontekst: men sotuv menejeriman. Yozuvlarim: 12 mijoz bilan uchrashdim, 3 ta shartnoma imzolandi, yangi narx roʻyxati tayyorlanyapti, yetkazib beruvchi 5 kun kechikyapti, chegirma boʻyicha rahbar qarori payshanbagacha kerak.'],
+  ['T', 'Tartib: 4 boʻlim — Bajarildi, Jarayonda, Muammo, Sizdan kerak.'],
+  ['A', 'Misol qator: «Muammo: printer buzildi — usta chaqirildi.»'],
+  ['B', 'Tekshir: raqamlar toʻgʻrimi? «Sizdan kerak»da muddat bormi?'],
 ];
-const OUT_WEAK = 'Termos — issiqlikni saqlaydigan idish. U choy va kofe uchun qulay. Sifatli materialdan tayyorlangan. Uyda va safarda foydalanish mumkin.';
-const OUT_STRONG = `Sarlavha: Ertalab damlangan choy — kechqurun ham issiq
-• 12 soat issiqlik: darsdan keyin ham choyingiz sovumaydi
-• 0,5 litr: kun boʻyi yetadi, sumkaga bemalol sigʻadi
-• Zanglamas poʻlat: hid va taʼm qoldirmaydi
-Buyurtma bering — qishki tongingiz issiq choy bilan boshlansin.`;
+const OUT_WEAK = 'Bu hafta samarali ishladim. Koʻplab uchrashuvlar oʻtkazildi, rejalar bajarilmoqda. Kelgusi haftada ham ishni davom ettiramiz.';
+const OUT_MID = 'Bu hafta 12 mijoz bilan uchrashdim va 3 ta shartnoma imzolandi. Narx roʻyxati ustida ishlayapmiz. Yetkazib beruvchi biroz kechikyapti. Chegirma masalasini ham hal qilish kerak.';
+const OUT_STRONG = `✓ Bajarildi: 12 mijoz bilan uchrashuv, 3 ta shartnoma imzolandi.
+… Jarayonda: yangi narx roʻyxati tayyorlanyapti.
+! Muammo: yetkazib beruvchi 5 kun kechikyapti.
+→ Sizdan kerak: chegirma boʻyicha qaror — payshanbagacha.`;
 
 const lab = {
   id: 'lab',
@@ -254,9 +254,10 @@ const lab = {
       range.value = lv;
       el.querySelector('[data-level]').textContent = `${lv} / 6`;
       ta.value = promptFor(lv);
+      ta.scrollTop = ta.scrollHeight;
       el.querySelectorAll('[data-li]').forEach((s) => s.classList.toggle('on', +s.dataset.li <= lv));
       mode.textContent = 'namuna javob';
-      out.textContent = lv >= 6 ? OUT_STRONG : lv >= 3 ? OUT_WEAK.replace('Sifatli materialdan tayyorlangan.', 'Hajmi 0,5 litr, 12 soat issiq saqlaydi.') : OUT_WEAK;
+      out.textContent = lv >= 6 ? OUT_STRONG : lv >= 3 ? OUT_MID : OUT_WEAK;
       out.classList.toggle('is-strong', lv >= 6);
       if (!instant) gsap.fromTo(out, { autoAlpha: 0.2, y: 8 }, { autoAlpha: 1, y: 0, duration: 0.5 });
       status.textContent = '';

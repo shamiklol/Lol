@@ -133,13 +133,13 @@ Qoida oddiy: **har bir «agar»ning oʻz «aks holda»si boʻlsin**. Yoʻl koʻr
 
 ⏱ 2:30 · boshlanishi 9:00 · kliklar: 6
 
-Endi hammasini jonli koʻramiz. Chapda — vazifa va MAKTAB harflari, oʻngda — natija. Boshida vazifa bitta qator: «Termos haqida tavsif yoz». Javob esa zerikarli, umumiy gap. **[KLIK]**
+Endi hammasini jonli koʻramiz. Har hafta rahbarga hisobot yozasiz-ku. Chapda — vazifa va MAKTAB harflari, oʻngda — natija. Boshida vazifa bitta qator: «Haftalik hisobot yoz». Javobga qarang: «samarali ishladim, rejalar bajarilmoqda». Rahbar bundan hech narsa tushunmaydi. **[KLIK]**
 
-Har klikda bitta harf qoʻshamiz. **Maqsad**: marketpleysda sotadigan tavsif. **[KLIK]** **Agar**: berilmagan xususiyatni oʻylab topma. **[KLIK]** **Kontekst**: yarim litr, 12 soat issiq saqlaydi, xaridorlar — talabalar va haydovchilar. **[KLIK]** **Tartib**: sarlavha, 3 ta afzallik va bitta chaqiriq. **[KLIK]** **Aniq misol**: «Ertalabki choy — kechgacha issiq». **[KLIK]** Va **baholash**: yuborishdan oldin raqamlarni tekshir.
+Har klikda bitta harf qoʻshamiz. **Maqsad**: rahbar bir daqiqada oʻqib, mendan nima kerakligini bilsin. **[KLIK]** **Agar**: yozuvlarimda yoʻq narsani oʻylab topma. **[KLIK]** **Kontekst**: haftalik yozuvlarim — 12 mijoz, 3 ta shartnoma, kechikkan yetkazib beruvchi. Qarang: javobda raqamlar paydo boʻldi, lekin hali tartibsiz. **[KLIK]** **Tartib**: toʻrtta boʻlim — bajarildi, jarayonda, muammo, sizdan kerak. **[KLIK]** **Aniq misol**: bitta tayyor qator. **[KLIK]** Va **baholash**: yuborishdan oldin raqamlarni tekshir.
 
-Javobga qarang: zerikarli gapdan tayyor sotuv matniga aylandi. Model oʻsha-oʻsha — faqat vazifa yaxshilandi.
+Natijaga qarang: rahbar bir qarashda hammasini koʻradi — nima qilindi, qayerda muammo va undan nima kerak. Model oʻsha-oʻsha, faqat vazifa yaxshilandi.
 
-**[JONLI]** «Claude’da ishga tushirish» tugmasi vazifani hozir modelga yuboradi. Zaldan biror mahsulot nomini soʻrang, termos oʻrniga yozing va natijani birga koʻring.
+**[JONLI]** «Claude’da ishga tushirish» tugmasi vazifani hozir modelga yuboradi. Zaldan kimdir oʻz haftasini 2–3 gap bilan aytsin — kontekst qatoriga yozing va natijani birga koʻring.
 
 ### 8. Bitta ulkan prompt oʻrniga — chain
 

@@ -45,7 +45,7 @@ Oltinchi slayd — Agar. Navigatorni eslang: yoʻl yopiq boʻlsa, qayerga burili
 
 === 4-QISM. 7–8-SLAYDLAR ===
 
-Yettinchi slayd — prompt laboratoriyasi. Bu jonli namoyish. Boshida vazifa bitta qator: «Termos haqida tavsif yoz». Javob zerikarli. Har klikda bitta Maktab harfi qoʻshiladi, va javob tayyor sotuv matniga aylanadi. Tugma vazifani Klodga yuboradi. Zaldan biror mahsulot nomini soʻrab, termos oʻrniga yozsangiz, odamlar natijani oʻz koʻzi bilan koʻradi.
+Yettinchi slayd — prompt laboratoriyasi. Bu jonli namoyish, misol esa — har haftalik ish: rahbarga hisobot. Boshida vazifa bitta qator: «Haftalik hisobot yoz». Javob — «samarali ishladim, rejalar bajarilmoqda». Rahbar bundan hech narsa tushunmaydi. Har klikda bitta Maktab harfi qoʻshiladi. Kontekst qoʻshilganda javobda raqamlar paydo boʻladi, lekin hali tartibsiz. Oxirida — toʻrt qator: bajarildi, jarayonda, muammo va rahbardan nima kerak, muddati bilan. Tugma vazifani Klodga yuboradi. Zaldan kimdir oʻz haftasini ikki-uch gap bilan aytsa, kontekstga yozasiz va natijani birga koʻrasiz.
 
 Sakkizinchi slayd — cheyn. Osh damlashni eslang: hamma narsani bir vaqtda qozonga tashlamaysiz — avval goʻsht, keyin sabzi, keyin guruch. Hamma ishni bitta katta vazifaga tiqsangiz, model hammasini chala qiladi. Toʻgʻri yoʻl — qadamlarga boʻlish: yigʻish, tahlil, yozish, tekshirish. Har qadamning natijasi keyingisiga oʻtadi. Oxirgi gap: «Endi bu cheynga qoʻl qoʻshamiz».
 

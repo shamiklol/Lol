@@ -28,7 +28,7 @@
 | 4 | I qism | Stajyorga vazifani qanday berish. | 1 |
 | 5 | MAKTAB | Tikuvchi. 6 qism, har biri bitta savolga javob. Zalga: «qaysi harf tushib qolgan?» | 2 |
 | 6 | Agar | Navigator. Maʼlumot yetmasa — soʻra. Har «agar»ga «aks holda». | 5 |
-| 7 | Laboratoriya | Har klik — bitta harf. Javob zerikarli gapdan sotuv matniga aylanadi. Jonli: zaldan mahsulot. | 6 |
+| 7 | Laboratoriya | Haftalik hisobot. Har klik — bitta harf. Javob «samarali ishladim»dan rahbar uchun aniq hisobotga aylanadi. Jonli: zaldan kimningdir haftasi. | 6 |
 | 8 | Chain | Osh damlash. Bitta ulkan prompt — yomon. Qadamlar + tekshiruv — yaxshi. | 3 |
 | 9 | II qism | Endi modelga qoʻl beramiz. | 1 |
 | 10 | Qoʻl yoʻq | 3 zaif joy. Tool kartasi: nomi, nima qiladi (bu ham prompt!), nima kerak. | 4 |

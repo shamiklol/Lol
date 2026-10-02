@@ -54,10 +54,10 @@ export const NOTES = {
 <p>Qoida oddiy: <b>har bir «agar»ning oʻz «aks holda»si boʻlsin</b>. Yoʻl koʻrsatilmagan joyda model yoʻlni oʻzi oʻylab topadi. Buni gallyutsinatsiya deyishadi — yaʼni ishonch bilan aytilgan yolgʻon.</p>`,
 
   lab: `
-<p>Endi hammasini jonli koʻramiz. Chapda — vazifa va MAKTAB harflari, oʻngda — natija. Boshida vazifa bitta qator: «Termos haqida tavsif yoz». Javob esa zerikarli, umumiy gap. ${KLIK}</p>
-<p>Har klikda bitta harf qoʻshamiz. <b>Maqsad</b>: marketpleysda sotadigan tavsif. ${KLIK} <b>Agar</b>: berilmagan xususiyatni oʻylab topma. ${KLIK} <b>Kontekst</b>: yarim litr, 12 soat issiq saqlaydi, xaridorlar — talabalar va haydovchilar. ${KLIK} <b>Tartib</b>: sarlavha, 3 ta afzallik va bitta chaqiriq. ${KLIK} <b>Aniq misol</b>: «Ertalabki choy — kechgacha issiq». ${KLIK} Va <b>baholash</b>: yuborishdan oldin raqamlarni tekshir.</p>
-<p>Javobga qarang: zerikarli gapdan tayyor sotuv matniga aylandi. Model oʻsha-oʻsha — faqat vazifa yaxshilandi.</p>
-<p>${JONLI} «Claude’da ishga tushirish» tugmasi vazifani hozir modelga yuboradi. Zaldan biror mahsulot nomini soʻrang, termos oʻrniga yozing va natijani birga koʻring.</p>`,
+<p>Endi hammasini jonli koʻramiz. Har hafta rahbarga hisobot yozasiz-ku. Chapda — vazifa va MAKTAB harflari, oʻngda — natija. Boshida vazifa bitta qator: «Haftalik hisobot yoz». Javobga qarang: «samarali ishladim, rejalar bajarilmoqda». Rahbar bundan hech narsa tushunmaydi. ${KLIK}</p>
+<p>Har klikda bitta harf qoʻshamiz. <b>Maqsad</b>: rahbar bir daqiqada oʻqib, mendan nima kerakligini bilsin. ${KLIK} <b>Agar</b>: yozuvlarimda yoʻq narsani oʻylab topma. ${KLIK} <b>Kontekst</b>: haftalik yozuvlarim — 12 mijoz, 3 ta shartnoma, kechikkan yetkazib beruvchi. Qarang: javobda raqamlar paydo boʻldi, lekin hali tartibsiz. ${KLIK} <b>Tartib</b>: toʻrtta boʻlim — bajarildi, jarayonda, muammo, sizdan kerak. ${KLIK} <b>Aniq misol</b>: bitta tayyor qator. ${KLIK} Va <b>baholash</b>: yuborishdan oldin raqamlarni tekshir.</p>
+<p>Natijaga qarang: rahbar bir qarashda hammasini koʻradi — nima qilindi, qayerda muammo va undan nima kerak. Model oʻsha-oʻsha, faqat vazifa yaxshilandi.</p>
+<p>${JONLI} «Claude’da ishga tushirish» tugmasi vazifani hozir modelga yuboradi. Zaldan kimdir oʻz haftasini 2–3 gap bilan aytsin — kontekst qatoriga yozing va natijani birga koʻring.</p>`,
 
   chain: `
 <p>Birinchi qismning oxirgi gapi. Osh damlashni eslang. Hamma narsani bir vaqtda qozonga tashlamaysiz-ku: avval goʻsht, keyin piyoz va sabzi, keyin guruch. Har bosqichning oʻz vaqti bor.</p>

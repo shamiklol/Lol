@@ -43,7 +43,7 @@ Endi eng muhim harf — «Agar». Navigatorni eslang: yoʻl yopiq boʻlsa, qayer
 
 === 4-QISM. LABORATORIYA VA CHEYN ===
 
-Maʼruzada jonli laboratoriya ham bor: «Termos haqida tavsif yoz» degan bitta qatorga har klikda bitta Maktab harfi qoʻshiladi, va javob zerikarli gapdan tayyor sotuv matniga aylanadi.
+Maʼruzada jonli laboratoriya ham bor. Misol — rahbarga haftalik hisobot. «Haftalik hisobot yoz» degan bitta qatorga har klikda bitta Maktab harfi qoʻshiladi. Javob «samarali ishladim» degan boʻsh gapdan toʻrt qatorli aniq hisobotga aylanadi: nima qilindi, nima jarayonda, qayerda muammo va rahbardan nima kerak.
 
 Cheyn. Osh damlashni eslang: hamma narsani bir vaqtda qozonga tashlamaysiz — avval goʻsht, keyin sabzi, keyin guruch. Hammasini birdaniga topshirsangiz — «yigʻ, tahlil qil, yoz, tarjima qil, tekshir» — model hammasini chala qiladi. Yaxshisi — qadamlarga boʻlish: yigʻish, tahlil, matn, tekshiruv. Bir qadamning natijasi keyingisiga oʻtadi. Buni cheyn deyishadi.
 

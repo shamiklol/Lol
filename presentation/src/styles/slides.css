@@ -186,7 +186,9 @@
 .mk-word span { color: var(--c); text-shadow: 0 0 30px color-mix(in srgb, var(--c) 50%, transparent); }
 .mk-result { position: absolute; left: 330px; right: 128px; top: 330px; z-index: 3; padding: 34px 40px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start; background: var(--panel-solid); }
 .mk-result .chip { font-size: 18px; }
-.mk-answer { margin: 0; font-size: 32px; line-height: 1.45; color: var(--text); padding: 22px 28px; border-radius: 22px 22px 22px 6px; background: color-mix(in srgb, var(--data) 9%, transparent); border: 1px solid color-mix(in srgb, var(--data) 40%, var(--line)); text-wrap: pretty; }
+.mk-answer { margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 28px; line-height: 1.45; color: var(--text); padding: 22px 28px; border-radius: 22px 22px 22px 6px; background: color-mix(in srgb, var(--data) 9%, transparent); border: 1px solid color-mix(in srgb, var(--data) 40%, var(--line)); text-wrap: pretty; }
+.mk-answer p { margin: 0; }
+.mk-answer b { color: var(--data); font-weight: 600; }
 .mk-checks { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* ---------- agar ---------- */

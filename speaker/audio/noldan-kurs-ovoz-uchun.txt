@@ -29,16 +29,18 @@ Model bir xil — faqat vazifa boshqacha.
 
 === 3-QISM. MAKTAB VA «AGAR» ===
 
-Maktab — yaxshi vazifaning olti qismi. Tikuvchini eslang: koʻylak buyurtma qilganda qayerga kiyishingizni, oʻlchamni aytasiz, «mato yetmasa qoʻngʻiroq qiling» deysiz, rasm koʻrsatasiz, oxirida kiyib koʻrasiz. Yaxshi prompt ham xuddi shunday. Misol — onlayn doʻkon yordam xizmati.
+Maktab — yaxshi vazifaning olti qismi. Tikuvchini eslang: koʻylak buyurtma qilganda qayerga kiyishingizni, oʻlchamni aytasiz, «mato yetmasa qoʻngʻiroq qiling» deysiz, rasm koʻrsatasiz, oxirida kiyib koʻrasiz. Yaxshi prompt ham xuddi shunday. Misol — jiddiy ish vazifasi: eych ar xodimi dasturchi vakansiyasiga kelgan rezyumelarni saralaydi.
 
-M — Maqsad: nima kerak va nima uchun? «Shikoyatga javob yoz, toki mijoz bizda qolsin».
-A — Agar: qanday shartlar va taqiqlar bor? «Buyurtma raqami boʻlmasa — avval soʻra. Chegirma oʻn foizdan oshmasin».
-K — Kontekst: kim, kimga, qanday vaziyatda? «Sen — yordam xizmati xodimisan, mijoz bizdan ikki yildan beri xarid qiladi».
-T — Tartib: javob qanday koʻrinishda boʻlishi kerak? «Uzr, yechim, keyingi qadam, sakson soʻzgacha».
-A — Aniq misol: yaxshi javob qanday koʻrinadi? Tayyor javob namunasi.
-B — Baholash: oʻzini qanday tekshiradi? «Yuborishdan oldin tekshir: yechim tushunarlimi, ohang samimiymi?»
+M — Maqsad: nima kerak va nima uchun? «Rezyumeni vakansiyaga solishtir — rahbar bir daqiqada qaror qilsin».
+A — Agar: nima mumkin, nima mumkin emas? «Rezyumeda yoʻq narsani oʻylab topma — nomaʼlum deb yoz».
+K — Kontekst: kim, qanday vaziyatda? «Sen — ay ti kompaniya eych ar xodimisan. Vakansiya: backend dasturchi, Payton, uch yildan koʻp tajriba».
+T — Tartib: javob qanday koʻrinishda? «Kuchli tomonlar, kamchiliklar, xulosa: suhbatga chaqirish yoki yoʻq».
+A — Aniq misol: boshqa nomzod uchun tayyor xulosa namunasi.
+B — Baholash: oʻzini qanday tekshiradi? «Har bir fikr rezyumedagi faktga asoslanganmi?»
 
-Endi eng muhim harf — «Agar». Navigatorni eslang: yoʻl yopiq boʻlsa, qayerga burilishni oldindan biladi. Nima qilishni bilmagan stajyor esa oʻylab topadi. Sunʼiy intellektda buni gallyutsinatsiya deyishadi. Shuning uchun vazifada yoʻllarni yozamiz. Maʼlumot yetmasa — taxmin qilma, soʻra. Mahsulotni qaytarmoqchi boʻlsa va oʻn toʻrt kun oʻtmagan — qaytarish tartibini yubor, oʻtgan boʻlsa — boshqa variant taklif qil. Texnik muammo boʻlsa — avval ikkita savol ber. Aks holda — operatorga ulab qoʻy. Qoida: har bir «agar»ning oʻz «aks holda»si boʻlsin.
+Natijada Klod qisqa xulosa yozadi: kuchli tomonlar, kamchiliklar va «suhbatga chaqirish». Rezyumeda yoʻq narsani u «nomaʼlum» deb belgilaydi. Yakuniy qarorni esa odam qiladi.
+
+Endi eng muhim harf — «Agar». Navigatorni eslang: yoʻl yopiq boʻlsa, qayerga burilishni oldindan biladi. Nima qilishni bilmagan stajyor esa oʻylab topadi. Sunʼiy intellektda buni gallyutsinatsiya deyishadi. Shuning uchun vazifada yoʻllarni yozamiz. Rezyume misolida: maʼlumot yetmasa — taxmin qilma, nomzoddan soʻra. Payton bor va uch yildan koʻp tajriba — suhbatga chaqir. Tajriba kamroq — junyor lavozimni taklif qil. Maosh talabi byudjetdan yuqori — rahbarga yubor. Aks holda — muloyim rad javobi yoz. Qoida: har bir «agar»ning oʻz «aks holda»si boʻlsin.
 
 
 === 4-QISM. LABORATORIYA VA CHEYN ===

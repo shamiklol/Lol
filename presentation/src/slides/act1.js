@@ -33,12 +33,12 @@ const card = {
 
 // ---------------------------------------------------------------- MAKTAB
 const LAYERS = [
-  ['M', 'Maqsad', 'Nima kerak va nima uchun', 'Maqsad: buyurtmasi 3 kun kechikkan mijozga javob yoz — u bizdan ketmasin.', 'prompt'],
-  ['A', 'Agar', 'Nima mumkin, nima mumkin emas', 'Agar buyurtma raqami boʻlmasa — avval soʻra. Chegirma 10 foizdan oshmasin.', 'danger'],
-  ['K', 'Kontekst', 'Kim yozyapti, kimga, qanday vaziyatda', 'Sen — yordam xizmati xodimisan. Mijoz 2 yildan beri xaridor. Buyurtma ertaga keladi.', 'model'],
-  ['T', 'Tartib', 'Javob qanday koʻrinishda boʻlsin', 'Tartib: avval uzr, keyin yechim, oxirida keyingi qadam. 80 soʻzdan oshmasin.', 'tool'],
-  ['A', 'Aniq misol', 'Tayyor javob namunasi', 'Misol: «Hurmatli Aziza opa, kechikish uchun uzr soʻraymiz…»', 'data'],
-  ['B', 'Baholash', 'Yuborishdan oldin oʻzini tekshirish', 'Yuborishdan oldin tekshir: yechim aniqmi? Ohang samimiymi?', 'prompt'],
+  ['M', 'Maqsad', 'Nima kerak va nima uchun', 'Maqsad: rezyumeni vakansiyaga solishtir — rahbar 1 daqiqada qaror qilsin.', 'prompt'],
+  ['A', 'Agar', 'Nima mumkin, nima mumkin emas', 'Agar biror maʼlumot rezyumeda boʻlmasa — «nomaʼlum» deb yoz, oʻylab topma.', 'danger'],
+  ['K', 'Kontekst', 'Kim yozyapti, kimga, qanday vaziyatda', 'Sen — IT kompaniya HR xodimisan. Vakansiya: backend dasturchi, Python, 3+ yil.', 'model'],
+  ['T', 'Tartib', 'Javob qanday koʻrinishda boʻlsin', 'Tartib: kuchli tomonlar, kamchiliklar, xulosa — suhbatga chaqirish yoki yoʻq.', 'tool'],
+  ['A', 'Aniq misol', 'Tayyor javob namunasi', 'Misol: «Kuchli: Java — 5 yil. Kamchilik: Python yoʻq. Xulosa: chaqirmaslik.»', 'data'],
+  ['B', 'Baholash', 'Yuborishdan oldin oʻzini tekshirish', 'Yuborishdan oldin tekshir: har bir fikr rezyumedagi faktga asoslanganmi?', 'prompt'],
 ];
 
 const maktab = {
@@ -72,13 +72,18 @@ const maktab = {
     .map((ch, i) => `<span style="--c:var(--${LAYERS[i][4]})">${ch}</span>`)
     .join('')}</div>
   <div class="mk-result panel" data-step="3" data-anim="up">
-    <span class="chip" data-c="data">Natija — Claude javobi</span>
-    <p class="mk-answer">Hurmatli Aziza opa, buyurtmangiz kechikkani uchun uzr soʻraymiz. U ertaga albatta yetib boradi. Ikki yildan beri biz bilan ekaningiz uchun keyingi xaridingizga 10% chegirma beramiz. Yana savolingiz boʻlsa, shu yerga yozing — darhol javob beramiz.</p>
+    <span class="chip" data-c="data">Natija — Claude xulosasi</span>
+    <div class="mk-answer">
+      <p><b>Nomzod:</b> Jasur Karimov</p>
+      <p><b>Kuchli tomonlar:</b> Python — 4 yil, bank loyihasida ishlagan, 3 kishilik jamoani boshqargan.</p>
+      <p><b>Kamchiliklar:</b> Docker tajribasi yoʻq. Ingliz tili — nomaʼlum.</p>
+      <p><b>Xulosa:</b> suhbatga chaqirish. Docker va ingliz tilini suhbatda tekshirish kerak.</p>
+    </div>
     <div class="mk-checks">
-      <span class="chip" data-c="tool">T · uzr → yechim → keyingi qadam</span>
-      <span class="chip" data-c="danger">A · chegirma 10 foizdan oshmadi</span>
-      <span class="chip" data-c="model">K · 2 yillik mijoz esga olindi</span>
-      <span class="chip" data-c="prompt">B · ohang samimiy</span>
+      <span class="chip" data-c="model">K · vakansiyaga solishtirildi</span>
+      <span class="chip" data-c="danger">A · «nomaʼlum» — oʻylab topmadi</span>
+      <span class="chip" data-c="tool">T · kuchli → kamchilik → xulosa</span>
+      <span class="chip" data-c="prompt">B · har bir fikr — faktdan</span>
     </div>
   </div>`,
   setup(el) {
@@ -119,12 +124,12 @@ const maktab = {
 };
 
 // ---------------------------------------------------------------- Agar (logic)
-const AGAR = `Mijoz xatini oʻqi va shunday qil:
-Agar maʼlumot yetmasa → taxmin qilma, soʻra.
-Agar qaytarmoqchi va 14 kun oʻtmagan → qaytarish tartibini yubor.
-Agar 14 kundan oshgan → boshqa variant taklif qil.
-Agar texnik muammo → avval 2 ta savol ber.
-Aks holda → operatorga ulab qoʻy.`;
+const AGAR = `Rezyumeni oʻqi va shunday qil:
+Agar maʼlumot yetmasa → taxmin qilma, nomzoddan soʻra.
+Agar Python bor va 3+ yil tajriba → suhbatga chaqir.
+Agar tajriba 3 yildan kam → junior lavozimni taklif qil.
+Agar maosh talabi byudjetdan yuqori → rahbarga yubor.
+Aks holda → muloyim rad javobi yoz.`;
 
 const node = (x, y, w, h, t1, t2, c, cls = '') => `
   <g class="fc-node ${cls}" style="--c:var(--${c})">
@@ -169,14 +174,14 @@ const agar = {
       </g>
       <text x="360" y="200" class="fc-lab s1">yoʻq</text>
       <text x="466" y="290" class="fc-lab s2">ha</text>
-      ${node(20, 268, 180, 64, 'Mijoz xabari', '', 'text-2', 's0')}
+      ${node(20, 268, 180, 64, 'Rezyume', '', 'text-2', 's0')}
       ${diamond(350, 300, 100, 62, 'Maʼlumot', 'yetarlimi?', 'prompt', 's1')}
-      ${node(250, 86, 200, 64, 'Taxmin qilma —', 'aniqlab soʻra', 'danger', 's1')}
-      ${diamond(610, 300, 90, 58, 'Turi?', '', 'model', 's2')}
-      ${node(752, 58, 220, 68, 'qaytarish · 14 kungacha', 'Qaytarish tartibi', 'data', 's2')}
-      ${node(752, 188, 220, 68, 'qaytarish · 14 kundan keyin', 'Boshqa variant', 'tool', 's2')}
-      ${node(752, 318, 220, 68, 'texnik muammo', '2 ta savol', 'model', 's3')}
-      ${node(752, 448, 220, 68, 'aks holda', 'Operatorga', 'text-2', 's4')}
+      ${node(250, 86, 200, 64, 'Taxmin qilma —', 'nomzoddan soʻra', 'danger', 's1')}
+      ${diamond(610, 300, 90, 58, 'Mosmi?', '', 'model', 's2')}
+      ${node(752, 58, 220, 68, 'Python · 3+ yil', 'Suhbatga chaqir', 'data', 's2')}
+      ${node(752, 188, 220, 68, '3 yildan kam', 'Junior taklif qil', 'tool', 's2')}
+      ${node(752, 318, 220, 68, 'maosh yuqori', 'Rahbarga yubor', 'model', 's3')}
+      ${node(752, 448, 220, 68, 'aks holda', 'Muloyim rad javobi', 'text-2', 's4')}
     </svg>
   </div>
   <div class="ag-punch panel" data-step="5" data-anim="up">

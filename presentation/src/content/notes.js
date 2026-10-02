@@ -35,24 +35,24 @@ export const NOTES = {
 
   maktab: `
 <p>Endi kuchli vazifani qanday yozamiz? Tikuvchiga koʻylak buyurtma qilganingizni eslang. Nimalarni aytasiz? Qayerga kiyishingizni, oʻlchamni, «mato yetmasa qoʻngʻiroq qiling» deysiz, rasm koʻrsatasiz, oxirida kiyib koʻrasiz. Yaxshi prompt ham xuddi shunday.</p>
-<p>Ekranda oddiy vazifa: internet-doʻkonning yordam xizmati mijozga javob yozadi. Mijozning buyurtmasi 3 kun kechikdi, u xafa. ${KLIK}</p>
-<p>Uni boʻlaklarga ajratsak, olti qism chiqadi. Eslab qolish oson boʻlsin deb, men ularni bitta soʻzga yigʻdim: <b>MAKTAB</b>. ${KLIK}</p>
-<p><b>M — Maqsad</b>: nima kerak va nima uchun. «Mijozga javob yoz — u bizdan ketmasin».</p>
-<p><b>A — Agar</b>: nima mumkin, nima mumkin emas. «Buyurtma raqami boʻlmasa — avval soʻra. Chegirma 10 foizdan oshmasin». Bu qator boʻlmasa, model mijozni xursand qilaman deb 50 foiz chegirma vaʼda qilib yuboradi.</p>
-<p><b>K — Kontekst</b>: kim yozyapti, kimga, qanday vaziyatda. «Sen — yordam xizmati xodimisan. Mijoz 2 yildan beri xaridor. Buyurtma ertaga keladi».</p>
-<p><b>T — Tartib</b>: javob qanday koʻrinishda. «Avval uzr, keyin yechim, oxirida keyingi qadam. 80 soʻzdan oshmasin».</p>
-<p><b>A — Aniq misol</b>: tayyor javob namunasi. Tikuvchiga rasm koʻrsatgandek.</p>
-<p><b>B — Baholash</b>: yuborishdan oldin oʻzini tekshirish. Koʻylakni kiyib koʻrgandek.</p>
+<p>Ekranda jiddiy ish vazifasi. IT kompaniyaga backend dasturchi kerak. HR xodimi kuniga oʻnlab rezyume oladi. Claude har bir rezyumeni vakansiyaga solishtirib, rahbar uchun qisqa xulosa yozib bersin. ${KLIK}</p>
+<p>Vazifani boʻlaklarga ajratsak, olti qism chiqadi. Eslab qolish oson boʻlsin deb, men ularni bitta soʻzga yigʻdim: <b>MAKTAB</b>. ${KLIK}</p>
+<p><b>M — Maqsad</b>: nima kerak va nima uchun. «Rezyumeni vakansiyaga solishtir — rahbar bir daqiqada qaror qilsin».</p>
+<p><b>A — Agar</b>: nima mumkin, nima mumkin emas. «Rezyumeda yoʻq narsani oʻylab topma — „nomaʼlum“ deb yoz». Bu qator boʻlmasa, model «ingliz tili yaxshi» deb oʻzidan qoʻshib qoʻyishi mumkin.</p>
+<p><b>K — Kontekst</b>: kim yozyapti, qanday vaziyatda. «Sen — IT kompaniya HR xodimisan. Vakansiya: backend dasturchi, Python, 3 yildan koʻp tajriba».</p>
+<p><b>T — Tartib</b>: javob qanday koʻrinishda. «Kuchli tomonlar, kamchiliklar, xulosa: suhbatga chaqirish yoki yoʻq».</p>
+<p><b>A — Aniq misol</b>: boshqa nomzod uchun tayyor xulosa namunasi. Tikuvchiga rasm koʻrsatgandek.</p>
+<p><b>B — Baholash</b>: «Har bir fikr rezyumedagi faktga asoslanganmi?» Koʻylakni kiyib koʻrgandek.</p>
 <p>Endi natijaga qaraymiz. ${KLIK}</p>
-<p>Mana Claude javobi. Uzr bor, yechim bor, keyingi qadam bor. Chegirma — 10 foiz, oshmadi. Ikki yillik mijoz ekani ham esga olindi. Ohang samimiy. Bunday javobni oʻqib, darhol mijozga yuborsa boʻladi.</p>
+<p>Mana Claude xulosasi: kuchli tomonlar, kamchiliklar va aniq taklif — suhbatga chaqirish. Ingliz tili rezyumeda yoʻq edi — model oʻylab topmadi, «nomaʼlum» deb yozdi. Rahbar bir daqiqada qaror qiladi. Muhim: yakuniy qarorni baribir odam qiladi, AI faqat vaqtni tejaydi.</p>
 <p>${SAVOL} Oxirgi yozgan vazifangizni eslang. Undan qaysi harflar tushib qolgan edi? ${PAUZA} Koʻpincha — A va B.</p>`,
 
   agar: `
-<p>MAKTAB’dagi eng muhim harf — <b>«Agar»</b>. Navigatorni eslang: yoʻl yopiq boʻlsa, boshqa yoʻl topadi. Nima qilishni oldindan biladi. Vazifada ham shunday boʻlishi kerak. Chapda — vazifa, oʻngda — xuddi shu vazifa yoʻllar xaritasi sifatida. ${KLIK}</p>
-<p>Birinchi qoida: <b>maʼlumot yetmasa — taxmin qilma, soʻra</b>. Chunki stajyor bilmagan narsasiga «bilmayman» demaydi, oʻzi toʻqib chiqaradi. ${KLIK}</p>
-<p>Keyin model soʻrov turini aniqlaydi. Qaytarish boʻlsa: 14 kungacha — qaytarish tartibini yuboradi, 14 kundan keyin — boshqa variant taklif qiladi. ${KLIK}</p>
-<p>Texnik muammo boʻlsa — darhol javob bermaydi, avval ikkita savol beradi. ${KLIK}</p>
-<p>Va eng muhimi — <b>«aks holda»</b>: hech biriga toʻgʻri kelmasa, operatorga ulaydi. ${KLIK}</p>
+<p>MAKTAB’dagi eng muhim harf — <b>«Agar»</b>. Navigatorni eslang: yoʻl yopiq boʻlsa, qayerga burilishni oldindan biladi. Vazifada ham shunday boʻlishi kerak. Chapda — oʻsha HR vazifasi, oʻngda — xuddi shu vazifa yoʻllar xaritasi sifatida. ${KLIK}</p>
+<p>Birinchi qoida: <b>maʼlumot yetmasa — taxmin qilma, nomzoddan soʻra</b>. Chunki stajyor bilmagan narsasiga «bilmayman» demaydi, oʻzi toʻqib chiqaradi: rezyumeda yoʻq tajribani «bor» deb yozib yuborishi mumkin. ${KLIK}</p>
+<p>Keyin talabga solishtiradi. Python bor va 3 yildan koʻp tajriba — suhbatga chaqiradi. Tajriba kamroq boʻlsa — junior lavozimni taklif qiladi. ${KLIK}</p>
+<p>Maosh talabi byudjetdan yuqori boʻlsa — oʻzi hal qilmaydi, rahbarga yuboradi. ${KLIK}</p>
+<p>Va eng muhimi — <b>«aks holda»</b>: hech biriga toʻgʻri kelmasa, muloyim rad javobi yozadi. ${KLIK}</p>
 <p>Qoida oddiy: <b>har bir «agar»ning oʻz «aks holda»si boʻlsin</b>. Yoʻl koʻrsatilmagan joyda model yoʻlni oʻzi oʻylab topadi. Buni gallyutsinatsiya deyishadi — yaʼni ishonch bilan aytilgan yolgʻon.</p>`,
 
   lab: `
